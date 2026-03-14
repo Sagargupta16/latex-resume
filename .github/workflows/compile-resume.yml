@@ -25,15 +25,17 @@ jobs:
 
       - name: Archive previous resume
         run: |
+          git checkout origin/main -- resume.pdf 2>/dev/null || true
           if [ -f resume.pdf ]; then
             mkdir -p resume-old
             DATE=$(date +%Y-%m-%d)
-            cp resume.pdf "resume-old/resume-${DATE}.pdf"
+            HASH=$(git rev-parse --short HEAD)
+            cp resume.pdf "resume-old/resume-${DATE}-${HASH}.pdf"
           fi
+          git checkout -- . 2>/dev/null || true
 
-      - name: Move compiled PDF
-        run: |
-          mv resume.pdf resume.pdf
+      - name: Verify compiled PDF exists
+        run: ls -la resume.pdf
 
       - name: Commit and push PDF
         run: |
