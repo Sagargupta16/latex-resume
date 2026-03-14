@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "resume.tex"
+      - "cover-letters/*.tex"
   workflow_dispatch:
 
 permissions:
@@ -17,11 +18,37 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX
+      - name: Compile resume
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
           latexmk_use_xelatex: false
+
+      - name: Compile cover letters
+        run: |
+          shopt -s nullglob
+          for tex in cover-letters/*.tex; do
+            filename=$(basename "$tex" .tex)
+            # Skip the template file
+            if [ "$filename" = "template" ]; then
+              continue
+            fi
+            echo "Compiling $tex..."
+          done
+        shell: bash
+
+      - name: Compile cover letters (LaTeX)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: "cover-letters/*.tex"
+          glob_root_file: true
+          latexmk_use_xelatex: false
+        continue-on-error: true
+
+      - name: Move cover letter PDFs
+        run: |
+          mkdir -p cover-letters/pdf
+          mv cover-letters/*.pdf cover-letters/pdf/ 2>/dev/null || true
 
       - name: Archive previous resume
         run: |
@@ -41,7 +68,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.pdf resume-old/
+          git add resume.pdf resume-old/ cover-letters/pdf/
           git diff --staged --quiet || git commit -m "chore: auto-compile resume PDF"
           git push
 
@@ -49,7 +76,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: resume.pdf
+          path: |
+            resume.pdf
+            cover-letters/pdf/*.pdf
           retention-days: 90
 
   release:
