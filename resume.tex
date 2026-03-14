@@ -1,0 +1,225 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Sagar Gupta
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{carlito}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+\geometry{left=1.4cm, top=0.9cm, right=1.4cm, bottom=0.9cm}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeExp}[4]{
+\item[]
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+        \small\textbf{#1} & {\footnotesize{#3}} \vspace{-1mm} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-5mm}
+}
+
+\newcommand{\resumeEdu}[4]{
+\item[]
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+        \small\textbf{#1} & \footnotesize{#3} \vspace{-1mm}\\
+        \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeAchievement}[2]{
+\item[$\bullet$] \hspace{-2mm}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & \textit{\footnotesize{#2}}
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=0mm]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=2ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+
+\renewcommand{\arraystretch}{1}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+    \LARGE{\textbf{Sagar Gupta}}
+\end{center}
+\vspace{-2mm}
+\begin{center}
+    \small{%
+    \href{https://sagargupta.online/portfolio-react/}{\faGlobe\ sagargupta.online} \hspace{1mm}|
+    \hspace{1mm} \href{https://github.com/Sagargupta16}{\faGithub\ Sagargupta16} \hspace{1mm}|
+    \hspace{1mm} \href{https://www.linkedin.com/in/sagar-gupta-16-10/}{\faLinkedinSquare\ sagar-gupta-16-10} \hspace{1mm}|
+    \hspace{1mm} \href{mailto:sg85207@gmail.com}{\faSend\ sg85207@gmail.com} \hspace{1mm}|
+    \hspace{1mm} \faPhone\ +91-8770532413}
+\end{center}
+\vspace{-3mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+\resumeSubHeadingListStart
+
+\resumeExp
+{Amazon Web Services (AWS)}{Cloud Consultant -- Professional Services (DevOps/MLOps)}{Aug 2024 -- Present}{Hyderabad, India}
+\resumeItemListStart
+    \item[$\diamond$] \textbf{RWS -- Lead DevOps Consultant:} Leading greenfield cloud migration -- designing AWS Organizations OU structure, SCPs, and deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments. Defining migration roadmap for 50+ application workloads.
+    \item[$\diamond$] \textbf{DTCC -- DevOps Consultant:} Refactored critical Terraform infrastructure code for a major financial services firm, leveraging Amazon Q to accelerate development and migration assessments.
+    \item[$\diamond$] \textbf{State Street -- DevOps Consultant:} Developed Terraform modules for $\sim$10 AWS services with tftest/PyTest testing, enabling 38+ services for application teams. Architected 1000+ preventative security controls aligned with CCMv4.0. Achieved 10/10 CSAT and 3x consecutive 5/5 Pulse ratings.
+    \item[$\diamond$] \textbf{Internal SME -- MLOps Pipeline:} Built end-to-end SageMaker pipeline with blue-green deployment, auto-scaling, and drift detection. Deployed via Terraform + CodePipeline with CloudFront frontend and API Gateway + Lambda inference API.
+    \item[$\diamond$] \textbf{Internal Contributions:} Published APG Pattern on AWS architecture. MLOps SME Program Graduate. 4x TFC Ambassador (AI/ML, NGDE, CloudOps, Agentic AI). Delivered 2 org-wide tech talks on Terraform testing and GitOps.
+\resumeItemListEnd
+
+\resumeExp
+{Amazon Web Services (AWS)}{Associate Professional Services -- DevOps (Internship)}{Mar 2024 -- Jul 2024}{Hyderabad, India}
+\resumeItemListStart
+    \item[$\diamond$] Migrated on-premises web application to AWS ECS with high-availability architecture and CI/CD via CodePipeline. Implemented blue-green deployment strategy for zero-downtime updates using Terraform.
+    \item[$\diamond$] Automated Docker image builds via CodeBuild, CodeDeploy, and ECR. Established distributed tracing with X-Ray and CloudWatch for full application observability.
+\resumeItemListEnd
+
+\resumeExp
+{Ikarus-3D}{Software Developer Associate (Internship)}{May 2023 -- Jul 2023}{Mohali, India}
+\resumeItemListStart
+    \item[$\diamond$] Containerized production application with Docker and deployed to AWS ECS/ECR. Built CI/CD pipeline with GitHub Actions automating build, test, and deployment processes.
+    \item[$\diamond$] Deployed SonarQube on EC2 with RDS integration for continuous code quality analysis. Standardized codebase with multi-language linting (pylint, ESLint, Stylelint).
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------------
+\section{\textbf{Industry Certifications (6)}}
+\vspace{-2pt}
+\resumeItemListStart
+    \resumeAchievement{\href{https://www.credly.com/badges/591e74ef-f6a8-4b77-82dc-07e06fb8060e}{AWS Certified Solutions Architect -- Associate}}{\href{https://www.credly.com/badges/591e74ef-f6a8-4b77-82dc-07e06fb8060e}{Verify}}
+    \resumeAchievement{\href{https://www.credly.com/badges/be7f9e0a-593a-4544-8dfd-f69f669ec57d}{AWS Certified Developer -- Associate}}{\href{https://www.credly.com/badges/be7f9e0a-593a-4544-8dfd-f69f669ec57d}{Verify}}
+    \resumeAchievement{\href{https://www.credly.com/badges/d6dc337a-0af5-48f8-b64f-eb2a5925f07b}{AWS Certified Machine Learning Engineer -- Associate}}{\href{https://www.credly.com/badges/d6dc337a-0af5-48f8-b64f-eb2a5925f07b}{Verify}}
+    \resumeAchievement{\href{https://www.credly.com/badges/e18d2154-e153-40b3-8f39-6684e561396e}{AWS Certified AI Practitioner}}{\href{https://www.credly.com/badges/e18d2154-e153-40b3-8f39-6684e561396e}{Verify}}
+    \resumeAchievement{\href{https://www.credly.com/badges/bf8ffb47-284c-4c45-adb8-3df4f807e404}{AWS Certified Cloud Practitioner}}{\href{https://www.credly.com/badges/bf8ffb47-284c-4c45-adb8-3df4f807e404}{Verify}}
+    \resumeAchievement{\href{https://www.credly.com/badges/8b0723a5-bac7-4262-b5b6-20337b2979a1}{HashiCorp Certified: Terraform Associate (003)}}{\href{https://www.credly.com/badges/8b0723a5-bac7-4262-b5b6-20337b2979a1}{Verify}}
+\resumeItemListEnd
+
+%-----------SKILLS-----------------
+\section{\textbf{Technical Skills}}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Cloud \& DevOps}{: AWS (ECS, SageMaker, Lambda, CodePipeline, EventBridge, CloudWatch, Organizations, SCPs), Terraform, Docker, Ansible, GitHub Actions, CI/CD} \\
+     \textbf{Languages}{: Python, JavaScript, TypeScript, C++, Java, SQL, HCL} \\
+     \textbf{Web \& Databases}{: React, Next.js, Node.js, Express, FastAPI, MongoDB, PostgreSQL, MySQL, Redis} \\
+     \textbf{AI/ML}{: SageMaker, TensorFlow, PyTorch, Scikit-learn, RAG Pipelines, MCP Protocol}
+    }}
+\end{itemize}
+\vspace{-2mm}
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\resumeSubHeadingListStart
+\resumeEdu
+{National Institute of Technology Warangal, Telangana}{Master of Computer Applications (MCA) | NIMCET AIR 208}{Aug 2021 -- Jun 2024}{CGPA: 8.38}
+\resumeEdu
+{Sanskar College of Professional Studies (DAVV University), Indore}{Bachelor of Computer Applications (BCA)}{Jun 2018 -- Jun 2021}{CGPA: 7.34}
+\resumeSubHeadingListEnd
+
+%============================================================
+%                       PAGE 2
+%============================================================
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+
+\resumeExp
+{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite, Tailwind CSS}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Self-hosted personal finance app that syncs transactions from Excel with SHA-256 deduplication, Sankey diagrams, and spending analytics.
+    \item[$\diamond$] 50/30/20 budget rule tracking, investment portfolio analytics, and year-over-year spending comparisons across 20+ pages.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://sagargupta16.github.io/InstagramLikesLeaderboard/}{Instagram Likes Leaderboard}}{TypeScript, Preact, Browser API}{Feb 2026}{\href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{\faGithub\ GitHub} | \href{https://sagargupta16.github.io/InstagramLikesLeaderboard/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Browser tool that scans Instagram posts and ranks followers by engagement -- no downloads, sign-ups, or API keys required.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, React, FastAPI, TensorFlow, GraphQL}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Dense neural network trained on 244K+ contest records achieving MAE $\sim$14 for LeetCode rating predictions.
+    \item[$\diamond$] Automated data pipeline via LeetCode GraphQL API with glassmorphism React frontend and FastAPI backend.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, AWS ECS Fargate, ALB, CodePipeline, HCL}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
+\resumeItemListStart
+    \item[$\diamond$] Production-grade IaC for zero-downtime blue-green deployments with 18 Terraform modules, KMS encryption, and IAM security.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://github.com/MCA-NITW/placemento}{Placemento}}{TypeScript, React 19, MongoDB, Node.js, AG Grid}{Jan 2024}{\href{https://github.com/MCA-NITW/placemento}{\faGithub\ GitHub}}
+\resumeItemListStart
+    \item[$\diamond$] Placement management portal for NIT Warangal MCA serving 100+ students and 50+ companies with OTP auth, AG Grid data tables, and role-based dashboards.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://sagargupta.online/portfolio-react/}{Personal Portfolio}}{React 19, Vite, Tailwind CSS v4, Three.js, Motion}{Oct 2022}{\href{https://github.com/Sagargupta16/portfolio-react}{\faGithub\ GitHub} | \href{https://sagargupta.online/portfolio-react/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Dark-themed portfolio with interactive 3D WebGL hero scene, glassmorphism effects, particle animations, and data-driven JSON architecture.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------------
+\section{\textbf{Achievements}}
+\vspace{-2pt}
+\resumeItemListStart
+    \resumeAchievement{Rank 1289 (Top 5\%) at Google Kick Start Round E '22.}{\href{https://github.com/Sagargupta16/Sagargupta16/blob/main/Certificates/Google-KickStart-September-2022.pdf}{Certificate}}
+    \resumeAchievement{1st Place -- Coding Cauldron Online, Version '23 (NIT Trichy).}{}
+    \resumeAchievement{1st Place -- QFiesta, IGNOSI '22 (NIT Warangal).}{}
+    \resumeAchievement{4th Place -- TriNIT Hackathon (NIT Warangal).}{}
+    \resumeAchievement{3rd Place -- INFOTREK '22 Logic Head (NIT Trichy) and MOTHRA -- Version '21 (NIT Trichy).}{}
+\resumeItemListEnd
+
+%-----------CODING PROFILES-----------------
+\section{\textbf{Coding Profiles}}
+\vspace{-2pt}
+\small{
+\begin{tabular*}{\textwidth}[t]{p{\textwidth}}
+\hspace{-3.1mm}\textbf{\href{https://leetcode.com/Sagargupta1610/}{LeetCode (Sagargupta1610):}} Knight badge, 2007 peak rating, 1200+ problems solved, 100+ contests.\\
+\hspace{-3.1mm}\textbf{\href{https://www.geeksforgeeks.org/user/sagargupta10/}{GeeksforGeeks (sagargupta10):}} 400+ DSA problems solved.\\
+\hspace{-3.1mm}\textbf{\href{https://www.hackerrank.com/Sagargupta1610}{HackerRank (Sagargupta1610):}} 6 Star (Problem Solving), 5 Star (C++).\\
+\hspace{-3.1mm}\textbf{\href{https://www.codechef.com/users/sagargupta_16}{CodeChef (sagargupta\_16):}} 3 Star rating, 20+ rated contests.
+\end{tabular*}
+}
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-2pt}
+\resumeItemListStart
+    \resumeAchievement{\textbf{Additional Secretary}, CSEA -- NIT Warangal. Contest and Development teams.}{Aug '23 -- Jun '24}
+    \resumeAchievement{\textbf{Class Representative}, MCA Final Year, NIT Warangal.}{Aug '23 -- Jun '24}
+\resumeItemListEnd
+
+\end{document}
