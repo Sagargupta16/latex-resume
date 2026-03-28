@@ -93,20 +93,68 @@ jobs:
       - name: Pull latest (with compiled PDF)
         run: git pull origin main
 
-      - name: Get current date
-        id: date
-        run: echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+      - name: Determine version bump
+        id: bump
+        run: |
+          CURRENT=$(cat VERSION)
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
 
-      - name: Create or update release
+          # Check commit message for bump hints
+          MSG=$(git log -1 --pretty=%B)
+          if echo "$MSG" | grep -qi '\[major\]'; then
+            MAJOR=$((MAJOR+1)); MINOR=0; PATCH=0
+          elif echo "$MSG" | grep -qi '\[minor\]'; then
+            MINOR=$((MINOR+1)); PATCH=0
+          else
+            PATCH=$((PATCH+1))
+          fi
+
+          NEXT="${MAJOR}.${MINOR}.${PATCH}"
+          echo "current=$CURRENT" >> $GITHUB_OUTPUT
+          echo "next=$NEXT" >> $GITHUB_OUTPUT
+
+      - name: Update VERSION file
+        run: |
+          echo "${{ steps.bump.outputs.next }}" > VERSION
+
+      - name: Update CHANGELOG
+        run: |
+          NEXT="${{ steps.bump.outputs.next }}"
+          DATE=$(date +%Y-%m-%d)
+          MSG=$(git log -1 --pretty=%s)
+          # Prepend new entry after the first heading line
+          sed -i "0,/^## /s//## [${NEXT}] - ${DATE}\n\n- ${MSG}\n\n## /" CHANGELOG.md
+
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VERSION CHANGELOG.md
+          git diff --staged --quiet || git commit -m "chore: bump version to v${{ steps.bump.outputs.next }}"
+          git push
+
+      - name: Create versioned release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest
-          name: "Resume - ${{ steps.date.outputs.date }}"
-          body: |
-            Auto-compiled resume PDF from latest `resume.tex`.
-
-            Updated on ${{ steps.date.outputs.date }}.
+          tag_name: v${{ steps.bump.outputs.next }}
+          name: "v${{ steps.bump.outputs.next }}"
+          body: ${{ github.event.head_commit.message }}
           files: resume.pdf
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NEXT="v${{ steps.bump.outputs.next }}"
+          # Delete old latest release and tag, then recreate
+          gh release delete latest --yes 2>/dev/null || true
+          git tag -d latest 2>/dev/null || true
+          git push origin :refs/tags/latest 2>/dev/null || true
+          # Create new latest release pointing to the same commit
+          gh release create latest resume.pdf \
+            --title "Latest Resume" \
+            --notes "Always points to the most recent resume version. Currently ${NEXT}." \
+            --latest=false
