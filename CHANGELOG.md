@@ -9,6 +9,20 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.0] - 2026-03-28
+
+- Add professional summary section for stronger first impression
+- Restructure experience bullets with engagement-level detail and metrics
+- Add Open Source Contributions section (Airflow, Terraform Provider AWS, Feast, Prefect, awslabs/mcp, cloudposse)
+- Add AI Developer Tools to skills (Claude Code, GitHub Copilot, Amazon Q, Kiro, MCP Protocol)
+- Add Kiro usage in RWS engagement and Amazon Q in DTCC engagement
+- Reorganize skills section: Cloud & Infrastructure, MLOps & AI/ML, AI Developer Tools, Languages, Frameworks
+- Shrink internship sections to 1 bullet each
+- Remove Positions of Responsibility and Coding Profiles sections
+- Remove less relevant projects (Placemento, Instagram Likes Leaderboard)
+- Consolidate achievements to top 3
+- Rename title from "Cloud & MLOps Engineer" to "Cloud & DevOps/MLOps Engineer"
+
 ## [1.0.5] - 2026-03-05
 
 - Expand TypeScript notes
