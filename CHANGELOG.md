@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.0.9] - 2026-04-08
+
+- chore: auto-compile resume PDFs
+
 ## [Unreleased]
 
 - Add multi-variant resume system with 8 role-targeted variants
