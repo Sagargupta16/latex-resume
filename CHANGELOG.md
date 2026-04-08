@@ -9,6 +9,17 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [Unreleased]
+
+- Add multi-variant resume system with 8 role-targeted variants
+- Create common/ directory for shared sections (preamble, header, education, certifications)
+- Create variants/ directory with general, devops, cloud, mlops, aiml, sde, platform, ai-tools
+- Each variant has tailored summary, experience bullets, skills ordering, projects, and OSS contributions
+- Update CI workflow to compile all 8 variants (general to root + release, variants to builds/)
+- Add builds/ directory for auto-compiled variant PDFs
+- Update README with variant download links and architecture docs
+- Update CLAUDE.md with multi-variant architecture documentation
+
 ## [1.0.8] - 2026-03-30
 
 - chore: auto-compile resume PDF

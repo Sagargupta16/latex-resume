@@ -28,6 +28,15 @@ desktop.ini
 *~
 .vscode/
 
+# Variant build artifacts (compiled in variant dirs, copied to builds/)
+variants/*/*.pdf
+variants/*/*.aux
+variants/*/*.log
+variants/*/*.out
+
+# Superpowers brainstorm sessions (ephemeral)
+.superpowers/
+
 # Token files -- never commit secrets
 *token*
 *.env

@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "resume.tex"
+      - "common/*.tex"
+      - "variants/**/*.tex"
       - "cover-letters/*.tex"
   workflow_dispatch:
 
@@ -18,26 +19,63 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile resume
+      - name: Compile general resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: variants/general/resume.tex
           latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile devops variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/devops/resume-devops.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile cloud variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/cloud/resume-cloud.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile mlops variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/mlops/resume-mlops.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile aiml variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/aiml/resume-aiml.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile sde variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/sde/resume-sde.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile platform variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/platform/resume-platform.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
+      - name: Compile ai-tools variant
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: variants/ai-tools/resume-ai-tools.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
 
       - name: Compile cover letters
-        run: |
-          shopt -s nullglob
-          for tex in cover-letters/*.tex; do
-            filename=$(basename "$tex" .tex)
-            # Skip the template file
-            if [ "$filename" = "template" ]; then
-              continue
-            fi
-            echo "Compiling $tex..."
-          done
-        shell: bash
-
-      - name: Compile cover letters (LaTeX)
         uses: xu-cheng/latex-action@v3
         with:
           root_file: "cover-letters/*.tex"
@@ -50,7 +88,7 @@ jobs:
           mkdir -p cover-letters/pdf
           mv cover-letters/*.pdf cover-letters/pdf/ 2>/dev/null || true
 
-      - name: Archive previous resume
+      - name: Archive previous general resume
         run: |
           git checkout origin/main -- resume.pdf 2>/dev/null || true
           if [ -f resume.pdf ]; then
@@ -61,23 +99,43 @@ jobs:
           fi
           git checkout -- . 2>/dev/null || true
 
-      - name: Verify compiled PDF exists
-        run: ls -la resume.pdf
+      - name: Move compiled PDFs to final locations
+        run: |
+          # General resume goes to root
+          cp variants/general/resume.pdf resume.pdf
 
-      - name: Commit and push PDF
+          # Variant resumes go to builds/
+          mkdir -p builds
+          cp variants/devops/resume-devops.pdf builds/resume-devops.pdf
+          cp variants/cloud/resume-cloud.pdf builds/resume-cloud.pdf
+          cp variants/mlops/resume-mlops.pdf builds/resume-mlops.pdf
+          cp variants/aiml/resume-aiml.pdf builds/resume-aiml.pdf
+          cp variants/sde/resume-sde.pdf builds/resume-sde.pdf
+          cp variants/platform/resume-platform.pdf builds/resume-platform.pdf
+          cp variants/ai-tools/resume-ai-tools.pdf builds/resume-ai-tools.pdf
+
+      - name: Verify all PDFs exist
+        run: |
+          echo "=== General ==="
+          ls -la resume.pdf
+          echo "=== Variants ==="
+          ls -la builds/
+
+      - name: Commit and push PDFs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.pdf resume-old/ cover-letters/pdf/
-          git diff --staged --quiet || git commit -m "chore: auto-compile resume PDF"
+          git add resume.pdf resume-old/ builds/ cover-letters/pdf/
+          git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs"
           git push
 
-      - name: Upload PDF as artifact
+      - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
+          name: resume-pdfs
           path: |
             resume.pdf
+            builds/*.pdf
             cover-letters/pdf/*.pdf
           retention-days: 90
 
@@ -90,7 +148,7 @@ jobs:
         with:
           ref: main
 
-      - name: Pull latest (with compiled PDF)
+      - name: Pull latest (with compiled PDFs)
         run: git pull origin main
 
       - name: Determine version bump
