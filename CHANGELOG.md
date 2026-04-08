@@ -19,10 +19,6 @@ Use `[major]` or `[minor]` in commit messages to control version bumps. Default 
 
 ## [1.0.6] - 2026-03-28
 
-- chore: auto-compile resume PDF
-
-## [1.1.0] - 2026-03-28
-
 - Add professional summary section for stronger first impression
 - Restructure experience bullets with engagement-level detail and metrics
 - Add Open Source Contributions section (Airflow, Terraform Provider AWS, Feast, Prefect, awslabs/mcp, cloudposse)
