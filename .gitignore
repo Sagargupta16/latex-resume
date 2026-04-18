@@ -40,3 +40,8 @@ variants/*/*.out
 # Token files -- never commit secrets
 *token*
 *.env
+
+# Added for consistency
+.env
+.env.local
+.env.*.local
