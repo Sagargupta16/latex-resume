@@ -20,63 +20,63 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile general resume
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/general/resume.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile devops variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/devops/resume-devops.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile cloud variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/cloud/resume-cloud.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile mlops variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/mlops/resume-mlops.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile aiml variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/aiml/resume-aiml.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile sde variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/sde/resume-sde.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile platform variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/platform/resume-platform.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile ai-tools variant
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: variants/ai-tools/resume-ai-tools.tex
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
       - name: Compile cover letters
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: "cover-letters/*.tex"
           glob_root_file: true
