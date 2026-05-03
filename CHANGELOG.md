@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.0] - 2026-05-03
+
+- chore: auto-compile resume PDFs
+
 ## [1.0.12] - 2026-05-03
 
 - chore: auto-compile resume PDFs
