@@ -153,12 +153,20 @@ jobs:
 
       - name: Determine version bump
         id: bump
+        env:
+          HEAD_COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           CURRENT=$(cat VERSION)
           IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
 
-          # Check commit message for bump hints
-          MSG=$(git log -1 --pretty=%B)
+          # Read the commit that triggered this workflow run, not HEAD.
+          # The compile job auto-commits "chore: auto-compile resume PDFs"
+          # before this job runs, so `git log -1` would see the bot's message.
+          # Fall back to `git log -1` for manual workflow_dispatch runs where
+          # github.event.head_commit may be empty.
+          MSG="${HEAD_COMMIT_MSG:-$(git log -1 --pretty=%B)}"
+          echo "Trigger commit message: $MSG"
+
           if echo "$MSG" | grep -qi '\[major\]'; then
             MAJOR=$((MAJOR+1)); MINOR=0; PATCH=0
           elif echo "$MSG" | grep -qi '\[minor\]'; then
