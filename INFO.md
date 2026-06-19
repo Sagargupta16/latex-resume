@@ -7,7 +7,7 @@ This file contains all personal, professional, and technical information used ac
 | Field | Value |
 |-------|-------|
 | **Name** | Sagar Gupta |
-| **Title** | Cloud Consultant - DevOps/MLOps |
+| **Title** | Cloud Consultant - DevOps/MLOps (official internal title: Associate Delivery Consultant, ProServe DC) |
 | **Employer** | Amazon Web Services (AWS) - Professional Services |
 | **Location** | Hyderabad, India |
 | **Email** | sg85207@gmail.com |
@@ -59,17 +59,18 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
 #### Engagement 1: RWS -- UK-based Global Technology Services Firm (Feb 2026 - Present)
 **Role: Lead DevOps Consultant (sole DevOps consultant)**
 
-- Leading greenfield AWS migration for 50+ application workloads
-- Designing AWS Organizations OU structure, SCPs, tag policies
-- Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments
+- Leading RWS Group data-centre migration to AWS: building the cloud platform from scratch for 50+ application workloads into **135+ AWS accounts**
+- Designing AWS Organizations OU structure, SCPs, tag policies; core networking, security baseline, governance framework
+- Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments; owns full deployment lifecycle
 - Driving architecture decisions and defining migration roadmap
 - Delivering recommendations on cost optimization, HA, and DR
 - Leveraging Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs
+- Recognition: 2x 5-Star Pulse, 2x 25 Peculiar Points (GCCI teammate: Amit Anjarlekar)
 
 #### Engagement 2: State Street -- US-based Major Financial Services Firm (Oct 2024 - Aug 2025)
 **Role: DevOps Consultant**
 
-- Built Terraform module library covering 38+ AWS services with automated testing (tftest, PyTest)
+- Developed Terraform code for ~10 AWS services with comprehensive testing (tftest, PyTest), enabling a 38+ service self-service platform for application teams
 - Module library adopted across the client's entire cloud platform
 - Architected 1000+ preventative security controls aligned with CCMv4.0 compliance
 - Implemented EventBridge-based cross-account automation patterns
@@ -93,14 +94,18 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
 
 #### Internal Impact & Recognition
 
-- Published APG Pattern on AWS Prescriptive Guidance
-- MLOps SME Program Graduate
-- 4x TFC Ambassador: AI/ML, NGDE, CloudOps, Agentic AI
-- Associate Speaker Certified
+- Published APG pattern: "Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub" (2025, co-authored with Abhigyan Dandriyal)
+- Ongoing: APG Guide "Choosing the Right Service Mesh for Amazon EKS Workloads (Istio / App Mesh / Linkerd)"; blog "Automating Healthcare Image Classification with Amazon SageMaker: End-to-End MLOps Pipeline"
+- MLOps SME Program Graduate (2025)
+- 5x TFC Ambassador: AI/ML, NGDE (Graduated), CloudOps (AWS DevOps Agent), Agentic AI, Serverless
+- Associate Speaker Certified (renewed 2026); hosted DevOps Builder Edition Team Cadence (May 2026)
 - 2 org-wide tech talks:
   - "Automating Unit Testing for Terraform using Terraform Test and PyTest frameworks" (2025)
   - "GitOps Configuration Safety with Health Checks and Pipeline Gating" (2026)
 - 2 APG Patterns Peer Reviewed (2025)
+- Recognition (2025): Utilization 93%; 4 Pulse @ avg 5/5; 18 accolades; 375 Awsome points; 2 eCards (Deliver Results, Hire and Develop the Best)
+- Other internal: AWS T&C SME Program contributor; Prime Video beta testing; ML Hackathon 2025 (26th/238); GCCI JAM Tester
+- Other internal project (ongoing): Work Task Buddy -- AI orchestration platform unifying business systems via conversational interface, Salesforce integration, strict AI controls
 - ML Hackathon 2025 - 26th/238 teams
 
 ### Amazon Web Services (AWS) - Intern (Mar 2024 - Jul 2024)

@@ -37,6 +37,10 @@ variants/*/*.out
 # Superpowers brainstorm sessions (ephemeral)
 .superpowers/
 
+# Internal AWS ProServe documents -- never commit (internal/confidential source material)
+Sagar Gupta.pdf
+*ProServe*.pdf
+
 # Token files -- never commit secrets
 *token*
 *.env
