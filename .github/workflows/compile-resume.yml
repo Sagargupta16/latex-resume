@@ -86,7 +86,6 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: "cover-letters/*.tex"
-          glob_root_file: true
           latexmk_use_xelatex: false
         continue-on-error: true
 
