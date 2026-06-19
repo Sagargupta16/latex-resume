@@ -20,6 +20,7 @@ LaTeX resume with 8 role-targeted variants and automated PDF compilation via Git
 | **SDE** | Full-stack, system design, DSA | [resume-sde.pdf](../../raw/main/builds/resume-sde.pdf) |
 | **Platform** | Internal tooling, governance | [resume-platform.pdf](../../raw/main/builds/resume-platform.pdf) |
 | **AI Tools** | AI agents, MCP, developer tooling | [resume-ai-tools.pdf](../../raw/main/builds/resume-ai-tools.pdf) |
+| **Big Tech** | FAANG/AI-lab SWE -- OSS + DSA forward | [resume-bigtech.pdf](../../raw/main/builds/resume-bigtech.pdf) |
 
 ## Quick Start
 

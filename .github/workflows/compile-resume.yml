@@ -75,6 +75,13 @@ jobs:
           latexmk_use_xelatex: false
           work_in_root_file_dir: true
 
+      - name: Compile bigtech variant
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: variants/bigtech/resume-bigtech.tex
+          latexmk_use_xelatex: false
+          work_in_root_file_dir: true
+
       - name: Compile cover letters
         uses: xu-cheng/latex-action@v4
         with:
@@ -113,6 +120,7 @@ jobs:
           cp variants/sde/resume-sde.pdf builds/resume-sde.pdf
           cp variants/platform/resume-platform.pdf builds/resume-platform.pdf
           cp variants/ai-tools/resume-ai-tools.pdf builds/resume-ai-tools.pdf
+          cp variants/bigtech/resume-bigtech.pdf builds/resume-bigtech.pdf
 
       - name: Verify all PDFs exist
         run: |

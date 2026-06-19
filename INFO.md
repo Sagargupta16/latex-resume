@@ -56,7 +56,7 @@ Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delive
 
 Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, India.
 
-#### Engagement 1: UK-based Global Technology Services Firm (Feb 2026 - Present)
+#### Engagement 1: RWS -- UK-based Global Technology Services Firm (Feb 2026 - Present)
 **Role: Lead DevOps Consultant (sole DevOps consultant)**
 
 - Leading greenfield AWS migration for 50+ application workloads
@@ -66,7 +66,7 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
 - Delivering recommendations on cost optimization, HA, and DR
 - Leveraging Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs
 
-#### Engagement 2: US-based Major Financial Services Firm (Oct 2024 - Aug 2025)
+#### Engagement 2: State Street -- US-based Major Financial Services Firm (Oct 2024 - Aug 2025)
 **Role: DevOps Consultant**
 
 - Built Terraform module library covering 38+ AWS services with automated testing (tftest, PyTest)
@@ -76,7 +76,7 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
 - Designed self-service capabilities with governance guardrails
 - **10/10 CSAT** score and **3x consecutive 5/5 Pulse** ratings from customer
 
-#### Engagement 3: US-based Leading Financial Services Firm (Aug 2025 - Dec 2025)
+#### Engagement 3: DTCC -- US-based Leading Financial Services Firm (Aug 2025 - Dec 2025)
 **Role: DevOps Consultant**
 
 - Refactored critical Terraform infrastructure, modernizing legacy patterns to cloud-native IaC
@@ -148,27 +148,33 @@ Mohali, India.
 
 ## Open Source Contributions
 
-### Merged
+_PR status verified against the GitHub API on 2026-06-18. Only PRs confirmed `merged: true` are listed as merged._
+
+### Merged (verified)
+
+| # | Project | Stars | PR | Merged | Description |
+|---|---------|-------|----|--------|-------------|
+| 1 | Apache Airflow | 46K | [#63109](https://github.com/apache/airflow/pull/63109) | 2026-03-23 | Add template_fields to SalesforceBulkOperator |
+| 2 | PrefectHQ/prefect | 21K | [#20956](https://github.com/PrefectHQ/prefect/pull/20956) | 2026-03-04 | Document deployment steps as Python functions |
+| 3 | feast-dev/feast | 9K | [#6081](https://github.com/feast-dev/feast/pull/6081) | 2026-03-16 | Add Claude Code agent skills for Feast |
+| 4 | awslabs/mcp | 8K | [#2607](https://github.com/awslabs/mcp/pull/2607) | 2026-03-09 | Fix Kendra documentation menu to match source directory |
+| 5 | cloudposse/terraform-aws-tfstate-backend | 437 | [#197](https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197) | 2026-03-24 | Add S3 native locking docs, fix variable descriptions |
+| 6 | awslabs/agent-plugins | -- | [#132](https://github.com/awslabs/agent-plugins/pull/132) | 2026-04-30 | Check file extension before defusedxml dependency |
+
+### Open / Under Review (verified)
 
 | # | Project | Stars | PR | Description |
 |---|---------|-------|----|-------------|
-| 1 | Apache Airflow | 44K | [#63109](https://github.com/apache/airflow/pull/63109) | Add template_fields to SalesforceBulkOperator |
-| 2 | feast-dev/feast | 9K | [#6081](https://github.com/feast-dev/feast/pull/6081) | Add Claude Code agent skills for Feast |
-| 3 | PrefectHQ/prefect | 21K | [#20956](https://github.com/PrefectHQ/prefect/pull/20956) | Document custom deployment steps as Python functions |
-| 4 | awslabs/mcp | 8K | [#2607](https://github.com/awslabs/mcp/pull/2607) | Fix Kendra documentation menu to match source directory |
-| 5 | cloudposse/terraform-aws-tfstate-backend | 437 | [#197](https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197) | Add S3 native locking docs, fix variable descriptions |
+| 7 | hashicorp/terraform-provider-aws | 10K | [#46867](https://github.com/hashicorp/terraform-provider-aws/pull/46867) | Fix IoT cloudwatch_metric substitution template validation (open) |
 
-### Open / Under Review
+### Closed without merge -- DO NOT list as contributions
 
-| # | Project | Stars | PR | Description |
-|---|---------|-------|----|-------------|
-| 6 | hashicorp/terraform-provider-aws | 10K | [#46867](https://github.com/hashicorp/terraform-provider-aws/pull/46867) | Fix IoT cloudwatch_metric substitution template validation |
-| 7 | chroma-core/chroma | 17K | [#6590](https://github.com/chroma-core/chroma/pull/6590) | Pending |
-| 8 | stanfordnlp/dspy | 22K | [#9405](https://github.com/stanfordnlp/dspy/pull/9405) | Pending |
-| 9 | terraform-aws-modules/terraform-aws-dynamodb-table | 100+ | [#117](https://github.com/terraform-aws-modules/terraform-aws-dynamodb-table/pull/117) | Pending |
-| 10 | aws-ia/terraform-aws-bedrock | 100+ | [#172](https://github.com/aws-ia/terraform-aws-bedrock/pull/172) | Pending |
-| 11 | NirmalScalia/le-git-graph | 400+ | [#109](https://github.com/NirmalScalia/le-git-graph/pull/109) | Infinite scroll, configurable commit count, and performance improvements |
-| 12 | mm65x/tokemon | 100+ | [#13](https://github.com/mm65x/tokemon/pull/13) | Pending |
+Verified `merged: false`. Kept here so they are never re-added to a resume by mistake.
+
+- aws/aws-cdk [#37601](https://github.com/aws/aws-cdk/pull/37601) -- scope batch SubmitJob IAM (closed, unmerged)
+- modelcontextprotocol/python-sdk [#2446](https://github.com/modelcontextprotocol/python-sdk/pull/2446) -- add subject to AccessToken (closed, unmerged)
+- chroma-core/chroma [#6590](https://github.com/chroma-core/chroma/pull/6590) (closed, unmerged)
+- stanfordnlp/dspy [#9405](https://github.com/stanfordnlp/dspy/pull/9405) (closed, unmerged)
 
 ## Projects
 
@@ -303,7 +309,7 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - 4x TFC Ambassador
 - 2 tech talks delivered
 - 1 APG Pattern published
-- 13+ open source PRs (5 merged, 7+ under review)
+- Open source PRs: 6 merged (Airflow, Prefect, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins), 1 open (terraform-provider-aws) -- verified 2026-06-18
 - 40+ projects built
 - 2000+ coding problems solved
 - LeetCode Knight (2007 rating)

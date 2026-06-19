@@ -59,6 +59,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 | SDE      | `sde`      | Full-stack, system design, DSA       |
 | Platform | `platform` | Internal tooling, governance         |
 | AI Tools | `ai-tools` | AI agents, MCP, developer tooling    |
+| Big Tech | `bigtech`  | FAANG / AI-lab SWE -- OSS + DSA forward |
 
 ### How variants work
 
@@ -96,7 +97,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 - **Hyperlinks**: All URLs, certifications, and project links are clickable (blue)
 - **Icons**: FontAwesome (`\faGithub`, `\faGlobe`, `\faLinkedinSquare`, etc.)
 - **Spacing**: Tight spacing optimized for 2-page layout - be careful with additions
-- **Client names**: The **general variant** names clients directly (RWS, State Street, DTCC) since the same names are already public on the portfolio site and GitHub profile. For role-targeted variants that will be sent to specific recruiters, default to anonymized descriptors (e.g., "US-based Major Financial Services Firm") unless the user says otherwise.
+- **Client names**: Name clients directly (RWS, State Street, DTCC) across **all** variants and the cover letters -- these names are already public on the portfolio site and GitHub profile. Anonymize to descriptors (e.g., "US-based Major Financial Services Firm") only when Sagar explicitly asks for an anonymized copy for a specific recruiter.
 - **Bullets**: Use `\item[$\diamond$]` for experience items, `\resumeAchievement` for achievements
 - **Hyphens**: Use single `-` in titles, never em dash
 
