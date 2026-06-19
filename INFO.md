@@ -61,7 +61,7 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
 
 - Leading RWS Group data-centre migration to AWS: building the cloud platform from scratch for 50+ application workloads into **135+ AWS accounts**
 - Designing AWS Organizations OU structure, SCPs, tag policies; core networking, security baseline, governance framework
-- Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments; owns full deployment lifecycle
+- Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments; owns full deployment lifecycle. Terraform automation cuts infrastructure setup time by ~90% versus manual configuration
 - Driving architecture decisions and defining migration roadmap
 - Delivering recommendations on cost optimization, HA, and DR
 - Leveraging Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs
