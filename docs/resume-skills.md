@@ -8,7 +8,7 @@ All five are grounded in two sources of truth and must never fabricate:
 
 | Skill | Use when you... | Edits / outputs |
 |-------|-----------------|-----------------|
-| [`tailor-variant`](../.claude/skills/tailor-variant/SKILL.md) | Have a JD and want the resume matched to it | Picks 1 of 8 variants, rewrites `variants/<slug>/*.tex`, recompiles |
+| [`tailor-variant`](../.claude/skills/tailor-variant/SKILL.md) | Have a JD and want the resume matched to it | Picks 1 of 9 variants, rewrites `variants/<slug>/*.tex`, recompiles |
 | [`ats-optimize`](../.claude/skills/ats-optimize/SKILL.md) | Want a keyword-coverage score vs a posting | Coverage report + honest gap list + suggested bullet edits |
 | [`cover-letter`](../.claude/skills/cover-letter/SKILL.md) | Need a company/role cover letter | New `cover-letters/<company>-<role>.tex` from the template, compiled |
 | [`recruiter-outreach`](../.claude/skills/recruiter-outreach/SKILL.md) | Need a recruiter/referral message | Plain-text LinkedIn DM / cold email / referral ask in Sagar's voice |

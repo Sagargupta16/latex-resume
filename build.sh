@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build all 8 resume variants locally
+# Build all 9 resume variants locally
 # Requires pdflatex (MiKTeX or TeX Live)
 
 set -e

@@ -1,6 +1,6 @@
 # latex-resume
 
-LaTeX resume with 8 role-targeted variants and automated PDF compilation via GitHub Actions.
+LaTeX resume with 9 role-targeted variants and automated PDF compilation via GitHub Actions.
 
 ## Download
 
@@ -26,7 +26,7 @@ LaTeX resume with 8 role-targeted variants and automated PDF compilation via Git
 
 1. Edit files in `common/` (shared) or `variants/<role>/` (role-specific)
 2. Push to `main`
-3. All 8 PDFs auto-compile. General goes to [Releases](../../releases/tag/latest), variants to `builds/`.
+3. All 9 PDFs auto-compile. General goes to [Releases](../../releases/tag/latest), variants to `builds/`.
 
 ## Architecture
 
@@ -50,6 +50,7 @@ variants/                   # Role-specific content
   sde/
   platform/
   ai-tools/
+  bigtech/
 
 builds/                     # Compiled variant PDFs (auto-committed)
 resume.pdf                  # Compiled general (root, released)
@@ -77,7 +78,7 @@ Each variant's main `.tex` file inputs shared sections from `common/` and local 
 ## How It Works
 
 ```
-Push .tex files -> GitHub Action triggers -> Compiles all 8 variants
+Push .tex files -> GitHub Action triggers -> Compiles all 9 variants
                                           -> General PDF -> root + release
                                           -> Variant PDFs -> builds/
                                           -> Archives old general PDF

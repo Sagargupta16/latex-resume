@@ -1,11 +1,11 @@
 ---
 name: tailor-variant
-description: Use when Sagar pastes a job description (or a JD link/role title) and wants his resume tailored to it. Picks the best of the 8 LaTeX variants (general, devops, cloud, mlops, aiml, sde, platform, ai-tools), then rewrites that variant's summary/experience/skills/projects/oss .tex files to match the posting. Triggers on "tailor my resume to this", "which resume for this job", "match my resume to this JD", "customize the devops variant for X".
+description: Use when Sagar pastes a job description (or a JD link/role title) and wants his resume tailored to it. Picks the best of the 9 LaTeX variants (general, devops, cloud, mlops, aiml, sde, platform, ai-tools, bigtech), then rewrites that variant's summary/experience/skills/projects/oss .tex files to match the posting. Triggers on "tailor my resume to this", "which resume for this job", "match my resume to this JD", "customize the devops variant for X".
 ---
 
 # Tailor a resume variant to a job description
 
-Tailors one of the 8 role-targeted variants in this repo to a specific job. Editing is surgical and grounded in real facts only.
+Tailors one of the 9 role-targeted variants in this repo to a specific job. Editing is surgical and grounded in real facts only.
 
 ## Hard rules
 
@@ -28,6 +28,7 @@ Tailors one of the 8 role-targeted variants in this repo to a specific job. Edit
 | `sde` | Full-stack, system design, DSA | Skills + projects before experience |
 | `platform` | Internal tooling, self-service, governance | Module-library / guardrail bullets |
 | `ai-tools` | AI agents, MCP, dev tooling | OSS up (MCP PRs), Claude Code skills |
+| `bigtech` | FAANG / AI-lab SWE -- OSS + DSA forward | OSS + projects up, talks section |
 
 ## Steps
 
@@ -41,6 +42,6 @@ Tailors one of the 8 role-targeted variants in this repo to a specific job. Edit
 
 ## Notes
 
-- If the JD fits none of the 8 variants well, propose creating a new variant (copy the closest one) rather than forcing a bad fit -- but ask first.
+- If the JD fits none of the 9 variants well, propose creating a new variant (copy the closest one) rather than forcing a bad fit -- but ask first.
 - Keep portfolio data in sync: significant content changes may also belong in `portfolio-react/data/*.json` (see repo CLAUDE.md "Content Sync").
 - Pair with the `ats-optimize` skill to score coverage before/after editing.

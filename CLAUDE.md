@@ -13,12 +13,12 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## What This Is
 
-Multi-variant LaTeX resume system for Sagar Gupta (DevOps/MLOps Consultant at AWS). Generates 8 role-targeted PDFs from a shared codebase. Auto-compiles via GitHub Actions on every push to `main`. General resume is published as a GitHub Release (versioned + `latest` tag). Variant PDFs are committed to `builds/`.
+Multi-variant LaTeX resume system for Sagar Gupta (DevOps/MLOps Consultant at AWS). Generates 9 role-targeted PDFs from a shared codebase. Auto-compiles via GitHub Actions on every push to `main`. General resume is published as a GitHub Release (versioned + `latest` tag). Variant PDFs are committed to `builds/`.
 
 ## Commands
 
 ```bash
-# Compile all 8 variants at once (preferred for local testing)
+# Compile all 9 variants at once (preferred for local testing)
 ./build.sh
 
 # Compile general resume only
@@ -36,7 +36,7 @@ No package manager or build tool needed -- just a LaTeX distribution (MiKTeX or 
 
 ## Architecture
 
-**Modular LaTeX resume** with shared sections and 8 role-specific variants:
+**Modular LaTeX resume** with shared sections and 9 role-specific variants:
 
 ### Shared sections (`common/`)
 
@@ -80,7 +80,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 1. Edit shared sections in `common/` or variant sections in `variants/<slug>/`
 2. Push to `main`
-3. GitHub Actions: compiles all 8 variants -> general to root + release, variants to `builds/`
+3. GitHub Actions: compiles all 9 variants -> general to root + release, variants to `builds/`
 4. Version bump via commit message: `[major]`, `[minor]`, or default patch
 
 ### CI details worth knowing
