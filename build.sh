@@ -8,7 +8,7 @@ ROOT=$(cd "$(dirname "$0")" && pwd)
 BUILDS="$ROOT/builds"
 mkdir -p "$BUILDS"
 
-VARIANTS=(general devops cloud mlops aiml sde platform ai-tools)
+VARIANTS=(general devops cloud mlops aiml sde platform ai-tools bigtech)
 FAILED=()
 
 for slug in "${VARIANTS[@]}"; do
