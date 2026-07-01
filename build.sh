@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build all 8 resume variants locally
+# Build all 9 resume variants locally
 # Requires pdflatex (MiKTeX or TeX Live)
 
 set -e
@@ -8,7 +8,7 @@ ROOT=$(cd "$(dirname "$0")" && pwd)
 BUILDS="$ROOT/builds"
 mkdir -p "$BUILDS"
 
-VARIANTS=(general devops cloud mlops aiml sde platform ai-tools)
+VARIANTS=(general devops cloud mlops aiml sde platform ai-tools bigtech)
 FAILED=()
 
 for slug in "${VARIANTS[@]}"; do
