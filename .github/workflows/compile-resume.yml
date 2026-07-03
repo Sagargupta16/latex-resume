@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: compile-resume
+  cancel-in-progress: false
+
 jobs:
   compile:
     runs-on: ubuntu-latest
@@ -19,107 +23,71 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Compile general resume
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/general/resume.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
+      - name: Install LaTeX + Carlito + fontawesome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-fonts-extra \
+            fonts-carlito \
+            latexmk
 
-      - name: Compile devops variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/devops/resume-devops.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile cloud variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/cloud/resume-cloud.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile mlops variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/mlops/resume-mlops.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile aiml variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/aiml/resume-aiml.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile sde variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/sde/resume-sde.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile platform variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/platform/resume-platform.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile ai-tools variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/ai-tools/resume-ai-tools.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
-
-      - name: Compile bigtech variant
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: variants/bigtech/resume-bigtech.tex
-          latexmk_use_xelatex: false
-          work_in_root_file_dir: true
+      - name: Compile all variants
+        run: |
+          set -e
+          mkdir -p builds
+          declare -A ROOTS=(
+            [general]=variants/general/resume.tex
+            [devops]=variants/devops/resume-devops.tex
+            [cloud]=variants/cloud/resume-cloud.tex
+            [mlops]=variants/mlops/resume-mlops.tex
+            [aiml]=variants/aiml/resume-aiml.tex
+            [sde]=variants/sde/resume-sde.tex
+            [platform]=variants/platform/resume-platform.tex
+            [ai-tools]=variants/ai-tools/resume-ai-tools.tex
+            [bigtech]=variants/bigtech/resume-bigtech.tex
+          )
+          for slug in "${!ROOTS[@]}"; do
+            root="${ROOTS[$slug]}"
+            dir=$(dirname "$root")
+            name=$(basename "$root" .tex)
+            (cd "$dir" && pdflatex -interaction=nonstopmode "$name.tex") \
+              || { echo "::error::compile failed for $slug"; exit 1; }
+            if [ "$slug" = general ]; then
+              cp "$dir/$name.pdf" resume.pdf
+            else
+              cp "$dir/$name.pdf" "builds/$name.pdf"
+            fi
+          done
 
       - name: Compile cover letters
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: "cover-letters/*.tex"
-          latexmk_use_xelatex: false
-        continue-on-error: true
-
-      - name: Move cover letter PDFs
         run: |
+          set -e
           mkdir -p cover-letters/pdf
-          mv cover-letters/*.pdf cover-letters/pdf/ 2>/dev/null || true
+          shopt -s nullglob
+          for tex in cover-letters/*.tex; do
+            base=$(basename "$tex" .tex)
+            # Skip the template -- it has unfilled placeholders.
+            if [ "$base" = template ]; then
+              continue
+            fi
+            (cd cover-letters && pdflatex -interaction=nonstopmode "$base.tex") \
+              || { echo "::error::cover-letter compile failed for $base"; exit 1; }
+            mv "cover-letters/$base.pdf" "cover-letters/pdf/$base.pdf"
+          done
 
       - name: Archive previous general resume
         run: |
-          git checkout origin/main -- resume.pdf 2>/dev/null || true
-          if [ -f resume.pdf ]; then
+          # Grab the previously-published PDF from origin/main and the commit
+          # that actually last modified it -- not the trigger commit.
+          if git show "origin/main:resume.pdf" > /tmp/prev-resume.pdf 2>/dev/null; then
             mkdir -p resume-old
             DATE=$(date +%Y-%m-%d)
-            HASH=$(git rev-parse --short HEAD)
-            cp resume.pdf "resume-old/resume-${DATE}-${HASH}.pdf"
+            HASH=$(git log -1 --pretty=%h origin/main -- resume.pdf)
+            cp /tmp/prev-resume.pdf "resume-old/resume-${DATE}-${HASH}.pdf"
           fi
-          git checkout -- . 2>/dev/null || true
-
-      - name: Move compiled PDFs to final locations
-        run: |
-          # General resume goes to root
-          cp variants/general/resume.pdf resume.pdf
-
-          # Variant resumes go to builds/
-          mkdir -p builds
-          cp variants/devops/resume-devops.pdf builds/resume-devops.pdf
-          cp variants/cloud/resume-cloud.pdf builds/resume-cloud.pdf
-          cp variants/mlops/resume-mlops.pdf builds/resume-mlops.pdf
-          cp variants/aiml/resume-aiml.pdf builds/resume-aiml.pdf
-          cp variants/sde/resume-sde.pdf builds/resume-sde.pdf
-          cp variants/platform/resume-platform.pdf builds/resume-platform.pdf
-          cp variants/ai-tools/resume-ai-tools.pdf builds/resume-ai-tools.pdf
-          cp variants/bigtech/resume-bigtech.pdf builds/resume-bigtech.pdf
 
       - name: Verify all PDFs exist
         run: |
@@ -127,13 +95,15 @@ jobs:
           ls -la resume.pdf
           echo "=== Variants ==="
           ls -la builds/
+          echo "=== Cover letters ==="
+          ls -la cover-letters/pdf/ 2>/dev/null || echo "(none)"
 
       - name: Commit and push PDFs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add resume.pdf resume-old/ builds/ cover-letters/pdf/
-          git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs"
+          git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs [skip ci]"
           git push
 
       - name: Upload PDFs as artifact
@@ -191,10 +161,16 @@ jobs:
           echo "${{ steps.bump.outputs.next }}" > VERSION
 
       - name: Update CHANGELOG
+        env:
+          HEAD_COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           NEXT="${{ steps.bump.outputs.next }}"
           DATE=$(date +%Y-%m-%d)
-          MSG=$(git log -1 --pretty=%s)
+          # Same reason as the version-bump step: git log HEAD would resolve to
+          # the compile job's bot commit. Use the trigger event's message.
+          MSG="${HEAD_COMMIT_MSG:-$(git log -1 --pretty=%s)}"
+          # First line only, in case the trigger commit has a body.
+          MSG=$(echo "$MSG" | head -n1)
           # Prepend new entry after the first heading line
           sed -i "0,/^## /s//## [${NEXT}] - ${DATE}\n\n- ${MSG}\n\n## /" CHANGELOG.md
 
@@ -203,7 +179,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add VERSION CHANGELOG.md
-          git diff --staged --quiet || git commit -m "chore: bump version to v${{ steps.bump.outputs.next }}"
+          git diff --staged --quiet || git commit -m "chore: bump version to v${{ steps.bump.outputs.next }} [skip ci]"
           git push
 
       - name: Create versioned release
@@ -222,12 +198,16 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           NEXT="v${{ steps.bump.outputs.next }}"
-          # Delete old latest release and tag, then recreate
-          gh release delete latest --yes 2>/dev/null || true
-          git tag -d latest 2>/dev/null || true
-          git push origin :refs/tags/latest 2>/dev/null || true
-          # Create new latest release pointing to the same commit
-          gh release create latest resume.pdf \
-            --title "Latest Resume" \
-            --notes "Always points to the most recent resume version. Currently ${NEXT}." \
-            --latest=false
+          NOTES="Always points to the most recent resume version. Currently ${NEXT}."
+          # Atomic-ish: create-if-missing, then upload with --clobber.
+          # Avoids the old delete+recreate gap where downstream links 404.
+          # --latest=false so the vX.Y.Z release stays "Latest" on the release page.
+          if ! gh release view latest >/dev/null 2>&1; then
+            gh release create latest resume.pdf \
+              --title "Latest Resume" \
+              --notes "$NOTES" \
+              --latest=false
+          else
+            gh release upload latest resume.pdf --clobber
+            gh release edit latest --notes "$NOTES"
+          fi

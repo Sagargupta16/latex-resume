@@ -8,22 +8,34 @@ ROOT=$(cd "$(dirname "$0")" && pwd)
 BUILDS="$ROOT/builds"
 mkdir -p "$BUILDS"
 
-VARIANTS=(general devops cloud mlops aiml sde platform ai-tools bigtech)
+# slug -> tex filename (deterministic, no glob-parsing).
+declare -A TEX=(
+  [general]=resume.tex
+  [devops]=resume-devops.tex
+  [cloud]=resume-cloud.tex
+  [mlops]=resume-mlops.tex
+  [aiml]=resume-aiml.tex
+  [sde]=resume-sde.tex
+  [platform]=resume-platform.tex
+  [ai-tools]=resume-ai-tools.tex
+  [bigtech]=resume-bigtech.tex
+)
+
 FAILED=()
 
-for slug in "${VARIANTS[@]}"; do
+for slug in general devops cloud mlops aiml sde platform ai-tools bigtech; do
   dir="$ROOT/variants/$slug"
-  tex=$(ls "$dir"/resume*.tex 2>/dev/null | head -1)
-  if [ -z "$tex" ]; then
-    echo "SKIP: No .tex file found in $dir"
+  tex="${TEX[$slug]}"
+  name="${tex%.tex}"
+
+  if [ ! -f "$dir/$tex" ]; then
+    echo "SKIP: $dir/$tex not found"
     continue
   fi
 
-  name=$(basename "$tex" .tex)
-  echo "Compiling $slug ($name.tex)..."
-
+  echo "Compiling $slug ($tex)..."
   cd "$dir"
-  if pdflatex -interaction=nonstopmode "$name.tex" > /dev/null 2>&1; then
+  if pdflatex -interaction=nonstopmode "$tex" > /dev/null 2>&1; then
     if [ "$slug" = "general" ]; then
       cp "$name.pdf" "$ROOT/resume.pdf"
       echo "  -> resume.pdf (root)"
@@ -40,7 +52,7 @@ done
 
 echo ""
 if [ ${#FAILED[@]} -eq 0 ]; then
-  echo "All ${#VARIANTS[@]} variants compiled successfully."
+  echo "All ${#TEX[@]} variants compiled successfully."
 else
   echo "FAILED variants: ${FAILED[*]}"
   exit 1
