@@ -56,3 +56,6 @@ cover-letters/pdf/
 .env
 .env.local
 .env.*.local
+
+# Local Claude Code config
+.claude/
