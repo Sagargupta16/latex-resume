@@ -1,33 +1,39 @@
 %-----------PROJECTS-----------------
-\section{\textbf{Personal Projects}}
-\vspace{-2pt}
+\section{\textbf{Projects}}
+\vspace{-1pt}
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP}}{TypeScript, MCP Protocol, AWS Bedrock, Converse API}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
+{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] MCP server exposing AWS Bedrock across text (Llama 4, Mistral, Nova, Claude, DeepSeek R1), image (Nova Canvas, SD 3.5, Titan), and video (Nova Reel, async S3) -- with \texttt{bedrock\_ask} and \texttt{bedrock\_compare} for side-by-side evaluation across 2-5 models. Bearer-token auth fallback for enterprise use.
+    \item[$\diamond$] Personal-finance transaction reconciler with rules engine and CSV/OFX import. Typed API contract between React frontend and FastAPI backend, SHA-256 deduplication on uploads.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+{\href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{GitScope}}{JavaScript, Manifest V3, GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Published Chrome extension for deep GitHub profile insights -- stat grid, language breakdown, activity heatmap, profile comparison. OAuth via Cloudflare Worker (server-side secrets), 5-min caching, zero runtime dependencies.
+    \item[$\diamond$] Published Chrome extension surfacing GitHub repo insights (contributor graphs, dependency health) via GraphQL. Cloudflare Workers proxy handles OAuth and 5-minute response caching.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React 19, FastAPI, SQLite, multi-provider LLM}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
+{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{TypeScript, React, Anthropic API}{2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Self-hosted personal-finance app with an AI chatbot using 15 read-only tool calls (multi-provider LLM, BYOK) across 23 pages -- FIRE calculators, tax estimator, Sankey cash flow, anomaly detection, SHA-256 dedup on CSV/Excel imports.
+    \item[$\diamond$] Prompt-caching and model-routing analyzer that cuts Claude API costs 30–60\%. Ships as a Claude Code plugin plus a web Repo Analyzer (A+ to F grading) and stack-specific CLAUDE.md templates.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, React, FastAPI, TensorFlow, GraphQL}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
+{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, TensorFlow, FastAPI, React, GraphQL}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Dense neural network trained on 121K+ contest records for rating prediction. Automated data pipeline via LeetCode GraphQL, 34 backend + 11 frontend tests, Docker + Render deploy.
+    \item[$\diamond$] Dense neural network trained on 244K+ contest records (MAE $\sim$14). Automated ingest via LeetCode GraphQL, 34 backend + 11 frontend tests, Docker + Render deploy.
+\resumeItemListEnd
+
+\resumeExp
+{Bedrock Multi-Model MCP}{TypeScript, MCP Protocol, AWS Bedrock}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{GitHub}}
+\resumeItemListStart
+    \item[$\diamond$] MCP server routing through 500+ Bedrock models via a single tool interface for Claude Code and Cursor. \texttt{bedrock\_compare} runs side-by-side evaluation across 2–5 models with bearer-token enterprise fallback.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-2pt}
-\small{\textbf{Other Notable Projects:} Blue-Green AWS Terraform (18 modules, ECS Fargate), Claude Skills Marketplace (25-plugin Claude Code marketplace), SelfHub (MCP personal memory server), GroundZeroNN (neural network from scratch, 79.8\% MNIST).}
+\vspace{-1pt}
+\small{\textbf{Other Notable Projects:} Instagram Likes Leaderboard (Preact/TypeScript), Blue-Green AWS Terraform (ECS Fargate/CodePipeline), SelfHub (MCP server + MongoDB).}
 \vspace{-2mm}

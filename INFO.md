@@ -311,9 +311,9 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - 2+ years at AWS Professional Services
 - 6 industry certifications (5 AWS + 1 Terraform)
 - 12 AWS knowledge badges
-- 4x TFC Ambassador
+- 5x TFC Ambassador
 - 2 tech talks delivered
-- 1 APG Pattern published
+- 1 APG Pattern published (plus 2 more peer-reviewed in publication pipeline)
 - Open source PRs: 6 merged (Airflow, Prefect, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins), 1 open (terraform-provider-aws) -- verified 2026-06-18
 - 40+ projects built
 - 2000+ coding problems solved

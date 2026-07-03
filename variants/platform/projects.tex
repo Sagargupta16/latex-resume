@@ -1,25 +1,36 @@
 %-----------PROJECTS-----------------
 \section{\textbf{Projects}}
-\vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, AWS ECS Fargate, ALB, CodePipeline, HCL}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
+{Blue-Green AWS Terraform Platform}{Terraform, ECS Fargate, ALB, CodePipeline}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Production-grade platform IaC for zero-downtime deployments on ECS Fargate with 18 modular Terraform components, KMS encryption, ALB traffic shifting, and least-privilege IAM policies.
-    \item[$\diamond$] Reusable module design enabling teams to deploy with a single module call -- demonstrating self-service infrastructure patterns with governance built in.
+    \item[$\diamond$] Reference platform pattern for zero-downtime service deployment on AWS – Terraform-provisioned ECS Fargate behind ALB with CodePipeline blue-green cutover and automated rollback. Packaged as a reusable module template with tftest coverage.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/mcp-toolkit}{MCP Toolkit}}{TypeScript, MCP Protocol, Node.js}{Mar 2026}{\href{https://github.com/Sagargupta16/mcp-toolkit}{\faGithub\ GitHub}}
+{Bedrock Multi-Model MCP Server}{Python, MCP Protocol, AWS Bedrock}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Developer tooling platform for MCP (Model Context Protocol) server management -- standardized interfaces for AI tool integration with configuration-driven setup and extensible plugin architecture.
+    \item[$\diamond$] Internal-tooling MCP server exposing 500+ Bedrock models behind a single Model Context Protocol endpoint – lets Claude Code, Cursor, and other agent hosts route through one contract instead of per-model glue.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL API, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+{Claude Cost Optimizer}{TypeScript, React, Claude API}{2026}{\href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Chrome extension with modular architecture -- contribution insights, language analytics, and activity visualization. Published on Chrome Web Store with zero runtime dependencies.
+    \item[$\diamond$] Developer tool that models prompt-caching, batch, and model-tier tradeoffs to cut Claude spend by 30–60\% – built for platform teams standardizing LLM usage across product lines.
+\resumeItemListEnd
+
+\resumeExp
+{GitScope}{JavaScript, Manifest V3, GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+\resumeItemListStart
+    \item[$\diamond$] Chrome extension surfacing repository health signals (CI, dependencies, contributor activity) inline on GitHub – Cloudflare Workers proxy caches GraphQL responses to stay under rate limits.
+\resumeItemListEnd
+
+\resumeExp
+{Ledger Sync}{TypeScript, React, FastAPI, SQLite}{Jan 2026}{\href{https://sagargupta.online/ledger-sync/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Personal-finance transaction reconciler with a typed API contract between React frontend and FastAPI backend – used as a template for internal FastAPI + React stacks.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+\small{\textbf{Other Notable Projects:} SelfHub (MCP + MongoDB), LeetCode Rating Predictor (244K+ records, MAE $\sim$14), Instagram Likes Leaderboard, GroundZeroNN, StockSage. See \href{https://github.com/Sagargupta16}{github.com/Sagargupta16}.}

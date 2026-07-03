@@ -6,20 +6,29 @@
 \resumeExp
 {\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, AWS ECS Fargate, ALB, CodePipeline, HCL}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Production-grade IaC for zero-downtime blue-green deployments on ECS Fargate with 18 Terraform modules, KMS encryption, ALB traffic shifting, and least-privilege IAM policies.
-    \item[$\diamond$] Full CI/CD pipeline with CodePipeline, CodeBuild, and CodeDeploy for automated container image builds, test execution, and progressive traffic shifting between blue and green target groups.
+    \item[$\diamond$] Production-grade IaC for zero-downtime blue-green deployments on ECS Fargate across 18 Terraform modules, with KMS encryption, ALB weighted traffic shifting, and least-privilege IAM.
+    \item[$\diamond$] Full pipeline via CodePipeline, CodeBuild, and CodeDeploy for automated image builds, test gates, and progressive traffic cut-over between blue and green target groups with rollback on alarm.
 \resumeItemListEnd
 
 \resumeExp
 {\href{https://github.com/Sagargupta16/DevOps-AWS-FARM}{DevOps-AWS-FARM}}{Terraform, Docker, GitHub Actions, FastAPI, React, MongoDB}{Aug 2024}{\href{https://github.com/Sagargupta16/DevOps-AWS-FARM}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Full-stack FARM application with production DevOps pipeline -- multi-stage Docker builds, GitHub Actions CI/CD, Terraform infrastructure, and automated deployments to AWS ECS.
+    \item[$\diamond$] Full-stack FARM application with production DevOps pipeline – multi-stage Docker builds, GitHub Actions CI/CD, Terraform-provisioned infrastructure, and automated ECS deployments with health-check gating.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL API, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
 \resumeItemListStart
-    \item[$\diamond$] Chrome extension adding contribution insights to any GitHub profile -- streaks, language breakdown, PR stats, and activity heatmap. OAuth via Cloudflare Worker, 5-min caching, zero runtime dependencies.
+    \item[$\diamond$] Chrome extension adding contribution insights to any GitHub profile – streaks, language breakdown, PR stats, and activity heatmap. OAuth proxy on Cloudflare Workers, 5-minute edge caching, zero runtime dependencies.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite}{Jan 2026}{\href{https://sagargupta.online/ledger-sync/}{\faGlobe\ Live}}
+\resumeItemListStart
+    \item[$\diamond$] Personal-finance transaction reconciler with rules-based categorization, duplicate detection across statement imports, and a typed FastAPI backend served behind a static React UI.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+\vspace{1pt}
+\small{\textbf{Other Notable Projects:} Claude Cost Optimizer (30--60\% Claude spend cuts via model routing + prompt-cache tuning), Bedrock Multi-Model MCP (500+ models via one server), LeetCode Rating Predictor (244K+ contest records, MAE \textasciitilde14), Instagram Likes Leaderboard.}
+\vspace{-2mm}
