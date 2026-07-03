@@ -104,7 +104,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.pdf resume-old/ builds/ cover-letters/pdf/
+          # cover-letters/pdf/ is gitignored (real letters stay local); skip it.
+          git add resume.pdf resume-old/ builds/
           git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs [skip ci]"
           git push
 
