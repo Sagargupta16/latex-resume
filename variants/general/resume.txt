@@ -1,0 +1,172 @@
+Sagar Gupta
+Cloud Consultant ­ DevOps / MLOps | AWS Professional Services | Hyderabad, India sagargupta.online | Sagargupta16 | sagar-gupta-16-10 | sg85207@gmail.com | +91-8770532413
+
+Summary
+
+Cloud Consultant at AWS Professional Services (2 years) delivering DevOps, MLOps, and cloud-platform engagements for financialservices and technology customers (RWS, State Street, DTCC). Fluent across AWS landing zones and governance (Organizations, SCPs, Terraform, GitHub Actions), production MLOps on SageMaker (pipelines, blue-green endpoints, drift detection), full-stack apps (React, FastAPI, Node.js), and AI-assisted developer tooling (Claude Code plugins, MCP servers, agent skills). 6 upstream OSS PRs merged across Apache Airflow, Prefect, Feast, awslabs/mcp, cloudposse/tfstate-backend, and awslabs/agent-plugins. 6x AWS/HashiCorp certified. LeetCode Knight ­ 2007 peak, 1200+ problems, 100+ contests.
+
+Experience
+
+Amazon Web Services (AWS) Cloud Consultant ­ Professional Services (DevOps/MLOps)
+
+Aug 2024 ­ Present Hyderabad, India
+
+ Lead DevOps Consultant ­ RWS (Feb 2026 ­ Present): Designed and built the cloud platform for a data-centre migration on-
+
+boarding 50+ application workloads into 135+ AWS accounts ­ authoring AWS Organizations OU structure, SCPs, tag policies,
+
+AWS Config rules, and Security Hub standards mapped to CCMv4-aligned controls. Architected Transit Gateway hub-and-
+
+spoke networking with VPN/Direct Connect hybrid connectivity and centralized egress inspection. Automated multi-account
+
+provisioning end-to-end with Terraform + GitHub Actions, cutting per-account setup from 3+ days to under 4 hours (~90%
+
+reduction). Integrated Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs.
+
+ DevOps Consultant ­ State Street (Oct 2024 ­ Aug 2025): Delivered a 38+ service self-service Terraform module library
+
+adopted by application teams as the client's cloud-platform standard, with automated unit tests via tftest + PyTest. Ar-
+
+chitected 1000+ preventative Config/Security-Hub controls mapped to CCMv4.0 compliance. Earned 10/10 CSAT and 3x
+
+consecutive 5/5 Pulse ratings.
+
+ DevOps Consultant ­ DTCC (Aug 2025 ­ Dec 2025): Modernized legacy Terraform to cloud-native IaC patterns on high-
+
+sensitivity financial workloads. Used Amazon Q to accelerate code analysis and migration assessments across the estate.
+
+ MLOps Pipeline (Internal SME Program, Jun ­ Aug 2025): Built a SageMaker medical-image-classification pipeline with
+
+blue-green endpoint deployment, auto-scaling, and drift detection ­ provisioned via Terraform + CodePipeline, fronted by
+
+CloudFront with API Gateway + Lambda inference.
+
+ Internal Impact: Published APG pattern "Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub"
+
+(plus 2 more peer-reviewed in publication pipeline). MLOps SME Program Graduate. 5x TFC Ambassador (AI/ML, NGDE
+
+Graduated, CloudOps, Agentic AI, Serverless). Delivered 2 org-wide tech talks on Terraform testing (2025) and GitOps
+
+pipeline gating (2026). Associate Speaker Certified (2026).
+
+Amazon Web Services (AWS)
+
+Mar 2024 ­ Jul 2024
+
+Associate Professional Services ­ DevOps (Internship)
+
+Hyderabad, India
+
+ Migrated an on-premises application to AWS ECS with blue-green deployment via Terraform, CodePipeline, and CodeDeploy
+
+­ enabling zero-downtime releases. Instrumented X-Ray and CloudWatch distributed tracing for production observability.
+
+Ikarus-3D Software Developer Associate (Internship)
+
+May 2023 ­ Jul 2023 Mohali, India
+
+ Containerized a production application on AWS ECS/ECR with GitHub Actions CI/CD, and deployed SonarQube on EC2 + RDS
+
+to embed continuous code-quality analysis into the delivery pipeline.
+
+Industry Certifications (6)
+AWS: Solutions Architect ­ Associate | Developer ­ Associate | Machine Learning Engineer ­ Associate AWS: AI Practitioner | Cloud Practitioner HashiCorp: Terraform Associate (003)
+Education
+National Institute of Technology Warangal, Telangana Master of Computer Applications (MCA) | NIMCET AIR 208 Sanskar College of Professional Studies (DAVV University), Indore Bachelor of Computer Applications (BCA)
+
+Sep 2021 ­ Jul 2024 CGPA: 8.38
+May 2018 ­ Aug 2021 CGPA: 7.34
+
+Personal Projects
+
+Ledger Sync
+
+Jan 2026
+
+TypeScript, React 19, FastAPI, SQLite, Tailwind CSS, AWS Bedrock, OpenAI, Anthropic
+
+GitHub | Live
+
+ Self-hosted personal-finance reconciler with an AI chatbot backed by 15 read-only tool calls (App mode or BYOK, multi-
+
+provider LLM) answering spending, tax, and goal questions across 23 pages.
+
+ FIRE calculator (Lean/Barista/Standard/Fat), Coast FIRE, India FY tax estimator, 8-metric Financial Health Score, Sankey cash
+
+flow, anomaly and recurring-transaction detection, SHA-256 deduplication on Excel/CSV imports.
+
+GitScope
+
+Mar 2026
+
+JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers
+
+GitHub | Chrome Web Store
+
+ Published Chrome extension adding deep GitHub profile insights ­ 9-stat grid, language breakdown, activity heatmap, pro-
+
+file comparison, follow leaderboard. OAuth handled by Cloudflare Worker (server-side secrets) with 5-minute caching and
+
+zero runtime dependencies.
+
+Claude Cost Optimizer
+
+Mar 2026
+
+Claude Code Plugin, React, Vite, TypeScript, Python
+
+GitHub | Live
+
+ Installable Claude Code plugin with a cost-mode skill (lite/standard/strict) that cuts AI coding spend by 30-60% via concise
+
+responses, model routing, and budget hooks. Ships a web Repo Analyzer (A+ to F grading), Cost Calculator, and stack-specific
+
+CLAUDE.md templates.
+
+Bedrock Multi-Model MCP
+
+Apr 2026
+
+TypeScript, MCP Protocol, AWS Bedrock, Converse API, Nova Canvas, Nova Reel
+
+GitHub
+
+ MCP server routing through 500+ AWS Bedrock models across text (Llama 4, Mistral, Nova, Claude, Cohere, DeepSeek R1),
+
+image (Nova Canvas, SD 3.5, Titan, SDXL), and video (Nova Reel, async S3) ­ with bedrock_ask and bedrock_compare for
+
+side-by-side evaluation across 2-5 models. Bearer-token auth fallback for enterprise use.
+
+LeetCode Rating Predictor
+
+Dec 2023
+
+Python, React, FastAPI, TensorFlow, GraphQL
+
+GitHub | Live
+
+ Dense neural network trained on 244K+ contest records (MAE ~14) for LeetCode rating prediction. Automated ingest via
+
+LeetCode GraphQL, 34 backend + 11 frontend tests, Docker + Render deploy.
+
+Other Notable Projects: Blue-Green AWS Terraform (18 modules, ECS Fargate + CodePipeline), Claude Skills Marketplace (25-
+
+plugin Claude Code marketplace), SelfHub (MCP personal-memory server), Instagram Likes Leaderboard (browser extension),
+
+GroundZeroNN (NN from scratch, 79.8% MNIST).
+
+Open Source Contributions
+· Apache Airflow (46K) ­ Add template_fields support to SalesforceBulkOperator (#63109, merged) · hashicorp/terraform-provider-aws (10K) ­ Fix IoT cloudwatch_metric substitution template validation (#46867, open) · PrefectHQ/prefect (21K) ­ Document deployment steps as Python functions (#20956, merged) · feast-dev/feast (9K) ­ Add Claude Code agent skills for Feast (#6081, merged) · awslabs/mcp (8K) ­ Fix Kendra documentation menu to match source directory (#2607, merged) · awslabs/agent-plugins ­ Guard defusedxml extension load (#132, merged) · cloudposse/terraform-aws-tfstate-backend ­ Add S3 native locking docs, fix variable descriptions (#197, merged)
+
+Technical Skills
+Cloud & Infrastructure: AWS (Organizations, SCPs, Landing Zone, Control Tower, Transit Gateway, Direct Connect, VPN, Security Hub, Config, IAM, ECS, Lambda, API Gateway, CloudFront, EventBridge, CloudWatch, X-Ray, CodePipeline, CodeDeploy), Terraform, Docker, Ansible DevOps & Automation: GitHub Actions, CI/CD, GitOps, Blue-Green Deployments, tftest, PyTest, cfn-lint/cfn-guard, SonarQube MLOps & AI/ML: SageMaker (Pipelines, Endpoints, Model Monitor, Drift Detection), TensorFlow, PyTorch, Scikit-learn, RAG Pipelines, LLMOps AI Developer Tools: Claude Code (custom skills, MCP servers, hooks, subagents), Amazon Q, Kiro, GitHub Copilot, MCP Protocol, AWS Bedrock (Nova, Claude, Llama) Languages: Python, HCL, TypeScript, JavaScript, C++, Java, SQL, Bash Frameworks & Data: React, Next.js, Node.js, Express, FastAPI, MongoDB, PostgreSQL, SQLite
+
+Achievements
+· Rank 1289 (Top 5%) at Google Kick Start Round E '22. · 1st Place ­ Coding Cauldron Online, Version '23 (NIT Trichy). · 1st Place ­ QFiesta, IGNOSI '22 (NIT Warangal). · 2nd Place ­ Manage the Damage, Version '23 (NIT Trichy) and Trial By Code, IGNOSI '22 (NIT Warangal). · 3rd Place ­ Logic Head, INFOTREK '22 (NIT Trichy) and MOTHRA, Version '21 (NIT Trichy). · 4th Place ­ TriNIT Hackathon (NIT Warangal). · NIMCET AIR 208 (2021); MCA CGPA 8.38 (First Division with Distinction), NIT Warangal.
+
+Certificate
+
+Coding Profiles
+LeetCode (Sagargupta1610): Knight badge, 2007 peak rating, 1200+ problems solved, 100+ contests. GeeksforGeeks (sagargupta10): 400+ DSA problems solved. HackerRank (Sagargupta1610): 6 Star (Problem Solving), 5 Star (C++).
+
+

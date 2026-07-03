@@ -1,10 +1,16 @@
-%-----------OPEN SOURCE-----------------
-\section{\textbf{Open Source Contributions}}
+%-----------OSS-----------------
+\section{\textbf{Open Source}}
 \vspace{-2pt}
-\resumeItemListStart
-    \resumeAchievement{\href{https://github.com/hashicorp/terraform-provider-aws/pull/46867}{\textbf{hashicorp/terraform-provider-aws} (10K\faStarO)} -- Fix IoT cloudwatch\_metric substitution template validation (\#46867)}{}
-    \resumeAchievement{\href{https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197}{\textbf{cloudposse/terraform-aws-tfstate-backend} (437\faStarO)} -- Add S3 native locking docs, fix variable descriptions (\#197, merged)}{}
-    \resumeAchievement{\href{https://github.com/apache/airflow/pull/63109}{\textbf{Apache Airflow} (44K\faStarO)} -- Add template\_fields to SalesforceBulkOperator (\#63109, merged)}{}
-    \resumeAchievement{\href{https://github.com/PrefectHQ/prefect/pull/20956}{\textbf{PrefectHQ/prefect} (21K\faStarO)} -- Document custom deployment steps as Python functions (\#20956, merged)}{}
-    \resumeAchievement{\href{https://github.com/awslabs/mcp/pull/2607}{\textbf{awslabs/mcp} (8K\faStarO)} -- Fix Kendra documentation menu to match source directory (\#2607, merged)}{}
-\resumeItemListEnd
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+    6 upstream PRs merged, 1 open – prioritizing platform, IaC, and agent-tooling projects:} \\
+    \textbf{Apache Airflow} \href{https://github.com/apache/airflow/pull/63109}{\#63109} (merged): Added \texttt{template\_fields} to \texttt{SalesforceBulkOperator} so operator args resolve via Jinja at runtime. \\
+    \textbf{HashiCorp terraform-provider-aws} \href{https://github.com/hashicorp/terraform-provider-aws/pull/46867}{\#46867} (open): IoT CloudWatch metric substitution validation – hardens platform-team guardrails against malformed metric templates. \\
+    \textbf{PrefectHQ/prefect} \href{https://github.com/PrefectHQ/prefect/pull/20956}{\#20956} (merged): Documented deployment-steps-as-Python, clarifying the platform contract for deployment authors. \\
+    \textbf{feast-dev/feast} \href{https://github.com/feast-dev/feast/pull/6081}{\#6081} (merged): Shipped Claude Code agent skills for Feast to standardize how teams work with the feature store. \\
+    \textbf{awslabs/mcp} \href{https://github.com/awslabs/mcp/pull/2607}{\#2607} (merged): Fixed the Kendra docs menu so the MCP server surfaces the correct navigation. \\
+    \textbf{cloudposse/terraform-aws-tfstate-backend} \href{https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197}{\#197} (merged): Documented S3 native locking – removes the need for a separate DynamoDB lock table in new platform bootstraps. \\
+    \textbf{awslabs/agent-plugins} \href{https://github.com/awslabs/agent-plugins/pull/132}{\#132} (merged): Added a \texttt{defusedxml} guard to the extension loader, closing an XXE surface in agent-plugin ingestion.
+    }
+\end{itemize}
+\vspace{-2mm}
