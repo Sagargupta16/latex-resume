@@ -1,0 +1,17 @@
+%-----------BODY (shared across all variants)-----------------
+% Compiled from within variants/<slug>/, so \input{summary} etc. resolve
+% to the variant's own files. Common files use ../../common/<file>.
+% A variant may define \variantExtraSections before \input-ing this body
+% to inject an extra section (e.g. bigtech: \newcommand{\variantExtraSections}{\input{talks}}).
+\providecommand{\variantExtraSections}{}
+
+\input{../../common/header}
+\input{summary}
+\input{experience}
+\input{../../common/certifications}
+\input{../../common/education}
+\input{projects}
+\input{oss}
+\input{skills}
+\variantExtraSections
+\input{achievements}

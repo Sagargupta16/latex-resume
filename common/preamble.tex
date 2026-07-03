@@ -3,10 +3,15 @@
 % Author : Sagar Gupta
 %------------------------
 
+% Paper size defaults to A4. To override for a variant (e.g. bigtech -> Letter),
+% put `\PassOptionsToClass{letterpaper}{article}` BEFORE `\input{../../common/preamble}`.
 \documentclass[a4paper,11pt]{article}
+
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
 \usepackage[sfdefault]{carlito}
-\usepackage{latexsym}
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{ragged2e}
@@ -19,7 +24,21 @@
 \usepackage{fontawesome}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
+% ATS: force \pdftex to map \textendash and friends to real Unicode in the text layer.
+% Without these, `--` extracts as U+00AD (soft-hyphen) and gets stripped by ATS normalizers.
+\input{glyphtounicode}
+\pdfgentounicode=1
+
 \geometry{left=1.4cm, top=0.9cm, right=1.4cm, bottom=0.9cm}
+
+% PDF metadata. Consumed by ATS + LinkedIn parser + screen readers.
+\hypersetup{
+  pdftitle={Sagar Gupta – Cloud Consultant (DevOps/MLOps) Resume},
+  pdfauthor={Sagar Gupta},
+  pdfsubject={Resume – AWS Cloud/DevOps/MLOps Consultant},
+  pdfkeywords={AWS, DevOps, MLOps, Terraform, SageMaker, Cloud Consultant, Professional Services, CI/CD, Infrastructure as Code, Kubernetes, Python, TypeScript},
+  pdfcreator={LaTeX – Sagar Gupta}
+}
 
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
@@ -45,11 +64,15 @@
 }
 
 \newcommand{\resumeAchievement}[2]{
-\item[$\bullet$] \hspace{-2mm}
+\item[\textbullet] \hspace{-2mm}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
         {#1} & \textit{\footnotesize{#2}}
     \end{tabular*}
 }
+
+% ATS-friendly bullet marker for experience items. `\textbullet` extracts cleanly
+% as a real bullet character; `$\diamond$` extracts as an empty string.
+\newcommand{\resumeBullet}{\item[\textbullet]}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=0mm]}
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=2ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
