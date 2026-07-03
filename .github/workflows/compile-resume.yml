@@ -26,12 +26,14 @@ jobs:
       - name: Install LaTeX + Carlito + fontawesome
         run: |
           sudo apt-get update
+          # Ubuntu ships Carlito as fonts-crosextra-carlito (Debian upstream name);
+          # `fonts-carlito` is a rename that never landed on noble/main.
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-recommended \
             texlive-fonts-recommended \
             texlive-latex-extra \
             texlive-fonts-extra \
-            fonts-carlito \
+            fonts-crosextra-carlito \
             latexmk
 
       - name: Compile all variants
