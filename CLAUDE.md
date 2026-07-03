@@ -30,9 +30,9 @@ cd variants/devops && pdflatex resume-devops.tex && cd ../..
 
 No package manager or build tool needed -- just a LaTeX distribution (MiKTeX or TeX Live). The GitHub Actions workflow handles compilation and release automatically on push.
 
-### Legacy root file
+### Local build
 
-`resume.tex` at the repo root is a **back-compat shim** that re-`\input`s `variants/general/*` so `pdflatex resume.tex` from root still works. The canonical source for the general variant is `variants/general/resume.tex` -- edit there, not at the root.
+The canonical source for the general variant is `variants/general/resume.tex`. The old root-level `resume.tex` shim has been deleted; compile from within the variant directory (`cd variants/general && pdflatex resume.tex`).
 
 ## Architecture
 
@@ -65,7 +65,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 - Each variant's main `.tex` file inputs `../../common/preamble`, `../../common/header`, `../../common/education`, `../../common/certifications` for shared content
 - Local `\input{summary}` etc. resolve to the variant directory's own files
-- Section ordering differs per variant (e.g., SDE puts Skills + Projects before Experience)
+- All variants share the same section order: Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements. Bigtech inserts a Talks & Publications section between Skills and Achievements.
 - Must compile from within the variant directory (`cd variants/<slug>`)
 
 ### Other directories
@@ -92,7 +92,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 ## Conventions
 
-- **Font**: Carlito (sans-serif), 11pt, A4 paper
+- **Font**: Carlito (sans-serif), 11pt. **Paper**: A4 for all variants except `bigtech`, which uses `letterpaper` (FAANG US-recruiter default).
 - **Custom commands**: `\resumeExp`, `\resumeEdu`, `\resumeAchievement` for consistent formatting
 - **Hyperlinks**: All URLs, certifications, and project links are clickable (blue)
 - **Icons**: FontAwesome (`\faGithub`, `\faGlobe`, `\faLinkedinSquare`, etc.)

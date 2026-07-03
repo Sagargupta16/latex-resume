@@ -34,12 +34,19 @@ variants/*/*.aux
 variants/*/*.log
 variants/*/*.out
 
-# Superpowers brainstorm sessions (ephemeral)
+# AI/agent scratch dirs -- never commit
+.remember/
 .superpowers/
+.internal/
 
 # Internal AWS ProServe documents -- never commit (internal/confidential source material)
 Sagar Gupta.pdf
 *ProServe*.pdf
+
+# Cover letters -- kept local, never commit
+cover-letters/*.tex
+!cover-letters/*.tex.example
+cover-letters/pdf/
 
 # Token files -- never commit secrets
 *token*

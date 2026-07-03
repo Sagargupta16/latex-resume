@@ -34,12 +34,13 @@ LaTeX resume with 9 role-targeted variants and automated PDF compilation via Git
 common/                     # Shared sections (edit once, used by all variants)
   preamble.tex              # Packages, fonts, geometry, custom commands
   header.tex                # Name, contact info, links
+  body.tex                  # Shared section order + \input scaffold for every variant
   education.tex             # Degrees
   certifications.tex        # 6 AWS/Terraform certs
 
-variants/                   # Role-specific content
+variants/                   # Role-specific content (9 variants)
   general/                  # Default resume (versioned releases)
-    resume.tex              # Main file - inputs common + local sections
+    resume.tex              # Main file - inputs common/body + local sections
     summary.tex, experience.tex, skills.tex, projects.tex, oss.tex, achievements.tex
   devops/                   # DevOps-focused variant
     resume-devops.tex       # Main file
@@ -50,30 +51,21 @@ variants/                   # Role-specific content
   sde/
   platform/
   ai-tools/
-  bigtech/
+  bigtech/                  # Uses letterpaper (FAANG US-recruiter default); others use A4
 
 builds/                     # Compiled variant PDFs (auto-committed)
 resume.pdf                  # Compiled general (root, released)
-resume-old/                 # Archived previous general PDFs
-cover-letters/              # Cover letter templates
+resume-old/                 # Archived previous general PDFs (last 6 kept, older pruned)
+cover-letters/              # Cover letter template (real letters .gitignored)
 ```
 
-Each variant's main `.tex` file inputs shared sections from `common/` and local role-specific sections:
+All 9 variants share the same section order, wired via `common/body.tex`:
 
-```latex
-\input{../../common/preamble}
-\begin{document}
-\input{../../common/header}          % shared
-\input{summary}                      % role-specific
-\input{experience}                   % role-specific bullets
-\input{../../common/certifications}  % shared
-\input{oss}                          % role-specific PRs
-\input{skills}                       % role-specific ordering
-\input{projects}                     % role-specific selection
-\input{../../common/education}       % shared
-\input{achievements}                 % role-specific
-\end{document}
 ```
+Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements
+```
+
+`bigtech` inserts a `Talks & Publications` section between Skills and Achievements via `\variantExtraSections`. Each variant's main `.tex` sets up preamble + paper size, then `\input{../../common/body}` handles the rest.
 
 ## How It Works
 
@@ -103,8 +95,10 @@ A reusable LaTeX template for company-specific cover letters.
 
 Requires a LaTeX distribution ([MiKTeX](https://miktex.org/download) or [TeX Live](https://tug.org/texlive/)).
 
+The old root-level `resume.tex` shim was removed; compile from the variant directory:
+
 ```bash
-# Compile general resume
+# Compile general resume (canonical local build)
 cd variants/general && pdflatex resume.tex && cd ../..
 
 # Compile a specific variant
@@ -112,6 +106,20 @@ cd variants/devops && pdflatex resume-devops.tex && cd ../..
 ```
 
 Or use VS Code with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension.
+
+## Deployment
+
+Push to `main` -> GitHub Actions builds all 9 PDFs, commits them back, and cuts a new versioned release with `latest` tag realigned.
+
+### Archive policy
+
+`resume-old/` keeps the 6 most recent archived general PDFs; older ones are deleted on the 1st of each month. To prune manually:
+
+```bash
+ls -t resume-old/*.pdf | tail -n +7 | xargs rm -f
+```
+
+Full history lives on [GitHub Releases](../../releases) -- each release keeps its PDF attached.
 
 ## Integration
 

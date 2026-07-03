@@ -5,7 +5,9 @@ description: Use when Sagar wants a company- and role-specific cover letter gene
 
 # Generate a cover letter
 
-Produces a tailored, ready-to-compile cover letter from [cover-letters/template.tex](../../../cover-letters/template.tex).
+Produces a tailored, ready-to-compile cover letter from [cover-letters/template.tex.example](../../../cover-letters/template.tex.example).
+
+Real cover letters (`cover-letters/*.tex`) and their compiled PDFs (`cover-letters/pdf/`) are `.gitignore`d so they never get committed. The `.example` template is the only tracked file.
 
 ## Hard rules
 
@@ -18,7 +20,7 @@ Produces a tailored, ready-to-compile cover letter from [cover-letters/template.
 ## Steps
 
 1. **Gather inputs.** Need: company name, role title, and ideally the JD or 1-2 specifics about the company. If the company specifics are missing, ask for them or the JD -- a generic "I admire your company" opener is the one thing this skill must avoid.
-2. **Copy the template.** Create `cover-letters/<company>-<role>.tex` (kebab-case, e.g. `stripe-platform-engineer.tex`) from [template.tex](../../../cover-letters/template.tex). Keep the header block verbatim.
+2. **Copy the template.** Create `cover-letters/<company>-<role>.tex` (kebab-case, e.g. `stripe-platform-engineer.tex`) from [template.tex.example](../../../cover-letters/template.tex.example). Keep the header block verbatim. The new `.tex` file will be `.gitignore`d automatically.
 3. **Fill placeholders:**
    - `COMPANY\_NAME`, `ROLE\_TITLE`, `CITY, STATE` -- from inputs.
    - `WHAT\_EXCITES\_YOU` -- one specific, true reason tied to the company/role (their product, scale, tech stack, mission). Not flattery.
