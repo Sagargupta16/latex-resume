@@ -41,8 +41,9 @@ The canonical source for the general variant is `variants/general/resume.tex`. T
 ### Shared sections (`common/`)
 
 - `preamble.tex` - Packages, fonts, geometry, custom commands (`\resumeExp`, `\resumeEdu`, `\resumeAchievement`)
+- `body.tex` - Shared document body: inputs the header, variant-local sections, certifications, and education in the canonical order; exposes a `\variantExtraSections` hook
 - `header.tex` - Name, contact info, links
-- `education.tex` - NIT Warangal MCA + BCA
+- `education.tex` - NIT Warangal MCA + DAVV (Indore) BCA
 - `certifications.tex` - 6 AWS/Terraform certifications
 
 ### Variant sections (`variants/<slug>/`)
@@ -63,8 +64,8 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 ### How variants work
 
-- Each variant's main `.tex` file inputs `../../common/preamble`, `../../common/header`, `../../common/education`, `../../common/certifications` for shared content
-- Local `\input{summary}` etc. resolve to the variant directory's own files
+- Each variant's main `.tex` file is a thin wrapper: it inputs `../../common/preamble`, then `../../common/body` inside the document. `body.tex` inputs the shared header/certifications/education and the variant-local sections
+- Local `\input{summary}` etc. (from `body.tex`) resolve to the variant directory's own files because compilation runs from the variant directory
 - All variants share the same section order: Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements. Bigtech inserts a Talks & Publications section between Skills and Achievements.
 - Must compile from within the variant directory (`cd variants/<slug>`)
 
@@ -86,9 +87,9 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 ### CI details worth knowing
 
 - **Path filter**: the `Compile Resume` workflow only runs on pushes that touch `common/*.tex`, `variants/**/*.tex`, or `cover-letters/*.tex`. README/docs-only pushes do **not** produce a new PDF or release. Use "Run workflow" in the Actions tab if you need to force a rebuild.
-- **Two jobs**: `compile` builds PDFs and commits them back to `main` (as `github-actions[bot]`); `release` then bumps `VERSION`, prepends a CHANGELOG entry, creates a `vX.Y.Z` release, and **recreates the `latest` tag/release** so downstream links (profile README, portfolio site) update automatically.
+- **Two jobs**: `compile` builds PDFs and commits them back to `main` (as `github-actions[bot]`); `release` then bumps `VERSION`, prepends a CHANGELOG entry, creates a `vX.Y.Z` release, and **updates the `latest` release in place** (uploads the new PDF with `--clobber`; created once if missing) so downstream links (profile README, portfolio site) update automatically.
 - **Never edit `VERSION` or `CHANGELOG.md` manually** in the same commit as content changes -- the `release` job owns both files and will race with you. Let the workflow manage them.
-- **Auto-commits from CI**: the workflow pushes `resume.pdf`, `builds/`, `resume-old/`, and `cover-letters/pdf/` back to `main`. Expect your `git pull` to pick up a `chore: auto-compile resume PDFs` commit after every content push.
+- **Auto-commits from CI**: the workflow pushes `resume.pdf`, `builds/`, and `resume-old/` back to `main` (`cover-letters/pdf/` is gitignored -- real letters stay local, CI only uploads them as an artifact). Expect your `git pull` to pick up a `chore: auto-compile resume PDFs` commit after every content push.
 
 ## Conventions
 
