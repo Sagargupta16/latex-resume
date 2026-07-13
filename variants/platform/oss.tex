@@ -3,13 +3,11 @@
 \vspace{-2pt}
 \begin{itemize}[leftmargin=0.05in, label={}]
     \small{\item{
-    6 upstream PRs merged, 1 open – prioritizing platform, IaC, and agent-tooling projects:} \\
+    4 upstream PRs merged, 1 open – prioritizing platform, IaC, and agent-tooling projects:} \\
     \textbf{Apache Airflow} \href{https://github.com/apache/airflow/pull/63109}{\#63109} (merged): Added \texttt{template\_fields} to \texttt{SalesforceBulkOperator} so operator args resolve via Jinja at runtime. \\
     \textbf{HashiCorp terraform-provider-aws} \href{https://github.com/hashicorp/terraform-provider-aws/pull/46867}{\#46867} (open): IoT CloudWatch metric substitution validation – hardens platform-team guardrails against malformed metric templates. \\
     \textbf{PrefectHQ/prefect} \href{https://github.com/PrefectHQ/prefect/pull/20956}{\#20956} (merged): Documented deployment-steps-as-Python, clarifying the platform contract for deployment authors. \\
     \textbf{feast-dev/feast} \href{https://github.com/feast-dev/feast/pull/6081}{\#6081} (merged): Shipped Claude Code agent skills for Feast to standardize how teams work with the feature store. \\
-    \textbf{awslabs/mcp} \href{https://github.com/awslabs/mcp/pull/2607}{\#2607} (merged): Fixed the Kendra docs menu so the MCP server surfaces the correct navigation. \\
-    \textbf{cloudposse/terraform-aws-tfstate-backend} \href{https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197}{\#197} (merged): Documented S3 native locking – removes the need for a separate DynamoDB lock table in new platform bootstraps. \\
     \textbf{awslabs/agent-plugins} \href{https://github.com/awslabs/agent-plugins/pull/132}{\#132} (merged): Added a \texttt{defusedxml} guard to the extension loader, closing an XXE surface in agent-plugin ingestion.
     }
 \end{itemize}
