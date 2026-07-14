@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.7] - 2026-07-14
+
+- docs: add merged axios PR to OSS section (4 -> 5 merged) (#11)
+
 ## [1.1.6] - 2026-07-13
 
 - docs: trim OSS section to 4 high-signal merged PRs (#10)
