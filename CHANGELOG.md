@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.9] - 2026-08-02
+
+- feat: link aws-samples SageMaker MLOps publication on the SME bullet (#12)
+
 ## [1.1.8] - 2026-07-17
 
 - feat: link every project in Other Notable Projects lines across variants
