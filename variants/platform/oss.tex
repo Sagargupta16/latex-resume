@@ -3,13 +3,15 @@
 \vspace{-2pt}
 \begin{itemize}[leftmargin=0.05in, label={}]
     \small{\item{
-    5 upstream PRs merged, 1 open – prioritizing platform, IaC, and agent-tooling projects:} \\
+    7 upstream PRs merged, 1 open – prioritizing platform, IaC, and agent-tooling projects:} \\
+    \textbf{aws-ia/terraform-aws-vpc} \href{https://github.com/aws-ia/terraform-aws-vpc/pull/184}{v4.8.0} (merged): Root-caused why the Cloud WAN attachment was destroyed and recreated on unrelated changes when \texttt{create\_vpc = false}; the fix shipped co-authored in the official AWS-IA module. \\
     \textbf{axios} \href{https://github.com/axios/axios/pull/11059}{\#11059} (merged): Synthesized the \texttt{AxiosError} message from \texttt{AggregateError.errors} so dual-stack connection failures surface actionable detail instead of an empty message. \\
     \textbf{Apache Airflow} \href{https://github.com/apache/airflow/pull/63109}{\#63109} (merged): Added \texttt{template\_fields} to \texttt{SalesforceBulkOperator} so operator args resolve via Jinja at runtime. \\
     \textbf{HashiCorp terraform-provider-aws} \href{https://github.com/hashicorp/terraform-provider-aws/pull/46867}{\#46867} (open): IoT CloudWatch metric substitution validation – hardens platform-team guardrails against malformed metric templates. \\
     \textbf{PrefectHQ/prefect} \href{https://github.com/PrefectHQ/prefect/pull/20956}{\#20956} (merged): Documented deployment-steps-as-Python, clarifying the platform contract for deployment authors. \\
     \textbf{feast-dev/feast} \href{https://github.com/feast-dev/feast/pull/6081}{\#6081} (merged): Shipped Claude Code agent skills for Feast to standardize how teams work with the feature store. \\
-    \textbf{awslabs/agent-plugins} \href{https://github.com/awslabs/agent-plugins/pull/132}{\#132} (merged): Added a \texttt{defusedxml} guard to the extension loader, closing an XXE surface in agent-plugin ingestion.
+    \textbf{awslabs/agent-plugins} \href{https://github.com/awslabs/agent-plugins/pull/132}{\#132} (merged): Added a \texttt{defusedxml} guard to the extension loader, closing an XXE surface in agent-plugin ingestion. \\
+    \textbf{lucide} \href{https://github.com/lucide-icons/lucide/pull/4512}{\#4512} (merged): Fixed the Vue Icon component to accept the kebab-case \texttt{icon-node} prop, removing an undefined-render crash.
     }
 \end{itemize}
 \vspace{-2mm}
