@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.11] - 2026-09-23
+
+- feat: add second aws sample, organizations governance on control tower (#14)
+
 ## [1.1.10] - 2026-08-13
 
 - docs: add lucide + terraform-aws-vpc credits (5 -> 7 merged) (#13)
