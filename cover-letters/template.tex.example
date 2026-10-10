@@ -54,7 +54,7 @@ I am writing to express my interest in the \textbf{ROLE\_TITLE} position at \tex
 \noindent
 % PARAGRAPH 2: Your relevant experience (3-4 sentences)
 % Map your experience directly to their job requirements.
-In my current role at AWS, I lead infrastructure engagements for enterprise clients including State Street, DTCC, and RWS. At State Street, I developed Terraform modules for 10+ AWS services and architected 1000+ preventative security controls, achieving a 10/10 customer satisfaction score. At RWS, I am leading a greenfield cloud migration, designing multi-account AWS Organizations architecture and defining the migration roadmap for 50+ application workloads. This experience has given me deep expertise in RELEVANT\_SKILLS\_FOR\_ROLE.
+In my current role at AWS, I lead infrastructure engagements for enterprise clients including State Street, DTCC, and RWS. At State Street, I built Terraform with automated tests for about 10 AWS services and worked on the security solution behind 1,000+ preventative controls, and the project closed with a 10/10 customer satisfaction score. At RWS, I lead the Terraform foundation for a data-centre exit and a second landing zone, cutting per-account setup from 3+ days to under 4 hours. This experience has given me deep expertise in RELEVANT\_SKILLS\_FOR\_ROLE.
 
 \vspace{3mm}
 \noindent

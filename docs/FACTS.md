@@ -25,23 +25,28 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data.
 
 ### RWS (Feb 2026 -- Present)
 
-- Role framing: `Lead DevOps Consultant -- RWS (sole DevOps consultant)`. Every variant that mentions RWS must include `Lead DevOps Consultant`; `sole DevOps consultant` is optional adjective, but if used, use in ALL variants that mention RWS.
-- Scale: `50+ application workloads into 135+ AWS accounts`. Both numbers together, always. Never `135+ accounts` alone.
-- Automation gain: `Terraform + GitHub Actions cuts infrastructure setup time by ~90% versus manual account provisioning`. Attach a directional baseline every time it appears: `weeks to days` or `3+ days per account to under 4 hours`. No naked `~90%` -- the audit flagged that as unverifiable metric shape.
-- Networking scope: Transit Gateway hub-and-spoke, VPN/Direct Connect hybrid connectivity, centralized egress inspection. Include in `cloud`, `devops`, `platform`, `general`, `bigtech`. Optional in `mlops`, `aiml`, `ai-tools`, `sde`.
-- Governance scope: Preventative SCPs, tag policies, AWS Config rules, Security Hub standards, CCMv4-aligned. Include everywhere RWS appears.
-- Kiro mention: `Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs`. Include in `general`, `ai-tools`, `platform`. Optional elsewhere.
-- Recognition (private, do not put on resume): 2x 5-Star Pulse, 2x 25 Peculiar Points.
+Source of record: the engagement write-up of 2026-10-10 (verified facts only). Write each point as need, what was built, result. Never include programme codenames, Region names, vendor products, colleague names or internal AWS recognition.
+
+- Role framing: `Lead DevOps Consultant -- RWS`, the DevOps and IaC lead. Never `sole DevOps consultant` (a second DevOps consultant joined in 2026).
+- Scale: `4,000+ resources across 20+ Terraform Cloud workspaces, none failing`. Do not use `50+ application workloads` or `135+ AWS accounts`; the write-up does not support them.
+- Automation gain: `per-account setup cut from 3+ days to under 4 hours (~90%)`. Always with the baseline; no naked `~90%`.
+- Foundation: Organizations OUs with Control Tower baselines, SCPs, tag policies, least-privilege account baselines with a security baseline (IMDSv2, EBS encryption, public-access blocks, no default VPC), IAM Identity Center, AWS Backup and SSM Patch Manager in every workload account, all in Terraform Cloud with OIDC, replacing account vending by a legacy pipeline.
+- Networking: two Transit Gateway hubs in separate AWS Regions with Network Firewall inspection and VPN/Direct Connect, plus self-service onboarding (route table within 15 minutes, firewall access by tag in about a minute, no network-team ticket).
+- IPAM: approved after measured sandbox billing; prefix delegation, about 94% lower projected cost.
+- Safety: every change applied in a sandbox mirror first through the same least-privilege role.
+- Speed: a second landing zone foundation in about four weeks, ahead of schedule.
+- AI: `Kiro and Claude Code for requirement analysis, specs and design documentation`.
 
 ### State Street (Oct 2024 -- Aug 2025)
 
 - Role: `DevOps Consultant`.
-- Scope claim (RECONCILED): `38+ service self-service Terraform module library, adopted by application teams as the client's cloud-platform standard`. Do NOT say `entire cloud estate` -- INFO.md line 74 says `across the client's entire cloud platform`, so use `client's cloud-platform standard adopted across application teams` uniformly.
-- CCMv4.0: `Architected 1000+ preventative Config/Security-Hub controls mapped to CCMv4.0 compliance`. Use `Config/Security-Hub controls` -- names the unit (audit flagged the naked `1000+`).
+- Scope claim: `Terraform for about 10 AWS services with automated tests, on the regulated landing zone team, part of the path that opened 38+ services to application teams`. Not a `38+ service module library`; that overstated it.
+- Detective: `designed Amazon Detective enablement (delegated admin in the Audit account via an AFT customization, organization-wide auto-enable in Terraform)`.
+- CCMv4.0: `worked on the security solution behind 1,000+ preventative controls aligned with CCMv4.0 (team result)`. Never `Architected 1000+`.
 - Testing: `tftest + PyTest`.
-- Delivery signal: `10/10 CSAT, 3x consecutive 5/5 Pulse ratings`.
+- Delivery signal: `10/10 CSAT` only. No Pulse ratings: none exist to back them.
 
-### DTCC (Aug 2025 -- Dec 2025)
+### DTCC (Aug 2025 -- Nov 2025)
 
 - Role: `DevOps Consultant`.
 - Scope: `Modernized legacy Terraform to cloud-native IaC patterns on high-sensitivity financial workloads`.
