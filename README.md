@@ -36,7 +36,7 @@ common/                     # Shared sections (edit once, used by all variants)
   header.tex                # Name, contact info, links
   body.tex                  # Shared section order + \input scaffold for every variant
   education.tex             # Degrees
-  certifications.tex        # 6 AWS/Terraform certs
+  certifications.tex        # 5 AWS certs
 
 variants/                   # Role-specific content (9 variants)
   general/                  # Default resume (versioned releases)

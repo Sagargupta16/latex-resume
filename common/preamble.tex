@@ -4,8 +4,11 @@
 %------------------------
 
 % Paper size defaults to A4. To override for a variant (e.g. bigtech -> Letter),
-% put `\PassOptionsToClass{letterpaper}{article}` BEFORE `\input{../../common/preamble}`.
-\documentclass[a4paper,11pt]{article}
+% put `\newcommand{\resumepaper}{letterpaper}` BEFORE `\input{../../common/preamble}`.
+% The size goes in the \documentclass options so geometry (which reads the global
+% class options) picks it up; \PassOptionsToClass alone never reached geometry.
+\providecommand{\resumepaper}{a4paper}
+\documentclass[\resumepaper,11pt]{article}
 
 \usepackage{cmap}
 \usepackage[T1]{fontenc}
@@ -63,11 +66,13 @@
     \vspace{-2mm}
 }
 
+% X column so long lines wrap inside the margin; an `l` column never wraps and
+% ran achievements and OSS lines off the right edge of the page.
 \newcommand{\resumeAchievement}[2]{
 \item[\textbullet] \hspace{-2mm}
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabularx}{0.99\textwidth}[t]{Xr}
         {#1} & \textit{\footnotesize{#2}}
-    \end{tabular*}
+    \end{tabularx}
 }
 
 % ATS-friendly bullet marker for experience items. `\textbullet` extracts cleanly
