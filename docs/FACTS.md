@@ -117,7 +117,7 @@ Canonical resume claim: `11 upstream PRs merged`, with a list like `axios, Apach
 
 ## Coding profiles (RECONCILED)
 
-- LeetCode (verified 2026-10-10): `Guardian badge, 2165 peak rating (current equals peak), 1300+ problems (1324 live), 107 contests, top 1.1% of contestants`. Never `Knight`, `2007`, `1200+` or `100+ contests`; all stale. **NEVER 2000+ on LeetCode alone.**
+- LeetCode (verified 2026-10-10): `Guardian badge, 2166 peak rating (current equals peak; LeetCode shows the API's 2165.70 rounded, so never 2165), 1300+ problems (1324 live), 107 contests, top 1.1% of contestants`. Never `Knight`, `2007`, `1200+` or `100+ contests`; all stale. **NEVER 2000+ on LeetCode alone.**
 - GeeksforGeeks: `500+ DSA problems` (521 live, 2026-10-10). Never `400+`.
 - HackerRank: `6-Star Problem Solving, 5-Star C++`.
 - Combined phrasing (only if using it): `1800+ problems across LeetCode + GfG` (1324 + 521; do NOT say 2000+ unless HackerRank problem count is added and verified). Preferred: quote per-platform, no aggregate.
