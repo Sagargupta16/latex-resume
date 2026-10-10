@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.14] - 2026-10-10
+
+- fix: leetcode peak rating 2166, as leetcode displays it (#17)
+
 ## [1.1.13] - 2026-10-10
 
 - fix: refresh stale resume stats, wrap long achievement lines, use letter paper for bigtech (#16)
