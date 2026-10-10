@@ -236,7 +236,7 @@ StockSage AI (LSTM stock prediction), GroundZeroNN (neural network from scratch)
 
 ### LeetCode
 
-- **Rating:** 2165 peak, current equals peak (Guardian badge, top 1.1% of contestants)
+- **Rating:** 2166 peak, current equals peak (Guardian badge, top 1.1% of contestants)
 - **Problems Solved:** 1300+ (1324 on 2026-10-10)
 - **Contests:** 107
 - **Profile:** [Sagargupta1610](https://leetcode.com/Sagargupta1610/)
@@ -325,7 +325,7 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - Open source PRs: 11 merged upstream (axios, Airflow, lucide, Prefect, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins x2, multer, terraform-aws-atlantis), plus 1 co-authored fix (aws-ia/terraform-aws-vpc) -- verified 2026-10-10
 - 40+ projects built
 - 2000+ coding problems solved
-- LeetCode Guardian (2165 peak rating, top 1.1%)
+- LeetCode Guardian (2166 peak rating, top 1.1%)
 - Top 5% Google Kick Start
 - 62 GitHub repositories
 - 155+ GitHub stars
