@@ -1,5 +1,6 @@
-% Bigtech targets US recruiters – Letter paper, not A4.
-\PassOptionsToClass{letterpaper}{article}
+% Bigtech targets US recruiters -- Letter paper, not A4. Define \resumepaper before
+% the preamble; it falls back to a4paper (via \providecommand) when unset.
+\newcommand{\resumepaper}{letterpaper}
 \input{../../common/preamble}
 \newcommand{\variantExtraSections}{\input{talks}}
 \begin{document}

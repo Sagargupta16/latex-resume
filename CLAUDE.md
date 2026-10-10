@@ -44,7 +44,7 @@ The canonical source for the general variant is `variants/general/resume.tex`. T
 - `body.tex` - Shared document body: inputs the header, variant-local sections, certifications, and education in the canonical order; exposes a `\variantExtraSections` hook
 - `header.tex` - Name, contact info, links
 - `education.tex` - NIT Warangal MCA + DAVV (Indore) BCA
-- `certifications.tex` - 6 AWS/Terraform certifications
+- `certifications.tex` - 5 AWS certifications
 
 ### Variant sections (`variants/<slug>/`)
 
