@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.1.12] - 2026-10-10
+
+- content: rewrite client engagements around impact without internal names (#15)
+
 ## [1.1.11] - 2026-09-23
 
 - feat: add second aws sample, organizations governance on control tower (#14)
