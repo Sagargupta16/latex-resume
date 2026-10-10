@@ -23,7 +23,7 @@ This file contains all personal, professional, and technical information used ac
 
 ## Bio
 
-Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delivering DevOps engagements for leading financial institutions. Currently leading a greenfield AWS migration for 50+ workloads. Built production MLOps pipelines on SageMaker. Published AWS architecture patterns. Open source contributor to Apache Airflow, Terraform Provider AWS, and Feast. 6x AWS/Terraform certified.
+Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delivering DevOps engagements for leading financial institutions. Currently leading the Terraform foundation for a data-centre exit and a second landing zone. Built production MLOps pipelines on SageMaker. Published AWS architecture patterns. Open source contributor to Apache Airflow, Terraform Provider AWS, and Feast. 6x AWS/Terraform certified.
 
 ## Education
 
@@ -57,27 +57,26 @@ Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delive
 Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, India.
 
 #### Engagement 1: RWS -- UK-based Global Technology Services Firm (Feb 2026 - Present)
-**Role: Lead DevOps Consultant (sole DevOps consultant)**
+**Role: Lead DevOps Consultant (DevOps and IaC lead)**
 
-- Leading RWS Group data-centre migration to AWS: building the cloud platform from scratch for 50+ application workloads into **135+ AWS accounts**
+- Building the AWS foundation in Terraform for RWS Group's data-centre exit and a second landing zone: **4,000+ resources across 20+ workspaces**, per-account setup cut from 3+ days to under 4 hours
 - Designing AWS Organizations OU structure, SCPs, tag policies; core networking, security baseline, governance framework
 - Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments; owns full deployment lifecycle. Terraform automation cuts infrastructure setup time by ~90% versus manual configuration
 - Driving architecture decisions and defining migration roadmap
 - Delivering recommendations on cost optimization, HA, and DR
 - Leveraging Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs
-- Recognition: 2x 5-Star Pulse, 2x 25 Peculiar Points (GCCI teammate: Amit Anjarlekar)
 
 #### Engagement 2: State Street -- US-based Major Financial Services Firm (Oct 2024 - Aug 2025)
 **Role: DevOps Consultant**
 
-- Developed Terraform code for ~10 AWS services with comprehensive testing (tftest, PyTest), enabling a 38+ service self-service platform for application teams
+- Developed Terraform code for ~10 AWS services with comprehensive testing (tftest, PyTest), part of the path that opened 38+ services to application teams
 - Module library adopted across the client's entire cloud platform
-- Architected 1000+ preventative security controls aligned with CCMv4.0 compliance
+- Worked on the security solution behind 1,000+ preventative controls aligned with CCMv4.0 (team result)
 - Implemented EventBridge-based cross-account automation patterns
 - Designed self-service capabilities with governance guardrails
-- **10/10 CSAT** score and **3x consecutive 5/5 Pulse** ratings from customer
+- **10/10 CSAT** at project closure
 
-#### Engagement 3: DTCC -- US-based Leading Financial Services Firm (Aug 2025 - Dec 2025)
+#### Engagement 3: DTCC -- US-based Leading Financial Services Firm (Aug 2025 - Nov 2025)
 **Role: DevOps Consultant**
 
 - Refactored critical Terraform infrastructure, modernizing legacy patterns to cloud-native IaC
@@ -103,7 +102,6 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, I
   - "Automating Unit Testing for Terraform using Terraform Test and PyTest frameworks" (2025)
   - "GitOps Configuration Safety with Health Checks and Pipeline Gating" (2026)
 - 2 APG Patterns Peer Reviewed (2025)
-- Recognition (2025): Utilization 93%; 4 Pulse @ avg 5/5; 18 accolades; 375 Awsome points; 2 eCards (Deliver Results, Hire and Develop the Best)
 - Other internal: AWS T&C SME Program contributor; Prime Video beta testing; ML Hackathon 2025 (26th/238); GCCI JAM Tester
 - Other internal project (ongoing): Work Task Buddy -- AI orchestration platform unifying business systems via conversational interface, Salesforce integration, strict AI controls
 - ML Hackathon 2025 - 26th/238 teams
