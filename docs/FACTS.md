@@ -9,8 +9,8 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, 
 | Field | Canonical value |
 |---|---|
 | Full name | Sagar Gupta |
-| Job title on resume | `Cloud Consultant -- Professional Services (DevOps/MLOps)` |
-| Job title on portfolio | `Cloud Consultant -- Professional Services (DevOps/MLOps) at AWS` |
+| Job title on resume | `ProServe (Cloud Consultant) - DevOps/MLOps` (set by Sagar 2026-10-14; use this exact string on every surface) |
+| Job title on portfolio | `ProServe (Cloud Consultant) - DevOps/MLOps at AWS` (`@ AWS` in short labels) |
 | Employer | Amazon Web Services (AWS), Professional Services |
 | Internal title (do NOT show externally) | Associate Delivery Consultant, ProServe DC |
 | Location | Hyderabad, India |

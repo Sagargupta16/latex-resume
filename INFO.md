@@ -7,7 +7,7 @@ This file contains all personal, professional, and technical information used ac
 | Field | Value |
 |-------|-------|
 | **Name** | Sagar Gupta |
-| **Title** | Cloud Consultant - DevOps/MLOps (official internal title: Associate Delivery Consultant, ProServe DC) |
+| **Title** | ProServe (Cloud Consultant) - DevOps/MLOps (official internal title: Associate Delivery Consultant, ProServe DC) |
 | **Employer** | Amazon Web Services (AWS) - Professional Services |
 | **Location** | Hyderabad, India |
 | **Email** | sg85207@gmail.com |
