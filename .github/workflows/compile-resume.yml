@@ -8,6 +8,11 @@ on:
       - "variants/**/*.tex"
       - "cover-letters/*.tex"
   workflow_dispatch:
+    inputs:
+      message:
+        description: "Release note line and version tag ([major]/[minor]) for a manual run"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -135,6 +140,7 @@ jobs:
         id: bump
         env:
           HEAD_COMMIT_MSG: ${{ github.event.head_commit.message }}
+          DISPATCH_MSG: ${{ inputs.message }}
         run: |
           CURRENT=$(cat VERSION)
           IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
@@ -144,7 +150,7 @@ jobs:
           # before this job runs, so `git log -1` would see the bot's message.
           # Fall back to `git log -1` for manual workflow_dispatch runs where
           # github.event.head_commit may be empty.
-          MSG="${HEAD_COMMIT_MSG:-$(git log -1 --pretty=%B)}"
+          MSG="${HEAD_COMMIT_MSG:-${DISPATCH_MSG:-$(git log -1 --pretty=%B)}}"
           echo "Trigger commit message: $MSG"
 
           if echo "$MSG" | grep -qi '\[major\]'; then
@@ -166,16 +172,26 @@ jobs:
       - name: Update CHANGELOG
         env:
           HEAD_COMMIT_MSG: ${{ github.event.head_commit.message }}
+          DISPATCH_MSG: ${{ inputs.message }}
         run: |
           NEXT="${{ steps.bump.outputs.next }}"
           DATE=$(date +%Y-%m-%d)
           # Same reason as the version-bump step: git log HEAD would resolve to
           # the compile job's bot commit. Use the trigger event's message.
-          MSG="${HEAD_COMMIT_MSG:-$(git log -1 --pretty=%s)}"
+          MSG="${HEAD_COMMIT_MSG:-${DISPATCH_MSG:-$(git log -1 --pretty=%s)}}"
           # First line only, in case the trigger commit has a body.
           MSG=$(echo "$MSG" | head -n1)
-          # Prepend new entry after the first heading line
-          sed -i "0,/^## /s//## [${NEXT}] - ${DATE}\n\n- ${MSG}\n\n## /" CHANGELOG.md
+          # Prepend the new entry before the first "## " heading. Python, not sed:
+          # a "/" in the message ("DevOps/MLOps", #19) ended sed's s/// early.
+          export NEXT DATE MSG
+          python3 -c '
+          import os
+          path = "CHANGELOG.md"
+          text = open(path, encoding="utf-8").read()
+          entry = "## [{}] - {}\n\n- {}\n\n".format(os.environ["NEXT"], os.environ["DATE"], os.environ["MSG"])
+          at = text.index("\n## ") + 1
+          open(path, "w", encoding="utf-8").write(text[:at] + entry + text[at:])
+          '
 
       - name: Commit version bump
         run: |
@@ -190,7 +206,7 @@ jobs:
         with:
           tag_name: v${{ steps.bump.outputs.next }}
           name: "v${{ steps.bump.outputs.next }}"
-          body: ${{ github.event.head_commit.message }}
+          body: ${{ github.event.head_commit.message || inputs.message }}
           files: resume.pdf
           make_latest: true
         env:
