@@ -13,7 +13,7 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## What This Is
 
-Multi-variant LaTeX resume system for Sagar Gupta (DevOps/MLOps Consultant at AWS). Generates 9 role-targeted PDFs from a shared codebase. Auto-compiles via GitHub Actions on every push to `main`. General resume is published as a GitHub Release (versioned + `latest` tag). Variant PDFs are committed to `builds/`.
+Multi-variant LaTeX resume system for Sagar Gupta (ProServe (Cloud Consultant) - DevOps/MLOps at AWS). Generates 9 role-targeted PDFs from a shared codebase. Auto-compiles via GitHub Actions on every push to `main`. General resume is published as a GitHub Release (versioned + `latest` tag). Variant PDFs are committed to `builds/`.
 
 ## Commands
 
