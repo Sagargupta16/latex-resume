@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.2.0] - 2026-10-14
+
+- feat: retitle the current role as ProServe (Cloud Consultant) - DevOps/MLOps [minor]
+
 ## [1.1.14] - 2026-10-10
 
 - fix: leetcode peak rating 2166, as leetcode displays it (#17)
