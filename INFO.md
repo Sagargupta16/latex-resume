@@ -9,7 +9,7 @@ This file contains all personal, professional, and technical information used ac
 | **Name** | Sagar Gupta |
 | **Title** | ProServe (Cloud Consultant) - DevOps/MLOps (official internal title: Associate Delivery Consultant, ProServe DC) |
 | **Employer** | Amazon Web Services (AWS) - Professional Services |
-| **Location** | Hyderabad, India |
+| **Location** | Bengaluru, India |
 | **Email** | sg85207@gmail.com |
 | **Phone** | +91-8770532413 |
 | **Portfolio** | [sagargupta.online](https://sagargupta.online/portfolio-react/) |
@@ -54,7 +54,7 @@ Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delive
 
 ### Amazon Web Services (AWS) - Cloud Consultant (Aug 2024 - Present)
 
-Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, India.
+Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Bengaluru, India (confirmed 2026-10-14; previously Hyderabad).
 
 #### Engagement 1: RWS -- UK-based Global Technology Services Firm (Feb 2026 - Present)
 **Role: Lead DevOps Consultant (DevOps and IaC lead)**
@@ -134,6 +134,8 @@ Mohali, India.
 | 5 | AWS Certified Cloud Practitioner | May 2024 | Jan 2029 | [Credly](https://www.credly.com/badges/bf8ffb47-284c-4c45-adb8-3df4f807e404) |
 
 Expired: HashiCorp Certified: Terraform Associate (003), issued Sep 2024, expired 2026-09-10 ([Credly](https://www.credly.com/badges/8b0723a5-bac7-4262-b5b6-20337b2979a1)). Removed from every variant; do not re-add.
+
+Non-AWS badge: Claude Partner Badge - Claude Code (Anthropic), issued Sep 2026, expires Mar 2027 ([Credly](https://www.credly.com/badges/5e4ea6eb-b781-4c83-a0f1-231e2b92e777)). Listed on `ai-tools` only, outside the 5 certification count.
 
 ### AWS Knowledge & Learning Badges (12)
 
@@ -230,7 +232,7 @@ Verified `merged: false`. Kept here so they are never re-added to a resume by mi
 
 ### Other Projects (15+)
 
-StockSage AI (LSTM stock prediction), GroundZeroNN (neural network from scratch), Brainstorm Verse (Next.js 14), Authentication System (MERN JWT), Contact Manager, Tour Vibes (MERN), Financial Dashboard, AI Code Translator (Next.js + OpenAI), Instagram Autopilot (AWS Bedrock + Composio), DevOps-AWS-FARM, PacMan/Minesweeper/Snake/Flappy Bird (Unity/C#), Music Web Player, Data Vault, and more.
+StockSage AI (scaffold only, not on the resume), GroundZeroNN (neural network from scratch), Brainstorm Verse (Next.js 14), Authentication System (MERN JWT), Contact Manager, Tour Vibes (MERN), Financial Dashboard, AI Code Translator (Next.js + OpenAI), Instagram Autopilot (AWS Bedrock + Composio), DevOps-AWS-FARM, PacMan/Minesweeper/Snake/Flappy Bird (Unity/C#), Music Web Player, Data Vault, and more.
 
 ## Competitive Programming
 
@@ -251,7 +253,7 @@ StockSage AI (LSTM stock prediction), GroundZeroNN (neural network from scratch)
 
 | Competition | Result | Date |
 |-------------|--------|------|
-| Google Kick Start Round E '22 | Rank 1289 (Top 5%) | Sep 2022 |
+| Google Kick Start Round E '22 | Rank 1289 | Sep 2022 |
 | Google Kick Start Round B '22 | Rank 1699 | May 2022 |
 | Coding Cauldron Online, Version '23 (NIT Trichy) | 1st Place | Mar 2023 |
 | QFiesta, IGNOSI '22 (NIT Warangal) | 1st Place | Dec 2022 |
@@ -275,7 +277,7 @@ Python, TypeScript, JavaScript, C++, Java, HCL, SQL, Bash, C#, R
 
 ### AI/ML & MLOps
 - **Frameworks:** TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy
-- **AWS ML:** SageMaker (Pipelines, Endpoints, Model Monitor, Drift Detection), Bedrock, Amazon Q
+- **AWS ML:** SageMaker (Pipelines, Endpoints, Custom PSI drift jobs), Bedrock, Amazon Q
 - **Specializations:** Dense Neural Networks, LSTM, CNN, Ensemble Methods, Feature Engineering
 - **MLOps:** Model Versioning, A/B Testing, Auto-Scaling, Drift Detection, CodePipeline for ML
 - **AI/LLM:** RAG Pipelines, LLMOps, LLM APIs, Agent Frameworks
@@ -326,6 +328,6 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - 40+ projects built
 - 2000+ coding problems solved
 - LeetCode Guardian (2166 peak rating, top 1.1%)
-- Top 5% Google Kick Start
+- Google Kick Start Round E '22 Rank 1289
 - 62 GitHub repositories
 - 155+ GitHub stars

@@ -1,41 +1,40 @@
 %-----------PROJECTS-----------------
+% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
 \section{\textbf{Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+{\href{https://kinfolk-neon.vercel.app/}{Kinfolk}}{TypeScript, Next.js 16, React 19, Drizzle, Neon Postgres}{Jul 2026}{\href{https://github.com/Sagargupta16/kinfolk}{\faGithub\ GitHub} | \href{https://kinfolk-neon.vercel.app/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Shipped a published Chrome extension that overlays contribution insights on any GitHub profile -- streaks, language mix, PR stats, activity heatmap, and per-repo charts -- with zero runtime dependencies.
-    \item[$\diamond$] Implemented server-side OAuth via a Cloudflare Worker (secrets never touch the client), a GitHub GraphQL data layer with 5-minute edge caching, SPA-safe navigation, and adaptive dark/light theming.
+    \item[$\diamond$] Collaborative family graph modelled as a directed acyclic graph, not a tree: each relative keeps their own record and consent links join them, so nothing is overwritten. Live on Vercel + Neon with a production health check; regression tests run on an in-memory PGlite database.
 \resumeItemListEnd
 
 \resumeExp
 {\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite, Tailwind CSS}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Built a self-hosted personal-finance reconciler across 26 pages with SHA-256 statement deduplication, Sankey cash-flow diagrams, 50/30/20 budget tracking, and investment-portfolio analytics.
+    \item[$\diamond$] Self-hosted personal-finance app across 26 pages: imports .xlsx/.xls/.csv statements with deterministic SHA-256 transaction IDs so repeated imports stay idempotent, plus an AI assistant backed by 15 read-only tool calls (multi-provider LLM).
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/code-arena}{Code Arena}}{TypeScript, React, Node.js, WebSockets, Monaco Editor}{Feb 2024}{\href{https://github.com/Sagargupta16/code-arena}{\faGithub\ GitHub}}
+{\href{https://github.com/Sagargupta16/itr-agent}{itr-agent}}{TypeScript, MCP Protocol, Node.js, Zod}{Jul 2026}{\href{https://github.com/Sagargupta16/itr-agent}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Built a real-time collaborative coding platform -- WebSocket multiplayer sessions, Monaco editor integration, and sandboxed code execution for competitive-programming practice rooms.
+    \item[$\diamond$] Local-first MCP server for Indian income tax: the LLM interviews and calls 12 tools, while a deterministic engine over a versioned JSON rule pack computes every rupee. 151 tests pin it to published worked examples and the statute, on an Ubuntu and Windows CI matrix.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, React, FastAPI, TensorFlow, GraphQL}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
+{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
 \resumeItemListStart
-    \item[$\diamond$] Shipped a full-stack rating predictor -- FastAPI backend, React frontend, and a TensorFlow regressor trained on 121K+ contest records (MAE $\sim$7.8), fed by a scheduled ingestion pipeline over the LeetCode GraphQL API.
+    \item[$\diamond$] Published Chrome extension adding GitHub profile insights (9-stat grid, language breakdown, activity heatmap, profile comparison). OAuth runs in a Cloudflare Worker so secrets stay server-side, with 5-minute caching and zero runtime dependencies.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/Placemento-Placement-Cell-Management-System}{Placemento}}{React, Node.js, Express, MongoDB, JWT}{Sep 2023}{\href{https://github.com/Sagargupta16/Placemento-Placement-Cell-Management-System}{\faGithub\ GitHub}}
+{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, TensorFlow, NumPy, FastAPI, React, Docker}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Built a MERN placement-cell management system with JWT auth, role-based access (student/coordinator/admin), and interview-scheduling workflows used by NIT Warangal's MCA placement cell.
+    \item[$\diamond$] Rating model on 15 engineered features. Found and fixed a train/serve skew on participant count that had tripled backtest error (MAE 38.76 to 12.46 on 57 contests). Moved serving to NumPy-only inference pinned by a golden test, cutting the runtime from \textasciitilde1.8 GB to \textasciitilde65 MB; a weekly job refreshes the data and re-runs the backtest.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
-\vspace{-1mm}
-\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{Instagram Likes Leaderboard} (TypeScript, Preact, Browser API, Feb 2026); \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (routing to 500+ Bedrock models via one MCP server); \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (30--60\% cost cut on Claude usage).}
+\vspace{-2pt}
+\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/code-arena}{Code Arena} (competitive coding arena frontend), \href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{Instagram Likes Leaderboard} (browser-console tool), \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (26 text models, 156 of 156 benchmark calls), \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (cache-aware Claude cost model), \href{https://github.com/Sagargupta16/skillcheck}{skillcheck} (Agent Skills linter, 284 npm downloads a month).}
 \vspace{-2mm}

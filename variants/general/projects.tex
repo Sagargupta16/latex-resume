@@ -1,40 +1,40 @@
 %-----------PROJECTS-----------------
+% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
 \section{\textbf{Personal Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React 19, FastAPI, SQLite, Tailwind CSS, AWS Bedrock, OpenAI, Anthropic}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
+{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{Claude Code Plugin, MCP, TypeScript, React, Python}{Mar 2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{\faGithub\ GitHub} | \href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Self-hosted personal-finance reconciler with an AI chatbot backed by 15 read-only tool calls (App mode or BYOK, multi-provider LLM) answering spending, tax, and goal questions across 26 pages.
-    \item[$\diamond$] FIRE calculator (Lean/Barista/Standard/Fat), Coast FIRE, India FY tax estimator, 8-metric Financial Health Score, Sankey cash flow, anomaly and recurring-transaction detection, SHA-256 deduplication on Excel/CSV imports.
+    \item[$\diamond$] Claude Code plugin, MCP cost server, CLI grader and web calculator for Claude spend. Rebuilt every estimator on cache-aware billing, correcting a modelled 30-turn Opus session from \$3.44 to \$0.74, and replaced every vague savings range with a sourced or computed number. Golden-value tests pin the cost math in all three implementations.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub} | \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store}}
+{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, TensorFlow, NumPy, FastAPI, React, Docker}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Published Chrome extension adding deep GitHub profile insights -- 9-stat grid, language breakdown, activity heatmap, profile comparison, follow leaderboard. OAuth handled by Cloudflare Worker (server-side secrets) with 5-minute caching and zero runtime dependencies.
+    \item[$\diamond$] Rating model on 15 engineered features. Found and fixed a train/serve skew on participant count that had tripled backtest error (MAE 38.76 to 12.46 on 57 contests). Moved serving to NumPy-only inference pinned by a golden test, cutting the runtime from \textasciitilde1.8 GB to \textasciitilde65 MB; a weekly job refreshes the data and re-runs the backtest.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{Claude Code Plugin, React, Vite, TypeScript, Python}{Mar 2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{\faGithub\ GitHub} | \href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
+{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, ECS on EC2, ALB, CodePipeline, CodeDeploy}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Installable Claude Code plugin with a cost-mode skill (lite/standard/strict) that cuts AI coding spend by 30-60\% via concise responses, model routing, and budget hooks. Ships a web Repo Analyzer (A+ to F grading), Cost Calculator, and stack-specific CLAUDE.md templates.
+    \item[$\diamond$] 15 Terraform modules for ECS blue/green on an EC2 Auto Scaling Group: 30\% canary for 1 minute with rollback on a 5xx spike or unhealthy target, an 80\% coverage gate in CodeBuild, and 8 \texttt{terraform test} files on a mock provider, plus Checkov and tflint on every PR.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP}}{TypeScript, MCP Protocol, AWS Bedrock, Converse API, Nova Canvas, Nova Reel}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
+{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP}}{TypeScript, MCP Protocol, AWS Bedrock Converse API}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] MCP server routing through 500+ AWS Bedrock models across text (Llama 4, Mistral, Nova, Claude, Cohere, DeepSeek R1), image (Nova Canvas, SD 3.5, Titan, SDXL), and video (Nova Reel, async S3) -- with \texttt{bedrock\_ask} and \texttt{bedrock\_compare} for side-by-side evaluation across 2-5 models. Bearer-token auth fallback for enterprise use.
+    \item[$\diamond$] MCP server putting 26 text models from 7 providers, plus image, video and embedding models, behind 8 tools and one set of AWS credentials. Benchmarked in us-east-1: 26 of 26 models answered and 156 of 156 calls succeeded.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, React, FastAPI, TensorFlow, GraphQL}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
+{\href{https://github.com/Sagargupta16/itr-agent}{itr-agent}}{TypeScript, MCP Protocol, Node.js, Zod}{Jul 2026}{\href{https://github.com/Sagargupta16/itr-agent}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Dense neural network trained on 121K+ contest records (MAE \textasciitilde7.8) for LeetCode rating prediction. Automated ingest via LeetCode GraphQL, backend and frontend test suites, Docker + Render deploy.
+    \item[$\diamond$] Local-first MCP server for Indian income tax: the LLM interviews and calls 12 tools, while a deterministic engine over a versioned JSON rule pack computes every rupee. 151 tests pin it to published worked examples and the statute, on an Ubuntu and Windows CI matrix.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-2pt}
-\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform} (15 modules, ECS on EC2 + CodePipeline), \href{https://github.com/Sagargupta16/claude-skills}{Claude Skills Marketplace} (16-plugin Claude Code marketplace), \href{https://github.com/Sagargupta16/SelfHub}{SelfHub} (MCP personal-memory server), \href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{Instagram Likes Leaderboard} (browser extension), GroundZeroNN (NN from scratch, 79.8\% MNIST).}
+\small{\textbf{Other Notable Projects:} \href{https://sagargupta.online/ledger-sync/}{Ledger Sync} (self-hosted finance app, 26 pages, AI assistant), \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{GitScope} (Chrome Web Store extension), \href{https://github.com/Sagargupta16/skillcheck}{skillcheck} (Agent Skills linter, 284 npm downloads a month), \href{https://kinfolk-neon.vercel.app/}{Kinfolk} (collaborative family-graph app on Next.js + Neon), \href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{Instagram Likes Leaderboard} (browser-console tool).}
 \vspace{-2mm}

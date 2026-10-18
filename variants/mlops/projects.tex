@@ -1,40 +1,34 @@
 %-----------PROJECTS-----------------
+% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
 \section{\textbf{Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, TensorFlow, FastAPI, React, GraphQL, Docker, Render}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
+{\href{https://leetcode-rating-predictor.onrender.com/}{LeetCode Rating Predictor}}{Python, TensorFlow, NumPy, FastAPI, React, Docker}{Dec 2023}{\href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{\faGithub\ GitHub} | \href{https://leetcode-rating-predictor.onrender.com/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Trained dense neural network on \textbf{121K+ contest records} for post-contest rating prediction with \textbf{MAE $\sim$7.8} on held-out set. Automated feature engineering pipeline over LeetCode GraphQL API.
-    \item[$\diamond$] Productionized full MLOps lifecycle: containerized FastAPI inference service, React frontend, backend and frontend test suites, Docker + Render deployment with health checks.
+    \item[$\diamond$] Rating model on 15 engineered features. Found and fixed a train/serve skew on participant count that had tripled backtest error (MAE 38.76 to 12.46 on 57 contests). Moved serving to NumPy-only inference pinned by a golden test, cutting the runtime from \textasciitilde1.8 GB to \textasciitilde65 MB; a weekly job refreshes the data and re-runs the backtest.
 \resumeItemListEnd
 
 \resumeExp
-{Bedrock Multi-Model MCP}{TypeScript, MCP Protocol, AWS Bedrock Converse API, Nova Canvas, Nova Reel}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
+{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP}}{TypeScript, MCP Protocol, AWS Bedrock Converse API}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] MCP server routing 500+ Bedrock foundation models across text (Llama 4, Mistral, Nova, Claude, Cohere, DeepSeek R1), image (Nova Canvas, SD 3.5, Titan), and video (Nova Reel async S3) -- with \texttt{bedrock\_compare} side-by-side inference evaluation across 2--5 models.
+    \item[$\diamond$] MCP server putting 26 text models from 7 providers, plus image, video and embedding models, behind 8 tools and one set of AWS credentials. Benchmarked in us-east-1: 26 of 26 models answered and 156 of 156 calls succeeded.
 \resumeItemListEnd
 
 \resumeExp
-{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, AWS ECS on EC2, ALB, CodePipeline, HCL}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
+{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, ECS on EC2, ALB, CodePipeline, CodeDeploy}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Production-grade IaC for zero-downtime blue-green deployments on ECS (EC2 Auto Scaling Group) with 15 Terraform modules -- directly applicable to ML model serving with progressive traffic shifting and automated rollback.
+    \item[$\diamond$] 15 Terraform modules for ECS blue/green on an EC2 Auto Scaling Group: 30\% canary for 1 minute with rollback on a 5xx spike or unhealthy target, an 80\% coverage gate in CodeBuild, and 8 \texttt{terraform test} files on a mock provider, plus Checkov and tflint on every PR.
 \resumeItemListEnd
 
 \resumeExp
-{GroundZeroNN}{Python, NumPy}{2024}{\href{https://github.com/Sagargupta16/GroundZeroNN}{\faGithub\ GitHub}}
+{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{Claude Code Plugin, MCP, TypeScript, React, Python}{Mar 2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{\faGithub\ GitHub} | \href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
 \resumeItemListStart
-    \item[$\diamond$] Feedforward neural network built from scratch in NumPy -- forward/backward propagation, activation functions, mini-batch gradient descent. \textbf{79.8\% test accuracy on MNIST}, no ML frameworks.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite, AWS Bedrock, OpenAI, Anthropic}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
-\resumeItemListStart
-    \item[$\diamond$] Data-intensive personal finance app with SHA-256 deduplication pipeline, anomaly \& recurring transaction detection, and multi-provider LLM chatbot (15 read-only tool calls) over Excel/CSV imports.
+    \item[$\diamond$] Claude Code plugin, MCP cost server, CLI grader and web calculator for Claude spend. Rebuilt every estimator on cache-aware billing, correcting a modelled 30-turn Opus session from \$3.44 to \$0.74, and replaced every vague savings range with a sourced or computed number. Golden-value tests pin the cost math in all three implementations.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-2pt}
-\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/StockSage-AI}{StockSage} (LSTM stock forecasting), \href{https://github.com/Sagargupta16/SelfHub}{SelfHub} (MCP personal memory server), \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (30--60\% AI cost reduction plugin), \href{https://github.com/Sagargupta16/GitScope}{GitScope} (Chrome extension), \href{https://github.com/Sagargupta16/instagram-autopilot}{Instagram Autopilot} (Bedrock Nova Canvas/Reel).}
+\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/itr-agent}{itr-agent} (deterministic tax engine, 151 tests), \href{https://github.com/Sagargupta16/GroundZeroNN}{GroundZeroNN} (neural network from scratch in NumPy), \href{https://github.com/Sagargupta16/SelfHub}{SelfHub} (MCP personal-memory server), \href{https://github.com/Sagargupta16/instagram-autopilot}{Instagram Autopilot} (source-grounded animated SVG Reels on a GitHub Actions schedule; Bedrock writes the topic and caption).}
 \vspace{-2mm}
