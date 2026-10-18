@@ -63,6 +63,26 @@ Source of record: the engagement write-up of 2026-10-10 (verified facts only). W
 - Associate Speaker Certified (2026).
 - MLOps Pipeline (SME Program, Jun-Aug 2025): SageMaker medical image classification, blue-green endpoints, drift detection.
 
+## Published AWS samples (verified 2026-10-18 against each repo's main branch)
+
+**aws-samples/sample-sagemaker-image-classification-mlops** (main at `c124044`):
+
+- Size: `86 Terraform files across 4 stacks and 13 reusable modules` (`git ls-files '*.tf' | wc -l`, `ls -d modules/*/`). Never `89 files` or `14 modules`: those were the first release, before PR #4 removed the SageMaker Model Monitor module.
+- Drift: `PSI drift detection` on the endpoint's output scores (`scripts/drift/compute_drift.py`), hourly. Never `Model Monitor`. A drift or fairness alarm **starts retraining**; it does not roll back.
+- Rollback: blue/green canary (10% of the new fleet's capacity by default; `LINEAR` and `ALL_AT_ONCE` selectable) with auto-rollback on the endpoint **error and latency alarms**. Say `canary`, not `weighted traffic shifting`.
+- Gates: clinical quality gate (accuracy >= 0.85, recall >= 0.95, precision >= 0.80, AUC >= 0.90) plus a Fairlearn fairness gate; every model registers as `PendingManualApproval`.
+- Explanations: Grad-CAM and sampled **region Shapley** values. Not the SHAP library.
+- A2I human review is **optional** and off by default (`enable_human_review = false`).
+- Stack: TensorFlow/Keras training jobs (VGG16, DenseNet121, EfficientNetV2M ensemble), a TensorFlow Serving endpoint, a plain Python Lambda behind API Gateway, a static HTML/JS web UI on CloudFront. There is **no FastAPI and no React** in the repo.
+- Do not claim a model was trained and shipped: the README's September 2026 BreakHis run failed the gates (accuracy 0.76, recall 0.90) and registered nothing. Say the pipeline trains, gates and ships.
+- Security: checkov 0 failed checks in CI (run 37437169016 on `c124044`), every skip documented.
+
+**aws-samples/sample-aws-terraform-org-governance** (main at `c4e0b38`):
+
+- Policy types: `six policy types` (SCP, RCP, tag, backup, AI services opt-out, chat applications) as 20 policy documents. Never `all six`: the AWS Organizations user guide lists 13 policy types (2 authorization, 11 declarative) as of 2026-10-18.
+- Delegated admin: `15 services` (17 resources in `delegation.tf`, minus the Access Analyzer service-linked role and the Macie management-account enablement).
+- OU tree up to 5 levels, Control Tower baselines parent before child, a 513-entry Control Tower control ID map.
+
 ## Earlier roles
 
 - `Associate Professional Services -- DevOps (Internship)`, AWS, Mar 2024 -- Jul 2024.
