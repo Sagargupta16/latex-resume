@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.3.0] - 2026-10-18
+
+- feat: rework projects, open source and publications on every variant [minor]
+
 ## [1.2.1] - 2026-10-18
 
 - fix: match the aws samples claims to their code (#21)
