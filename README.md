@@ -62,10 +62,10 @@ cover-letters/              # Cover letter template (real letters .gitignored)
 All 9 variants share the same section order, wired via `common/body.tex`:
 
 ```
-Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements
+Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition
 ```
 
-`bigtech` inserts a `Talks & Publications` section between Skills and Achievements via `\variantExtraSections`. Each variant's main `.tex` sets up preamble + paper size, then `\input{../../common/body}` handles the rest.
+`achievements.tex` renders the last section. On 8 variants it is `Publications & Recognition`: the two AWS-published samples plus one LeetCode line (sde adds Kick Start). College contests and hackathons are off the resume and stay on the portfolio. `bigtech` inserts `Publications & Talks` (`talks.tex`) after Skills via `\variantExtraSections`, and its `achievements.tex` is `Competitive Programming`. Open Source lists the top 5 merged fixes, then one `Also merged` line. Each variant's main `.tex` sets up preamble + paper size, then `\input{../../common/body}` handles the rest.
 
 ## How It Works
 

@@ -2,7 +2,7 @@
 
 Every disputed number in the audit reconciled here. If a variant or portfolio JSON disagrees, edit them, never this file. INFO.md remains the long-form reference; this file is the short truth table for numeric claims that recruiters check.
 
-Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, open source, coding profiles and project numbers re-verified live 2026-10-10.
+Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, open source, coding profiles and project numbers re-verified live 2026-10-10, and again 2026-10-18 for the section rework (Credly, `gh api`, each repo's README on main, npm downloads API).
 
 ## Identity
 
@@ -13,7 +13,7 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, 
 | Job title on portfolio | `ProServe (Cloud Consultant) - DevOps/MLOps at AWS` (`@ AWS` in short labels) |
 | Employer | Amazon Web Services (AWS), Professional Services |
 | Internal title (do NOT show externally) | Associate Delivery Consultant, ProServe DC |
-| Location | Hyderabad, India |
+| Location | Bengaluru, India (since 2026-10-14). The AWS internship (Mar -- Jul 2024) stays `Hyderabad, India`. |
 | Email | sg85207@gmail.com |
 | Phone | +91-8770532413 |
 | Portfolio | https://sagargupta.online/portfolio-react/ |
@@ -55,8 +55,9 @@ Source of record: the engagement write-up of 2026-10-10 (verified facts only). W
 
 ### Internal impact (roll into experience or extract to Talks section)
 
-- Published APG pattern (1): `Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub` (2025).
-- 2 peer-reviewed APG patterns pending publication. Frame as: `plus 2 more peer-reviewed in publication pipeline`. Show this on `general`, `bigtech`, `platform`, `cloud`. On other variants, one-line `Published APG Pattern on AWS Prescriptive Guidance` is fine.
+- APG pattern `Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub` (2025, co-authored with Abhigyan Dandriyal per INFO.md). **NOT found on the public site on 2026-10-18**: none of the 464 live pattern pages in `docs.aws.amazon.com/prescriptive-guidance/latest/patterns/toc-contents.json` has this title or his name in a byline, and only 5 Amplify patterns exist. Resume wording is `Co-authored an AWS Prescriptive Guidance pattern on secure PR previews and approval-gated releases for Amplify Gen 2`, inside the Experience Internal Impact bullet only. Never `Published APG pattern` until Sagar supplies the public URL; then it can move into Publications.
+- `plus 2 more peer-reviewed in publication pipeline`: dropped 2026-10-18. Not public, and the count disagrees with the portfolio (`3 APG Patterns Peer Reviewed`).
+- No AWS blog post by Sagar exists yet (AWS blog directory search, 2026-10-18). The SageMaker healthcare MLOps blog (INFO.md) is unpublished; add it only once live.
 - MLOps SME Program Graduate (2025).
 - 5x TFC Ambassador: `AI/ML, NGDE (Graduated), CloudOps (AWS DevOps Agent), Agentic AI, Serverless`. Portfolio's `4x` is stale -- fix to 5x. INFO.md line 314 (`4x`) is also stale -- fix to 5x.
 - 2 org-wide tech talks: Terraform testing (2025); GitOps pipeline gating (2026).
@@ -64,6 +65,8 @@ Source of record: the engagement write-up of 2026-10-10 (verified facts only). W
 - MLOps Pipeline (SME Program, Jun-Aug 2025): SageMaker medical image classification, blue-green endpoints, drift detection.
 
 ## Published AWS samples (verified 2026-10-18 against each repo's main branch)
+
+Both are listed in the `Publications & Recognition` section (bigtech: `Publications & Talks`) as `Published by AWS: aws-samples/<repo> (author, MIT-0)`. Authorship: `xsagarx-aws` (commit author `Sagar Gupta`) is the only human committer on both (`gh api repos/aws-samples/<repo>/contributors`). Never quote their star counts (4 each; aws-samples has 9,000+ public repos). The Experience MLOps bullet keeps the first sample's link; the second sample is only referenced there (`see Publications`), so neither is listed twice in full.
 
 **aws-samples/sample-sagemaker-image-classification-mlops** (main at `c124044`):
 
@@ -103,11 +106,13 @@ Ordered by relevance to primary target role (Cloud/DevOps/MLOps). Match badge ID
 | 2 | AWS Certified Developer -- Associate | Jan 2026 | Jan 2029 |
 | 3 | AWS Certified Machine Learning Engineer -- Associate | Jun 2025 | Jun 2028 |
 | 4 | AWS Certified AI Practitioner | Jul 2025 | Jul 2028 |
-| 5 | AWS Certified Cloud Practitioner | May 2024 | May 2027 |
+| 5 | AWS Certified Cloud Practitioner | May 2024 | Jan 2029 |
 
 Expired: HashiCorp Certified: Terraform Associate (003), issued Sep 2024, expired 2026-09-10. It is off every variant. Canonical claim is `5x AWS certified`; never `6x` or `AWS/HashiCorp certified`.
 
-Note: Cloud Practitioner expiry in portfolio JSON was `2029-01-31` -- that is Developer Associate's expiry, not Cloud Practitioner's. Fix to `2027-05-02` (3-year standard).
+Note (corrected 2026-10-18): Credly's `badges.json` shows Cloud Practitioner expiring `2029-01-31`. Passing Developer Associate on 2026-01-31 renewed it, so the portfolio JSON value was right and the old `2027-05-02` note here was stale.
+
+Also on Credly (not an AWS cert, so the count stays `5x AWS certified`): `Claude Partner Badge - Claude Code`, issued 2026-09-23, expires 2027-03-23. Not on the resume yet.
 
 Optional resume additions from learning badges: `Well-Architected Proficient (Jan 2026)`, `AWS AI-DLC Ambassador L100 (Jun 2026)`. Both are current and role-relevant.
 
@@ -135,9 +140,15 @@ Optional resume additions from learning badges: `Well-Architected Proficient (Ja
 
 Canonical resume claim: `11 upstream PRs merged`, with a list like `axios, Apache Airflow, lucide, Prefect, Feast, awslabs/mcp, multer, and others`. Do not quote an open-PR count. Never `7 upstream PRs` or `6 merged`; both are stale.
 
+**Resume section shape (2026-10-18):** header `Open Source Contributions (11 merged upstream)`, then the top 5 behavior fixes with one impact line each, then one `Also merged` line: Prefect, Feast, awslabs/agent-plugins (#132, #212), awslabs/mcp, cloudposse tfstate-backend, and co-author of the aws-ia/terraform-aws-vpc v4.8.0 fix. Top 5 order: axios, Airflow, lucide, multer, atlantis (devops, cloud and platform lead with atlantis; mlops and aiml lead with Airflow). Prefect, Feast, awslabs/mcp and cloudposse are docs or skill-file PRs, so they stay in the comma line. The open terraform-provider-aws #46867 is off every variant.
+
+- Star counts (live 2026-10-18): axios 109K, Airflow 47K, lucide 25K, Prefect 24K, multer 12K, awslabs/mcp 9.8K, Feast 7.3K (never `9K`), atlantis 557.
+- agent-plugins #132 only moves the defusedxml dependency check after the file-extension check, ending a spurious warning on every Edit/Write. It is **not** a security or XXE fix; never `guard` or `XXE`.
+- Linked issues: axios closes #6721; lucide closes #3485 (a TypeError crash); multer fixes #1419; atlantis closes #444 (v5 replaced custom egress rules with a hardcoded allow-all).
+
 ## Coding profiles (RECONCILED)
 
-- LeetCode (verified 2026-10-10): `Guardian badge, 2166 peak rating (current equals peak; LeetCode shows the API's 2165.70 rounded, so never 2165), 1300+ problems (1324 live), 107 contests, top 1.1% of contestants`. Never `Knight`, `2007`, `1200+` or `100+ contests`; all stale. **NEVER 2000+ on LeetCode alone.**
+- LeetCode (verified 2026-10-10): `Guardian badge, 2166 peak rating (current equals peak; LeetCode shows the API's 2165.70 rounded, so never 2165), 1300+ problems (1328 live on 2026-10-18), 107 contests, top 1.1% of contestants`. Never `Knight`, `2007`, `1200+` or `100+ contests`; all stale. **NEVER 2000+ on LeetCode alone.**
 - GeeksforGeeks: `500+ DSA problems` (521 live, 2026-10-10). Never `400+`.
 - HackerRank: `6-Star Problem Solving, 5-Star C++`.
 - Combined phrasing (only if using it): `1800+ problems across LeetCode + GfG` (1324 + 521; do NOT say 2000+ unless HackerRank problem count is added and verified). Preferred: quote per-platform, no aggregate.
@@ -145,28 +156,35 @@ Canonical resume claim: `11 upstream PRs merged`, with a list like `axios, Apach
 
 ## Competitions
 
-- `Rank 1289 (Top 5%) -- Google Kick Start Round E '22` (Sep 2022). Keep despite Kick Start retirement (2023).
+- `Rank 1289 (Top 5%) -- Google Kick Start Round E '22` (Sep 2022). On `sde` and `bigtech` only since 2026-10-18. Certificate link: `https://github.com/Sagargupta16/Sagargupta16/blob/main/certificates/google_kickstart_2022-09.pdf` (the old `Certificates/Google-KickStart-September-2022.pdf` path returns 404).
 - `Rank 1699 -- Google Kick Start Round B '22` (May 2022) -- drop from resume, keep on portfolio.
-- 1st place: Coding Cauldron '23 (NIT Trichy, Mar 2023); QFiesta IGNOSI '22 (NIT Warangal, Dec 2022).
-- 2nd place: Manage the Damage '23 (NIT Trichy); Trial By Code IGNOSI '22.
+- College fest results (1st Coding Cauldron '23 and QFiesta IGNOSI '22; 2nd Manage the Damage '23 and Trial By Code IGNOSI '22; 3rd Logic Head '22 and MOTHRA '21; 4th TriNIT Hackathon): **off every variant since 2026-10-18**, kept on the portfolio. At 2 years into an AWS role they read as dated detail next to AWS-published samples and merged upstream fixes.
+- NIMCET AIR 208 and CGPA live on the Education line only, not in a separate section.
 
 ## Featured projects (7+/10 bar)
 
-Ranked by role fit and recency. Each variant may re-rank. All descriptions ~one line + tech stack + link.
+Ranked by role fit and recency. Each variant may re-rank. All descriptions ~one line + tech stack + link. Re-measured 2026-10-18 against each repo's README and CHANGELOG on main.
 
-1. **Ledger Sync** (Jan 2026) -- Personal-finance transaction reconciler. TypeScript/React/FastAPI/SQLite. 26 pages (not 23); AI chatbot with 15 read-only tool calls. https://sagargupta.online/ledger-sync/
-2. **GitScope** (Mar 2026) -- Chrome extension for GitHub repo insights. JS/Manifest V3/GitHub GraphQL/Cloudflare Workers. https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff
-3. **Claude Cost Optimizer** (2026) -- Save 30--60% on Claude costs. https://sagargupta.online/claude-cost-optimizer/
-4. **Bedrock Multi-Model MCP** -- Route through 500+ Bedrock models via one MCP server.
-5. **LeetCode Rating Predictor** (Dec 2023) -- Python/React/FastAPI/TensorFlow/GraphQL. Training set: **121K+ contest records, test MAE ~7.8 rating points**. Pick 121K+ everywhere; `244K+` and `MAE ~14` are stale. Do not quote test counts (the repo disagrees with itself); say `backend and frontend test suites`. https://leetcode-rating-predictor.onrender.com/
-6. **Instagram Likes Leaderboard** (Feb 2026) -- TypeScript/Preact/Browser API. Currently absent from resume; add to `Other Notable Projects` line.
-7. **Blue-Green AWS Terraform** (Jul 2025) -- Terraform/ECS on EC2/ALB/CodePipeline, 15 Terraform modules. Runs on an EC2 Auto Scaling Group of container instances, NOT Fargate; never `18 modules`.
-8. **Claude Skills Marketplace** -- Claude Code plugin marketplace, 16 plugins (not 25).
-9. **SelfHub** (Mar 2025) -- MCP server + MongoDB.
+1. **Claude Cost Optimizer** (Mar 2026) -- Claude Code plugin, MCP cost server (`mcp-cost-server`), CLI grader (`claude-rate`) and web calculator. Cache-aware billing corrected a modelled 30-turn Opus 5.5 session from `$3.44 to $0.74` (CHANGELOG); golden-value tests in all three implementations (27 vitest, 13 unittest, 5 node:test). 38 stars, the most of any own repo. **Never `30-60%`**: the README says no typical saving has been published, so the repo quotes none (its GitHub description still says `Save 30-60%` and needs fixing). https://sagargupta.online/claude-cost-optimizer/
+2. **LeetCode Rating Predictor** (Dec 2023) -- Python/TensorFlow/NumPy/FastAPI/React. 15 engineered features. Fixed a participant-count train/serve skew that had tripled backtest error: `MAE 38.76 to 12.46 on 57 contests`. NumPy-only serving, runtime `~1.8 GB to ~65 MB`, pinned by a golden test. Weekly data refresh re-runs the backtest. **Never `MAE ~7.8` or `121K+ records` as the headline**: the README retired the 7.84 figure because it came from a random record split that leaks users. Current numbers if needed: held-out users MAE 14.14; recent-contest backtest MAE 9.11 and 7.58 on two 50-user samples (model 2.4.0). https://leetcode-rating-predictor.onrender.com/
+3. **Blue-Green AWS Terraform** (Jul 2025) -- 15 Terraform modules (plus bootstrap and tests), ECS on an EC2 Auto Scaling Group, NOT Fargate. CodeDeploy `TimeBasedCanary` 30% for 1 minute with rollback on a 5xx spike or unhealthy target; 80% coverage gate in CodeBuild; 8 `.tftest.hcl` files with `tests/mocks/aws.tfmock.hcl`; Checkov and tflint in CI. Never `18 modules` (the GitHub description still says 18).
+4. **Bedrock Multi-Model MCP** (Apr 2026) -- 26 text models from 7 providers, 3 image, 1 video, 5 embedding models, 8 tools. Benchmark 2026-10-18 in us-east-1: 26 of 26 models answered, 156 of 156 calls succeeded. **Never `500+ models`.** Not on npm.
+5. **itr-agent** (Jul 2026) -- Local-first MCP server for Indian income tax: 12 tools + a `file_my_itr` prompt; the LLM never does arithmetic, a deterministic engine over a versioned JSON rule pack computes every number. 151 tests; CI matrix ubuntu + windows x Node 22/24/26 (green on main 2026-10-18). npm still serves 0.3.0 (the v0.5.1 publish failed), so never claim an npm or MCP registry listing or users.
+6. **skillcheck** (Jul 2026) -- Agent Skills conformance linter: 36 rules with skills-ref parity, SARIF 2.1.0, GitHub Marketplace action. `284 npm downloads in the last month` (api.npmjs.org, 2026-09-17 to 2026-10-16; re-measure before reuse). Do not claim runtime trigger tests or a compatibility matrix (the repo description promises them; they do not exist yet).
+7. **Kinfolk** (Jul 2026) -- Collaborative family graph (a DAG, consent links between owners). Next.js 16, React 19, Drizzle on Neon. Live: https://kinfolk-neon.vercel.app/ (`/api/health` returned `ready`, v0.5.0, 2026-10-18). Featured on sde and bigtech only.
+8. **Ledger Sync** (Jan 2026) -- Self-hosted personal-finance app. TypeScript/React/FastAPI/SQLite. 26 pages (not 23); `.xlsx/.xls/.csv` imports with SHA-256 transaction IDs (idempotent re-imports); AI assistant with 15 read-only tool calls. Never `CSV/OFX` or `fuzzy-match dedup`. https://sagargupta.online/ledger-sync/
+9. **GitScope** (Mar 2026) -- Chrome extension for GitHub profile insights. JS/Manifest V3/GitHub GraphQL/Cloudflare Workers. https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff
+10. **Instagram Likes Leaderboard** (Feb 2026) -- TypeScript/Preact/Browser API. `Other Notable Projects` line.
+11. **Claude Skills Marketplace** -- Claude Code plugin marketplace, 16 plugins (not 25).
+12. **SelfHub** (Mar 2025) -- MCP server + MongoDB.
+
+Placemento has no public repo (`Sagargupta16/Placemento-Placement-Cell-Management-System` returns 404), so it is off every variant. Code Arena's live demo is frontend-only; describe it as a frontend.
+
+General picks (2026-10-18): Claude Cost Optimizer, LeetCode Rating Predictor, Blue-Green AWS Terraform, Bedrock Multi-Model MCP, itr-agent; Other line: Ledger Sync, GitScope, skillcheck, Kinfolk, Instagram Likes Leaderboard.
 
 ## Section-order canon (all 9 variants uniform, homogenized in commit 953843c)
 
-`Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements`. Bigtech inserts `Talks & Publications` between Skills and Achievements. Fix CLAUDE.md line 68 (stale SDE claim) and match across README.
+`Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition`. The last section is `achievements.tex`: the two aws-samples repos plus one LeetCode line (sde adds Kick Start). Bigtech inserts `Publications & Talks` (`talks.tex`: the two samples plus internal talks and programs, labelled `AWS internal`) after Skills, and its `achievements.tex` is `Competitive Programming`. Renamed from `Achievements` on 2026-10-18.
 
 ## Banned phrases (voice principles, non-negotiable)
 

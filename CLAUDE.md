@@ -66,7 +66,9 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 - Each variant's main `.tex` file is a thin wrapper: it inputs `../../common/preamble`, then `../../common/body` inside the document. `body.tex` inputs the shared header/certifications/education and the variant-local sections
 - Local `\input{summary}` etc. (from `body.tex`) resolve to the variant directory's own files because compilation runs from the variant directory
-- All variants share the same section order: Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Achievements. Bigtech inserts a Talks & Publications section between Skills and Achievements.
+- All variants share the same section order: Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition (`achievements.tex`). Bigtech inserts Publications & Talks (`talks.tex`) after Skills, and its `achievements.tex` is Competitive Programming.
+- Open Source: top 5 merged fixes with a one-line impact each, then one `Also merged` comma line. Never list an open PR.
+- Publications & Recognition: confirmed, publicly checkable items only (the two aws-samples repos, one LeetCode line). No college contests or hackathons; those live on the portfolio. Add an APG pattern or blog only once it has a public URL.
 - Must compile from within the variant directory (`cd variants/<slug>`)
 
 ### Other directories

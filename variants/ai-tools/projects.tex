@@ -1,39 +1,40 @@
 %-----------PROJECTS-----------------
+% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
 \section{\textbf{Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
+{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{Claude Code Plugin, MCP, TypeScript, React, Python}{Mar 2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{\faGithub\ GitHub} | \href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Claude Code plugin, MCP cost server, CLI grader and web calculator for Claude spend. Rebuilt every estimator on cache-aware billing, correcting a modelled 30-turn Opus session from \$3.44 to \$0.74, and replaced every vague savings range with a sourced or computed number. Golden-value tests pin the cost math in all three implementations.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://github.com/Sagargupta16/itr-agent}{itr-agent}}{TypeScript, MCP Protocol, Node.js, Zod}{Jul 2026}{\href{https://github.com/Sagargupta16/itr-agent}{\faGithub\ GitHub}}
+\resumeItemListStart
+    \item[$\diamond$] Local-first MCP server for Indian income tax: the LLM interviews and calls 12 tools, while a deterministic engine over a versioned JSON rule pack computes every rupee. 151 tests pin it to published worked examples and the statute, on an Ubuntu and Windows CI matrix.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://github.com/Sagargupta16/skillcheck}{skillcheck}}{TypeScript, Node.js, GitHub Actions, SARIF}{Jul 2026}{\href{https://github.com/Sagargupta16/skillcheck}{\faGithub\ GitHub} | \href{https://github.com/marketplace/actions/skillcheck-for-agent-skills}{Marketplace}}
+\resumeItemListStart
+    \item[$\diamond$] Conformance linter for Agent Skills: 36 rules with message-for-message parity to the skills-ref reference validator, SARIF 2.1.0 output and inline PR annotations. Ships as an npm CLI (284 downloads in the last month) and a GitHub Marketplace action.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP}}{TypeScript, MCP Protocol, AWS Bedrock Converse API}{Apr 2026}{\href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{\faGithub\ GitHub}}
+\resumeItemListStart
+    \item[$\diamond$] MCP server putting 26 text models from 7 providers, plus image, video and embedding models, behind 8 tools and one set of AWS credentials. Benchmarked in us-east-1: 26 of 26 models answered and 156 of 156 calls succeeded.
+\resumeItemListEnd
+
+\resumeExp
 {\href{https://github.com/Sagargupta16/claude-skills}{Claude Skills Marketplace}}{TypeScript, Claude Code Skills, MCP Protocol, Plugin System}{2026}{\href{https://github.com/Sagargupta16/claude-skills}{\faGithub\ GitHub}}
 \resumeItemListStart
-    \item[$\diamond$] Public Claude Code plugin marketplace hosting 16 plugins (dev-workflow, debug triage, Docker deploy, OSS contribution, deps audit, repo polish, refactoring, git advanced), each with slash commands, agents, and hooks. Skills auto-trigger on natural-language intent so users get the right tool without memorizing commands.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://github.com/Sagargupta16/mcp-toolkit}{Bedrock Multi-Model MCP + MCP Toolkit}}{TypeScript, MCP Protocol, AWS Bedrock, Node.js}{2026}{\href{https://github.com/Sagargupta16/mcp-toolkit}{\faGithub\ GitHub}}
-\resumeItemListStart
-    \item[$\diamond$] MCP server routing a single tool call to 500+ Bedrock foundation models (Claude, Llama, Mistral, Nova, DeepSeek, Titan, Stable Diffusion, Luma). Companion toolkit standardizes MCP server config, transport, and logging across projects with a plugin architecture.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://github.com/Sagargupta16/SelfHub}{SelfHub}}{TypeScript, MCP Server, MongoDB, Node.js}{Mar 2025}{\href{https://github.com/Sagargupta16/SelfHub}{\faGithub\ GitHub}}
-\resumeItemListStart
-    \item[$\diamond$] MCP server exposing a personal knowledge and life-ops hub (notes, tasks, journals) to Claude as structured tools. Backed by MongoDB with typed schemas so agents can read and write without hallucinating fields.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://github.com/Sagargupta16/GitScope}{GitScope}}{JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL, Cloudflare Workers}{Mar 2026}{\href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{Chrome Web Store} | \href{https://github.com/Sagargupta16/GitScope}{\faGithub\ GitHub}}
-\resumeItemListStart
-    \item[$\diamond$] Chrome extension published on the Chrome Web Store adding contribution insights to any GitHub profile -- streaks, language breakdown, PR stats, and activity heatmaps. OAuth via Cloudflare Worker (server-side secrets), 5-minute GraphQL response caching, zero runtime dependencies.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{TypeScript, Anthropic SDK, Analytics}{2026}{\href{https://sagargupta.online/claude-cost-optimizer/}{\faGlobe\ Live}}
-\resumeItemListStart
-    \item[$\diamond$] Tool that inspects Claude API usage and rewrites prompts, prompt-cache hits, and model routing to cut spend by 30--60\% on real workloads without changing outputs.
+    \item[$\diamond$] Public Claude Code plugin marketplace hosting 16 plugins (dev-workflow, debug triage, Docker deploy, OSS contribution, deps audit, repo polish, refactoring, git advanced), each with slash commands, agents, and hooks.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-1mm}
-\small{\textit{Other notable projects:} LeetCode Rating Predictor (Python/FastAPI/TensorFlow, 121K+ contest records, MAE \textasciitilde7.8), Ledger Sync (personal-finance reconciler, TypeScript/FastAPI/SQLite), Instagram Likes Leaderboard (TypeScript/Preact).}
+\vspace{-2pt}
+\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/mcp-toolkit}{MCP Toolkit} (MCP server middleware packages), \href{https://github.com/Sagargupta16/SelfHub}{SelfHub} (MCP personal-memory server), \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{GitScope} (Chrome Web Store extension), \href{https://github.com/Sagargupta16/LeetCode_Rating_Predictor}{LeetCode Rating Predictor} (train/serve skew fix, NumPy serving), \href{https://sagargupta.online/ledger-sync/}{Ledger Sync} (self-hosted finance app, 26 pages).}
 \vspace{-2mm}

@@ -1,9 +1,12 @@
-%-----------OPEN-SOURCE-----------------
-\section{\textbf{Open Source}}
-\vspace{-1pt}
-\resumeSubHeadingListStart
-\small{\item{
-    \textbf{11 upstream PRs merged}: \href{https://github.com/axios/axios/pull/11059}{axios \#11059} (synthesize AxiosError message from AggregateError on dual-stack failures), \href{https://github.com/apache/airflow/pull/63109}{Apache Airflow \#63109} (SalesforceBulkOperator template\_fields), \href{https://github.com/lucide-icons/lucide/pull/4512}{lucide \#4512} (Vue Icon kebab-case icon-node prop), \href{https://github.com/expressjs/multer/pull/1426}{expressjs/multer \#1426} (files skipped by fileFilter no longer count toward maxCount), \href{https://github.com/PrefectHQ/prefect/pull/20956}{PrefectHQ/prefect \#20956} (deployment-steps-as-Python doc), \href{https://github.com/feast-dev/feast/pull/6081}{feast-dev/feast \#6081} (Claude Code agent skills), \href{https://github.com/awslabs/agent-plugins/pull/132}{awslabs/agent-plugins \#132} (defusedxml extension guard), \href{https://github.com/awslabs/mcp/pull/2607}{awslabs/mcp \#2607} (Kendra docs navigation fix), \href{https://github.com/aws-ia/terraform-aws-vpc/pull/184}{aws-ia/terraform-aws-vpc v4.8.0} (Cloud WAN attachment-replacement root cause, fix co-authored). Open: \href{https://github.com/hashicorp/terraform-provider-aws/pull/46867}{hashicorp/terraform-provider-aws \#46867} (IoT CloudWatch metric substitution validation).
-}}
-\resumeSubHeadingListEnd
-\vspace{-2mm}
+%-----------OPEN SOURCE-----------------
+% Top 5 merged code fixes with impact, the rest on one line (docs/FACTS.md, Open source).
+\section{\textbf{Open Source Contributions (11 merged upstream)}}
+\vspace{-2pt}
+\resumeItemListStart
+    \resumeAchievement{\href{https://github.com/axios/axios/pull/11059}{\textbf{axios} (109K\faStarO)} -- AxiosError message now built from AggregateError sub-errors, ending blank dual-stack errors (\#11059)}{}
+    \resumeAchievement{\href{https://github.com/apache/airflow/pull/63109}{\textbf{Apache Airflow} (47K\faStarO)} -- template\_fields on SalesforceBulkOperator, so its arguments render via Jinja at run time (\#63109)}{}
+    \resumeAchievement{\href{https://github.com/lucide-icons/lucide/pull/4512}{\textbf{lucide} (25K\faStarO)} -- Fixed a TypeError crash when Vue templates pass the kebab-case icon-node prop (\#4512)}{}
+    \resumeAchievement{\href{https://github.com/expressjs/multer/pull/1426}{\textbf{multer} (12K\faStarO)} -- Files rejected by fileFilter no longer use up maxCount and fail later valid uploads (\#1426)}{}
+    \resumeAchievement{\href{https://github.com/terraform-aws-modules/terraform-aws-atlantis/pull/446}{\textbf{terraform-aws-modules/atlantis}} -- Fixed custom ECS security group egress rules being silently replaced by allow-all (\#446)}{}
+    \resumeAchievement{\RaggedRight\textbf{Also merged:} \href{https://github.com/PrefectHQ/prefect/pull/20956}{PrefectHQ/prefect}, \href{https://github.com/feast-dev/feast/pull/6081}{feast-dev/feast}, awslabs/agent-plugins (\href{https://github.com/awslabs/agent-plugins/pull/132}{\#132}, \href{https://github.com/awslabs/agent-plugins/pull/212}{\#212}), \href{https://github.com/awslabs/mcp/pull/2607}{awslabs/mcp}, \href{https://github.com/cloudposse/terraform-aws-tfstate-backend/pull/197}{cloudposse/terraform-aws-tfstate-backend}; co-author of the \href{https://github.com/aws-ia/terraform-aws-vpc/pull/184}{aws-ia/terraform-aws-vpc} v4.8.0 fix.}{}
+\resumeItemListEnd
