@@ -156,7 +156,7 @@ Canonical resume claim: `11 upstream PRs merged`, with a list like `axios, Apach
 
 ## Competitions
 
-- `Rank 1289 (Top 5%) -- Google Kick Start Round E '22` (Sep 2022). On `sde` and `bigtech` only since 2026-10-18. Certificate link: `https://github.com/Sagargupta16/Sagargupta16/blob/main/certificates/google_kickstart_2022-09.pdf` (the old `Certificates/Google-KickStart-September-2022.pdf` path returns 404).
+- `Rank 1289 -- Google Kick Start Round E '22` (Sep 2022). Never `Top 5%`: the certificate shows the rank only and the round's participant count is not on record (re-checked 2026-10-18). On `sde` and `bigtech` only since 2026-10-18. Certificate link: `https://github.com/Sagargupta16/Sagargupta16/blob/main/certificates/google_kickstart_2022-09.pdf` (the old `Certificates/Google-KickStart-September-2022.pdf` path returns 404).
 - `Rank 1699 -- Google Kick Start Round B '22` (May 2022) -- drop from resume, keep on portfolio.
 - College fest results (1st Coding Cauldron '23 and QFiesta IGNOSI '22; 2nd Manage the Damage '23 and Trial By Code IGNOSI '22; 3rd Logic Head '22 and MOTHRA '21; 4th TriNIT Hackathon): **off every variant since 2026-10-18**, kept on the portfolio. At 2 years into an AWS role they read as dated detail next to AWS-published samples and merged upstream fixes.
 - NIMCET AIR 208 and CGPA live on the Education line only, not in a separate section.
@@ -175,10 +175,14 @@ Ranked by role fit and recency. Each variant may re-rank. All descriptions ~one 
 8. **Ledger Sync** (Jan 2026) -- Self-hosted personal-finance app. TypeScript/React/FastAPI/SQLite. 26 pages (not 23); `.xlsx/.xls/.csv` imports with SHA-256 transaction IDs (idempotent re-imports); AI assistant with 15 read-only tool calls. Never `CSV/OFX` or `fuzzy-match dedup`. https://sagargupta.online/ledger-sync/
 9. **GitScope** (Mar 2026) -- Chrome extension for GitHub profile insights. JS/Manifest V3/GitHub GraphQL/Cloudflare Workers. https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff
 10. **Instagram Likes Leaderboard** (Feb 2026) -- TypeScript/Preact/Browser API. `Other Notable Projects` line.
-11. **Claude Skills Marketplace** -- Claude Code plugin marketplace, 16 plugins (not 25).
+11. **Claude Skills Marketplace** -- Claude Code plugin marketplace, 16 plugins (not 25). Every plugin ships a skill; only dev-workflow, git-advanced and oss-contrib also have commands, agents and hooks, so never `each with slash commands, agents, and hooks`.
+
+Off every variant (re-checked 2026-10-18): **StockSage AI** (the README says it is a Phase 1 scaffold with empty placeholder files; `lstm_model.py` is 0 bytes, so never claim an LSTM forecaster). **DevOps-AWS-FARM** has no Terraform (0 `.tf` files); describe it only as `Docker + GitHub Actions OIDC deploy to ECR/ECS`. **Instagram Autopilot** posts animated SVG Reels; Bedrock writes the topic and caption text only, so never `Bedrock image and video generation`.
+
+SageMaker skills rows say `Custom PSI drift jobs`, never `Model Monitor` (see the MLOps sample section). HackerRank is written `6-Star` on every variant.
 12. **SelfHub** (Mar 2025) -- MCP server + MongoDB.
 
-Placemento has no public repo (`Sagargupta16/Placemento-Placement-Cell-Management-System` returns 404), so it is off every variant. Code Arena's live demo is frontend-only; describe it as a frontend.
+Placemento lives at https://github.com/MCA-NITW/placemento (live: placemento.onrender.com); the old `Sagargupta16/Placemento-...` URL is a 404. It is off every variant for now; whether sde lists it again is Sagar's call. Code Arena's live demo is frontend-only; describe it as a frontend.
 
 General picks (2026-10-18): Claude Cost Optimizer, LeetCode Rating Predictor, Blue-Green AWS Terraform, Bedrock Multi-Model MCP, itr-agent; Other line: Ledger Sync, GitScope, skillcheck, Kinfolk, Instagram Likes Leaderboard.
 
