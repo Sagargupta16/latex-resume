@@ -1,17 +1,24 @@
 %-----------BODY (shared across all variants)-----------------
 % Compiled from within variants/<slug>/, so \input{summary} etc. resolve
 % to the variant's own files. Common files use ../../common/<file>.
-% A variant may define \variantExtraSections before \input-ing this body
-% to inject an extra section (e.g. bigtech: \newcommand{\variantExtraSections}{\input{talks}}).
+% Order: Summary -> Experience -> Publications -> Certifications -> Projects
+% -> Open Source -> Education -> Skills -> extra section.
+% Two hooks a variant may define before \input-ing this body:
+%   \variantPublications   the section right after Experience
+%                          (default: achievements.tex, Publications & Recognition)
+%   \variantExtraSections  a section after Skills (default: none)
+% bigtech sets \variantPublications to talks (Publications & Talks) and
+% \variantExtraSections to achievements (Competitive Programming).
+\providecommand{\variantPublications}{\input{achievements}}
 \providecommand{\variantExtraSections}{}
 
 \input{../../common/header}
 \input{summary}
 \input{experience}
+\variantPublications
 \input{../../common/certifications}
-\input{../../common/education}
 \input{projects}
 \input{oss}
+\input{../../common/education}
 \input{skills}
 \variantExtraSections
-\input{achievements}

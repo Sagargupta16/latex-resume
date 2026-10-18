@@ -135,6 +135,8 @@ Mohali, India.
 
 Expired: HashiCorp Certified: Terraform Associate (003), issued Sep 2024, expired 2026-09-10 ([Credly](https://www.credly.com/badges/8b0723a5-bac7-4262-b5b6-20337b2979a1)). Removed from every variant; do not re-add.
 
+Non-AWS badge: Claude Partner Badge - Claude Code (Anthropic), issued Sep 2026, expires Mar 2027 ([Credly](https://www.credly.com/badges/5e4ea6eb-b781-4c83-a0f1-231e2b92e777)). Listed on `ai-tools` only, outside the 5 certification count.
+
 ### AWS Knowledge & Learning Badges (12)
 
 - Amazon Q Developer Fundamentals (Jan 2026)

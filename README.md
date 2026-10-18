@@ -62,10 +62,10 @@ cover-letters/              # Cover letter template (real letters .gitignored)
 All 9 variants share the same section order, wired via `common/body.tex`:
 
 ```
-Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition
+Summary -> Experience -> Publications & Recognition -> Certifications -> Projects -> Open Source -> Education -> Skills
 ```
 
-`achievements.tex` renders the last section. On 8 variants it is `Publications & Recognition`: the two AWS-published samples plus one LeetCode line (sde adds Kick Start). College contests and hackathons are off the resume and stay on the portfolio. `bigtech` inserts `Publications & Talks` (`talks.tex`) after Skills via `\variantExtraSections`, and its `achievements.tex` is `Competitive Programming`. Open Source lists the top 5 merged fixes, then one `Also merged` line. Each variant's main `.tex` sets up preamble + paper size, then `\input{../../common/body}` handles the rest.
+On 8 variants `achievements.tex` renders `Publications & Recognition` right after Experience: the two AWS-published samples plus one LeetCode line (sde adds Kick Start). College contests and hackathons are off the resume and stay on the portfolio. `bigtech` swaps in `Publications & Talks` (`talks.tex`) at that slot via `\variantPublications`, and appends its `achievements.tex` (`Competitive Programming`) after Skills via `\variantExtraSections`. Education sits below Projects and Open Source, since two years of AWS work now lead. Each summary opens with the target job title in bold (DevOps Engineer, Platform Engineer, ...); the role line in Experience keeps the exact AWS title. `ai-tools` adds the Anthropic Claude Code partner badge to the certifications line via `\variantCertExtra`; it is not counted in the 5 AWS certifications. Open Source lists the top 5 merged fixes, then one `Also merged` line. Each variant's main `.tex` sets up preamble + paper size, then `\input{../../common/body}` handles the rest.
 
 ## How It Works
 

@@ -10,6 +10,7 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, 
 |---|---|
 | Full name | Sagar Gupta |
 | Job title on resume | `ProServe (Cloud Consultant) - DevOps/MLOps` (set by Sagar 2026-10-14; use this exact string on every surface) |
+| Summary headline (2026-10-18) | The target job title in bold, then `with 2 years at AWS Professional Services as ProServe (Cloud Consultant) - DevOps/MLOps`. Headlines: general `Cloud & DevOps/MLOps Engineer` (INFO.md bio), devops `DevOps Engineer`, cloud `Cloud Engineer`, mlops `MLOps Engineer`, aiml `ML Engineer`, platform `Platform Engineer`, sde `Software Engineer (full-stack)`, ai-tools `AI Tools & Developer Productivity Engineer`, bigtech `Software Engineer`. Never `Senior DevOps Consultant` or `Cloud Consultant at AWS` as his title. |
 | Job title on portfolio | `ProServe (Cloud Consultant) - DevOps/MLOps at AWS` (`@ AWS` in short labels) |
 | Employer | Amazon Web Services (AWS), Professional Services |
 | Internal title (do NOT show externally) | Associate Delivery Consultant, ProServe DC |
@@ -51,7 +52,8 @@ Source of record: the engagement write-up of 2026-10-10 (verified facts only). W
 - Role: `DevOps Consultant`.
 - Scope: `Modernized legacy Terraform to cloud-native IaC patterns on high-sensitivity financial workloads`.
 - Amazon Q usage: `Used Amazon Q to accelerate code analysis and migration assessments`. NOT `leveraged` (banned by voice principles).
-- IMPORTANT: DTCC MUST appear in every variant that lists RWS + State Street. Missing on `aiml`, `mlops`, `bigtech` today -- leaves a 6-month gap Aug 2025 to Feb 2026.
+- No confirmed metric exists, so since 2026-10-18 the resume line is one rendered line on every variant: `Modernized legacy Terraform to cloud-native IaC with Amazon Q.` (sde: `Refactored`, per INFO.md). Never `S3 native locking`, `policy-as-code checks`, `refactored monoliths into reusable modules`, `standardizing state, provider, and module patterns`, `modular` or `across the estate`: none of them is in the engagement record.
+- IMPORTANT: DTCC MUST appear in every variant that lists RWS + State Street (all 9 do, checked 2026-10-18); dropping it leaves a 6-month gap Aug 2025 to Feb 2026.
 
 ### Internal impact (roll into experience or extract to Talks section)
 
@@ -112,7 +114,7 @@ Expired: HashiCorp Certified: Terraform Associate (003), issued Sep 2024, expire
 
 Note (corrected 2026-10-18): Credly's `badges.json` shows Cloud Practitioner expiring `2029-01-31`. Passing Developer Associate on 2026-01-31 renewed it, so the portfolio JSON value was right and the old `2027-05-02` note here was stale.
 
-Also on Credly (not an AWS cert, so the count stays `5x AWS certified`): `Claude Partner Badge - Claude Code`, issued 2026-09-23, expires 2027-03-23. Not on the resume yet.
+Also on Credly (not an AWS cert, so the count stays `5x AWS certified`): `Claude Partner Badge - Claude Code`, issuer Anthropic, issued 2026-09-23, expires 2027-03-23, public, badge https://www.credly.com/badges/5e4ea6eb-b781-4c83-a0f1-231e2b92e777 (re-checked 2026-10-18 via `https://www.credly.com/users/sagar-gupta.f8eb96cc/badges.json`; the profile handle is `sagar-gupta.f8eb96cc`, `sagar-gupta.6c9fd6e2` returns "Resource not found"). On `ai-tools` only since 2026-10-18, as `Anthropic badge: Claude Partner Badge - Claude Code (Sep 2026)` on the certifications line; the heading stays `Industry Certifications (5)`.
 
 Optional resume additions from learning badges: `Well-Architected Proficient (Jan 2026)`, `AWS AI-DLC Ambassador L100 (Jun 2026)`. Both are current and role-relevant.
 
@@ -188,7 +190,7 @@ General picks (2026-10-18): Claude Cost Optimizer, LeetCode Rating Predictor, Bl
 
 ## Section-order canon (all 9 variants uniform, homogenized in commit 953843c)
 
-`Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition`. The last section is `achievements.tex`: the two aws-samples repos plus one LeetCode line (sde adds Kick Start). Bigtech inserts `Publications & Talks` (`talks.tex`: the two samples plus internal talks and programs, labelled `AWS internal`) after Skills, and its `achievements.tex` is `Competitive Programming`. Renamed from `Achievements` on 2026-10-18.
+`Summary -> Experience -> Publications & Recognition -> Certifications -> Projects -> Open Source -> Education -> Skills` (reordered 2026-10-18: Publications moved up next to Experience, Education moved below Projects and Open Source). `Publications & Recognition` is `achievements.tex`: the two aws-samples repos plus one LeetCode line (sde adds Kick Start). Bigtech puts `Publications & Talks` (`talks.tex`: the two samples plus internal talks and programs, labelled `AWS internal`) in the slot after Experience via `\variantPublications`, and its `achievements.tex` (`Competitive Programming`) goes last, after Skills, via `\variantExtraSections`. Renamed from `Achievements` on 2026-10-18.
 
 ## Banned phrases (voice principles, non-negotiable)
 

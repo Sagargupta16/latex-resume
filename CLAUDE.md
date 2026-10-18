@@ -41,10 +41,10 @@ The canonical source for the general variant is `variants/general/resume.tex`. T
 ### Shared sections (`common/`)
 
 - `preamble.tex` - Packages, fonts, geometry, custom commands (`\resumeExp`, `\resumeEdu`, `\resumeAchievement`)
-- `body.tex` - Shared document body: inputs the header, variant-local sections, certifications, and education in the canonical order; exposes a `\variantExtraSections` hook
+- `body.tex` - Shared document body: inputs the header, variant-local sections, certifications, and education in the canonical order; exposes the `\variantPublications` (slot after Experience) and `\variantExtraSections` (after Skills) hooks
 - `header.tex` - Name, contact info, links
 - `education.tex` - NIT Warangal MCA + DAVV (Indore) BCA
-- `certifications.tex` - 5 AWS certifications
+- `certifications.tex` - 5 AWS certifications; `\variantCertExtra` lets a variant append a non-AWS credential (ai-tools: Anthropic Claude Code partner badge, not counted in the 5)
 
 ### Variant sections (`variants/<slug>/`)
 
@@ -66,7 +66,9 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 
 - Each variant's main `.tex` file is a thin wrapper: it inputs `../../common/preamble`, then `../../common/body` inside the document. `body.tex` inputs the shared header/certifications/education and the variant-local sections
 - Local `\input{summary}` etc. (from `body.tex`) resolve to the variant directory's own files because compilation runs from the variant directory
-- All variants share the same section order: Summary -> Experience -> Certifications -> Education -> Projects -> Open Source -> Skills -> Publications & Recognition (`achievements.tex`). Bigtech inserts Publications & Talks (`talks.tex`) after Skills, and its `achievements.tex` is Competitive Programming.
+- All variants share the same section order: Summary -> Experience -> Publications & Recognition (`achievements.tex`) -> Certifications -> Projects -> Open Source -> Education -> Skills. Bigtech puts Publications & Talks (`talks.tex`) in the slot after Experience and its `achievements.tex` (Competitive Programming) last, after Skills.
+- Summary headline: each variant opens with the target job title in bold (general `Cloud & DevOps/MLOps Engineer`, devops `DevOps Engineer`, cloud `Cloud Engineer`, mlops `MLOps Engineer`, aiml `ML Engineer`, platform `Platform Engineer`, sde `Software Engineer (full-stack)`, ai-tools `AI Tools & Developer Productivity Engineer`, bigtech `Software Engineer`). Wherever the resume states his own title (the Experience role line, the summary's `as ...` clause) it is exactly `ProServe (Cloud Consultant) - DevOps/MLOps`.
+- RWS is one result-first lead line plus 2 or 3 short sub-bullets on every variant; DTCC is one line (no confirmed metric exists).
 - Open Source: top 5 merged fixes with a one-line impact each, then one `Also merged` comma line. Never list an open PR.
 - Publications & Recognition: confirmed, publicly checkable items only (the two aws-samples repos, one LeetCode line). No college contests or hackathons; those live on the portfolio. Add an APG pattern or blog only once it has a public URL.
 - Must compile from within the variant directory (`cd variants/<slug>`)
