@@ -1,8 +1,20 @@
 %-----------PROJECTS-----------------
-% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
+% Numbers re-measured against each repo's main branch on 2026-10-18, Ledger Sync and orrery on 2026-10-19 (docs/FACTS.md, Featured projects).
 \section{\textbf{Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
+
+\resumeExp
+{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{React 19, TypeScript, FastAPI, SQLAlchemy, Neon PostgreSQL, Vercel}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Self-hosted personal-finance app: imports .xlsx, .xls and .csv bank statements with SHA-256 transaction IDs so re-imports stay idempotent, then serves 26 analytics pages (Indian fiscal-year tax planning, investments, FIRE, multi-currency) and an AI assistant limited to 15 read-only tool calls. FastAPI on Vercel over Neon PostgreSQL, React on GitHub Pages, with 298 test files across both stacks.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://sagargupta.online/orrery/}{orrery}}{Agent Skill, Claude Code Plugin, Node.js, ELK, SVG}{Oct 2026}{\href{https://github.com/Sagargupta16/orrery}{\faGithub\ GitHub} | \href{https://sagargupta.online/orrery/gallery/}{Gallery}}
+\resumeItemListStart
+    \item[$\diamond$] Agent Skill that turns a YAML spec into animated architecture diagrams with 18,209 official icons (AWS, Azure, Google Cloud, Kubernetes, GitHub, IBM), each cloud pack rebuilt from the vendor's own download and pinned by checksum. ELK auto-layout, a validator whose every finding names the fix, and a review board of 3 reviewer agents; 40 reference diagrams are rendered and checked in CI. Runs in Claude Code, Codex, Cursor, Gemini CLI and Kiro.
+\resumeItemListEnd
 
 \resumeExp
 {\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{Blue-Green AWS Terraform}}{Terraform, ECS on EC2, ALB, CodePipeline, CodeDeploy}{Jul 2025}{\href{https://github.com/Sagargupta16/Blue_Green_AWS_Terraform}{\faGithub\ GitHub}}
@@ -22,13 +34,7 @@
     \item[$\diamond$] Rating model on 15 engineered features. Found and fixed a train/serve skew on participant count that had tripled backtest error (MAE 38.76 to 12.46 on 57 contests). Moved serving to NumPy-only inference pinned by a golden test, cutting the runtime from \textasciitilde1.8 GB to \textasciitilde65 MB; a weekly job refreshes the data and re-runs the backtest.
 \resumeItemListEnd
 
-\resumeExp
-{\href{https://sagargupta.online/claude-cost-optimizer/}{Claude Cost Optimizer}}{Claude Code Plugin, MCP, TypeScript, React, Python}{Mar 2026}{\href{https://github.com/Sagargupta16/claude-cost-optimizer}{\faGithub\ GitHub} | \href{https://sagargupta.online/claude-cost-optimizer/}{Live}}
-\resumeItemListStart
-    \item[$\diamond$] Claude Code plugin, MCP cost server, CLI grader and web calculator for Claude spend. Rebuilt every estimator on cache-aware billing, correcting a modelled 30-turn Opus session from \$3.44 to \$0.74, and replaced every vague savings range with a sourced or computed number. Golden-value tests pin the cost math in all three implementations.
-\resumeItemListEnd
-
 \resumeSubHeadingListEnd
 \vspace{-2pt}
-\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (26 text models, 156 of 156 benchmark calls), \href{https://github.com/Sagargupta16/itr-agent}{itr-agent} (deterministic tax engine, 151 tests), \href{https://github.com/Sagargupta16/DevOps-AWS-FARM}{DevOps-AWS-FARM} (Docker + GitHub Actions OIDC deploy to ECR/ECS), \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{GitScope} (Chrome Web Store extension), \href{https://sagargupta.online/ledger-sync/}{Ledger Sync} (self-hosted finance app, 26 pages).}
+\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (26 text models, 156 of 156 benchmark calls), \href{https://github.com/Sagargupta16/itr-agent}{itr-agent} (deterministic tax engine, 151 tests), \href{https://github.com/Sagargupta16/DevOps-AWS-FARM}{DevOps-AWS-FARM} (Docker + GitHub Actions OIDC deploy to ECR/ECS), \href{https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff}{GitScope} (Chrome Web Store extension), \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (cache-aware Claude cost model).}
 \vspace{-2mm}
