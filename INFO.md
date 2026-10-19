@@ -197,8 +197,9 @@ Verified `merged: false`. Kept here so they are never re-added to a resume by mi
 
 | Project | Tech Stack | Date | Links |
 |---------|-----------|------|-------|
+| **Ledger Sync** | React 19, TypeScript, FastAPI, SQLAlchemy, Neon PostgreSQL, Vercel | Jan 2026 | [GitHub](https://github.com/Sagargupta16/ledger-sync), [Live](https://sagargupta.online/ledger-sync/) |
+| **orrery** | Agent Skill, Claude Code Plugin, Node.js, ELK, SVG | Oct 2026 | [GitHub](https://github.com/Sagargupta16/orrery), [Live](https://sagargupta.online/orrery/), [Gallery](https://sagargupta.online/orrery/gallery/) |
 | **GitScope** | JavaScript, Chrome Extension (Manifest V3), GitHub GraphQL API, Cloudflare Workers | Mar 2026 | [GitHub](https://github.com/Sagargupta16/GitScope), [Chrome Web Store](https://chromewebstore.google.com/detail/gitscope/fndaanihifimmlnmkjdmjbbkbdajolff) |
-| **Ledger Sync** | TypeScript, React, FastAPI, SQLite, Tailwind CSS | Jan 2026 | [GitHub](https://github.com/Sagargupta16/ledger-sync), [Live](https://sagargupta.online/ledger-sync/) |
 | **Blue-Green AWS Terraform** | Terraform, AWS ECS on EC2 (Auto Scaling Group, not Fargate), ALB, CodePipeline, HCL; 15 modules | Jul 2025 | [GitHub](https://github.com/Sagargupta16/Blue_Green_AWS_Terraform) |
 | **LeetCode Rating Predictor** | Python, React, FastAPI, TensorFlow, GraphQL | Dec 2023 | [GitHub](https://github.com/Sagargupta16/LeetCode_Rating_Predictor), [Live](https://leetcode-rating-predictor.onrender.com/) |
 | **Instagram Likes Leaderboard** | TypeScript, Preact, Browser API | Feb 2026 | [GitHub](https://github.com/Sagargupta16/InstagramLikesLeaderboard), [Live](https://sagargupta.online/InstagramLikesLeaderboard/) |

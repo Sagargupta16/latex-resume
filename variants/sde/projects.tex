@@ -1,25 +1,25 @@
 %-----------PROJECTS-----------------
-% Numbers re-measured against each repo's main branch on 2026-10-18 (docs/FACTS.md, Featured projects).
+% Numbers re-measured against each repo's main branch on 2026-10-18, Ledger Sync and orrery on 2026-10-19 (docs/FACTS.md, Featured projects).
 \section{\textbf{Projects}}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 
 \resumeExp
+{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{React 19, TypeScript, FastAPI, SQLAlchemy, Neon PostgreSQL, Vercel}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
+\resumeItemListStart
+    \item[$\diamond$] Self-hosted personal-finance app: imports .xlsx, .xls and .csv bank statements with SHA-256 transaction IDs so re-imports stay idempotent, then serves 26 analytics pages (Indian fiscal-year tax planning, investments, FIRE, multi-currency) and an AI assistant limited to 15 read-only tool calls. FastAPI on Vercel over Neon PostgreSQL, React on GitHub Pages, with 298 test files across both stacks.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://sagargupta.online/orrery/}{orrery}}{Agent Skill, Claude Code Plugin, Node.js, ELK, SVG}{Oct 2026}{\href{https://github.com/Sagargupta16/orrery}{\faGithub\ GitHub} | \href{https://sagargupta.online/orrery/gallery/}{Gallery}}
+\resumeItemListStart
+    \item[$\diamond$] Agent Skill that turns a YAML spec into animated architecture diagrams with 18,209 official icons (AWS, Azure, Google Cloud, Kubernetes, GitHub, IBM), each cloud pack rebuilt from the vendor's own download and pinned by checksum. ELK auto-layout, a validator whose every finding names the fix, and a review board of 3 reviewer agents; 40 reference diagrams are rendered and checked in CI. Runs in Claude Code, Codex, Cursor, Gemini CLI and Kiro.
+\resumeItemListEnd
+
+\resumeExp
 {\href{https://kinfolk-neon.vercel.app/}{Kinfolk}}{TypeScript, Next.js 16, React 19, Drizzle, Neon Postgres}{Jul 2026}{\href{https://github.com/Sagargupta16/kinfolk}{\faGithub\ GitHub} | \href{https://kinfolk-neon.vercel.app/}{Live}}
 \resumeItemListStart
     \item[$\diamond$] Collaborative family graph modelled as a directed acyclic graph, not a tree: each relative keeps their own record and consent links join them, so nothing is overwritten. Live on Vercel + Neon with a production health check; regression tests run on an in-memory PGlite database.
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://sagargupta.online/ledger-sync/}{Ledger Sync}}{TypeScript, React, FastAPI, SQLite, Tailwind CSS}{Jan 2026}{\href{https://github.com/Sagargupta16/ledger-sync}{\faGithub\ GitHub} | \href{https://sagargupta.online/ledger-sync/}{Live}}
-\resumeItemListStart
-    \item[$\diamond$] Self-hosted personal-finance app across 26 pages: imports .xlsx/.xls/.csv statements with deterministic SHA-256 transaction IDs so repeated imports stay idempotent, plus an AI assistant backed by 15 read-only tool calls (multi-provider LLM).
-\resumeItemListEnd
-
-\resumeExp
-{\href{https://github.com/Sagargupta16/itr-agent}{itr-agent}}{TypeScript, MCP Protocol, Node.js, Zod}{Jul 2026}{\href{https://github.com/Sagargupta16/itr-agent}{\faGithub\ GitHub}}
-\resumeItemListStart
-    \item[$\diamond$] Local-first MCP server for Indian income tax: the LLM interviews and calls 12 tools, while a deterministic engine over a versioned JSON rule pack computes every rupee. 151 tests pin it to published worked examples and the statute, on an Ubuntu and Windows CI matrix.
 \resumeItemListEnd
 
 \resumeExp
@@ -36,5 +36,5 @@
 
 \resumeSubHeadingListEnd
 \vspace{-2pt}
-\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/code-arena}{Code Arena} (competitive coding arena frontend), \href{https://github.com/Sagargupta16/InstagramLikesLeaderboard}{Instagram Likes Leaderboard} (browser-console tool), \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (26 text models, 156 of 156 benchmark calls), \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (cache-aware Claude cost model), \href{https://github.com/Sagargupta16/skillcheck}{skillcheck} (Agent Skills linter, 284 npm downloads a month).}
+\small{\textbf{Other Notable Projects:} \href{https://github.com/Sagargupta16/itr-agent}{itr-agent} (deterministic tax engine, 151 tests), \href{https://github.com/Sagargupta16/code-arena}{Code Arena} (competitive coding arena frontend), \href{https://github.com/Sagargupta16/bedrock-multi-model-mcp}{Bedrock Multi-Model MCP} (26 text models, 156 of 156 benchmark calls), \href{https://github.com/Sagargupta16/claude-cost-optimizer}{Claude Cost Optimizer} (cache-aware Claude cost model), \href{https://github.com/Sagargupta16/skillcheck}{skillcheck} (Agent Skills linter, 284 npm downloads a month).}
 \vspace{-2mm}
