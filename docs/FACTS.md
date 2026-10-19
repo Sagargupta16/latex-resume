@@ -68,7 +68,7 @@ Source of record: the engagement write-up of 2026-10-10 (verified facts only). W
 
 ## Published AWS samples (verified 2026-10-18 against each repo's main branch)
 
-Both are listed in the `Publications & Recognition` section (bigtech: `Publications & Talks`) as `Published by AWS: aws-samples/<repo> (author, MIT-0)`. Authorship: `xsagarx-aws` (commit author `Sagar Gupta`) is the only human committer on both (`gh api repos/aws-samples/<repo>/contributors`). Never quote their star counts (4 each; aws-samples has 9,000+ public repos). The Experience MLOps bullet keeps the first sample's link; the second sample is only referenced there (`see Publications`), so neither is listed twice in full.
+All three are listed in the `Publications & Recognition` section (bigtech: `Publications & Talks`, which still lists only the first two: its letter-size page 2 is full, and even a one-line third entry pushed it to 3 pages on 2026-10-19) as `Published by AWS: aws-samples/<repo> (author, MIT-0)`. Authorship: `xsagarx-aws` (commit author `Sagar Gupta`) is the only human committer on each (`gh api repos/aws-samples/<repo>/contributors`). Never quote their star counts (4 each on the first two; aws-samples has 9,000+ public repos). The Experience MLOps bullet keeps the first sample's link; the other two are only referenced in the Internal Impact bullet (`see Publications`), so none is listed twice in full.
 
 **aws-samples/sample-sagemaker-image-classification-mlops** (main at `c124044`):
 
@@ -87,6 +87,14 @@ Both are listed in the `Publications & Recognition` section (bigtech: `Publicati
 - Policy types: `six policy types` (SCP, RCP, tag, backup, AI services opt-out, chat applications) as 20 policy documents. Never `all six`: the AWS Organizations user guide lists 13 policy types (2 authorization, 11 declarative) as of 2026-10-18.
 - Delegated admin: `15 services` (17 resources in `delegation.tf`, minus the Access Analyzer service-linked role and the Macie management-account enablement).
 - OU tree up to 5 levels, Control Tower baselines parent before child, a 513-entry Control Tower control ID map.
+
+**aws-samples/sample-agentcore-harness-agent-terraform** (main at `bb65454`, published 2026-10-19):
+
+- A skills-based AWS architecture agent hosted on the Amazon Bedrock AgentCore harness, deployed entirely with Terraform: `71 resources in 12 .tf files` (`git ls-files '*.tf'`, count of `resource "` blocks).
+- `9 MCP tools`: the 8 in `tool_names` (`hosted/terraform/variables.tf`) plus `ask_architect`, on AgentCore Runtime behind AgentCore Gateway. The gateway's Cedar policy is default-deny and permits only the listed tools and caller roles.
+- `3 agent skills` (`skills/`: aws-archify, aws-design-doc, aws-docs-lookup). Served to Claude Code, Codex and Kiro.
+- AgentCore Memory and AgentCore Evaluations; `promote.sh` moves a version to the pinned `PROD` endpoint only after it passes an evaluation.
+- Operations: CloudWatch alarms, a CloudWatch Synthetics canary and an AWS Budgets budget.
 
 ## Earlier roles
 

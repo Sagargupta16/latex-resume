@@ -70,7 +70,7 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 - Summary headline: each variant opens with the target job title in bold (general `Cloud & DevOps/MLOps Engineer`, devops `DevOps Engineer`, cloud `Cloud Engineer`, mlops `MLOps Engineer`, aiml `ML Engineer`, platform `Platform Engineer`, sde `Software Engineer (full-stack)`, ai-tools `AI Tools & Developer Productivity Engineer`, bigtech `Software Engineer`). Wherever the resume states his own title (the Experience role line, the summary's `as ...` clause) it is exactly `ProServe (Cloud Consultant) - DevOps/MLOps`.
 - RWS is one result-first lead line plus 2 or 3 short sub-bullets on every variant; DTCC is one line (no confirmed metric exists).
 - Open Source: top 5 merged fixes with a one-line impact each, then one `Also merged` comma line. Never list an open PR.
-- Publications & Recognition: confirmed, publicly checkable items only (the two aws-samples repos, one LeetCode line). No college contests or hackathons; those live on the portfolio. Add an APG pattern or blog only once it has a public URL.
+- Publications & Recognition: confirmed, publicly checkable items only (the three aws-samples repos, one LeetCode line; bigtech lists two because its page is full). No college contests or hackathons; those live on the portfolio. Add an APG pattern or blog only once it has a public URL.
 - Must compile from within the variant directory (`cd variants/<slug>`)
 
 ### Other directories
