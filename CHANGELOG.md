@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.3.1] - 2026-10-19
+
+- feat: lead the projects section with ledger sync and orrery (#23)
+
 ## [1.3.0] - 2026-10-18
 
 - feat: rework projects, open source and publications on every variant [minor]
