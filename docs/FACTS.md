@@ -190,7 +190,7 @@ Since 2026-10-19 every variant leads Projects with Ledger Sync, then orrery (ai-
 11. **Instagram Likes Leaderboard** (Feb 2026) -- TypeScript/Preact/Browser API. `Other Notable Projects` line. A browser-console tool (README), never `browser extension`.
 12. **Claude Skills Marketplace** -- Claude Code plugin marketplace, 16 plugins (not 25). Every plugin ships a skill; only dev-workflow, git-advanced and oss-contrib also have commands, agents and hooks, so never `each with slash commands, agents, and hooks`.
 
-Off every variant (re-checked 2026-10-18): **StockSage AI** (the README says it is a Phase 1 scaffold with empty placeholder files; `lstm_model.py` is 0 bytes, so never claim an LSTM forecaster). **DevOps-AWS-FARM** has no Terraform (0 `.tf` files); describe it only as `Docker + GitHub Actions OIDC deploy to ECR/ECS`. **Instagram Autopilot** posts animated SVG Reels; Bedrock writes the topic and caption text only, so never `Bedrock image and video generation`.
+Off every variant (re-checked 2026-10-18): **StockSage AI** (the README says it is a Phase 1 scaffold with empty placeholder files; `lstm_model.py` is 0 bytes, so never claim an LSTM forecaster). **farm-stack-aws-ecs** (renamed from DevOps-AWS-FARM on 2026-10-21) has no Terraform (0 `.tf` files); describe it only as `Docker + GitHub Actions OIDC deploy to ECR/ECS`. **Instagram Autopilot** posts animated SVG Reels; Bedrock writes the topic and caption text only, so never `Bedrock image and video generation`.
 
 SageMaker skills rows say `Custom PSI drift jobs`, never `Model Monitor` (see the MLOps sample section). HackerRank is written `6-Star` on every variant.
 13. **SelfHub** (Mar 2025) -- MCP server + MongoDB.
