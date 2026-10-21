@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.3.3] - 2026-10-21
+
+- chore: link the renamed blue-green and farm repositories (#25)
+
 ## [1.3.2] - 2026-10-19
 
 - feat: list the agentcore harness aws sample in eight variants (#24)
