@@ -27,5 +27,5 @@ All five are grounded in two sources of truth and must never fabricate:
 - Source facts only from [INFO.md](../INFO.md); never invent a metric, client, cert, or date.
 - Edit variant `.tex` files, not the root `resume.tex` shim or `common/` (unless cross-variant).
 - Never touch `VERSION` or `CHANGELOG.md` -- the CI `release` job owns them.
-- Anonymize clients in recruiter-facing variants; the `general` variant may name public clients.
+- Never name a customer on any variant, letter or message; use the generic descriptors and wording in [FACTS.md](FACTS.md) (Amazon/AWS confidentiality rules).
 - No em-dashes (use `--`), no emojis, no buzzwords -- per voice-principles.

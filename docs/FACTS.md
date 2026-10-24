@@ -13,8 +13,8 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, 
 | Summary headline (2026-10-18) | The target job title in bold, then `with 2 years at AWS Professional Services as ProServe (Cloud Consultant) - DevOps/MLOps`. Headlines: general `Cloud & DevOps/MLOps Engineer` (INFO.md bio), devops `DevOps Engineer`, cloud `Cloud Engineer`, mlops `MLOps Engineer`, aiml `ML Engineer`, platform `Platform Engineer`, sde `Software Engineer (full-stack)`, ai-tools `AI Tools & Developer Productivity Engineer`, bigtech `Software Engineer` (bigtech puts the competitive-programming line between the headline and the `Two years at AWS Professional Services as ...` clause). Never `Senior DevOps Consultant` or `Cloud Consultant at AWS` as his title. |
 | Job title on portfolio | `ProServe (Cloud Consultant) - DevOps/MLOps at AWS` (`@ AWS` in short labels) |
 | Employer | Amazon Web Services (AWS), Professional Services |
-| Internal title (do NOT show externally) | Associate Delivery Consultant, ProServe DC |
-| Location | Bengaluru, India (since 2026-10-14). The AWS internship (Mar -- Jul 2024) stays `Hyderabad, India`. |
+| Location | `Hyderabad, India` on every surface, including the AWS internship (Mar -- Jul 2024). |
+| Disclaimer | `Personal projects and opinions are my own and do not represent Amazon or AWS.` as a footer on every page of every variant (`common/preamble.tex`, in the bottom margin, so it costs no layout space). |
 | Email | sg85207@gmail.com |
 | Phone | +91-8770532413 |
 | Portfolio | https://sagargupta.online/portfolio-react/ |
@@ -24,47 +24,38 @@ Reconciled 2026-07-03 from INFO.md + Credly + verified PR data. Certifications, 
 
 ## Experience: AWS ProServe (Aug 2024 -- Present)
 
-### RWS (Feb 2026 -- Present)
+Confidentiality (Amazon/AWS rules, 2026-10-24): never name a customer anywhere (resume text, LaTeX comments, docs, cover letters); use the three descriptors below. Never state a customer's environment, architecture, topology, Regions, programme, timeline, change process, blockers or cost decisions, resource or control counts, compliance frameworks, satisfaction scores, before/after timings or any other customer-specific metric, and never say customer work used AI tools. Each engagement is the role, the descriptor, the dates and 2 to 3 generic bullets about the type of work and skills.
 
-Source of record: the engagement write-up of 2026-10-10 (verified facts only). Write each point as need, what was built, result. Never include programme codenames, Region names, vendor products, colleague names or internal AWS recognition.
+### Enterprise customer (Feb 2026 -- Present)
 
-- Role framing: `Lead DevOps Consultant -- RWS`, the DevOps and IaC lead. Never `sole DevOps consultant` (a second DevOps consultant joined in 2026).
-- Scale: `4,000+ resources across 20+ Terraform Cloud workspaces, none failing`. Do not use `50+ application workloads` or `135+ AWS accounts`; the write-up does not support them.
-- Automation gain: `per-account setup cut from 3+ days to under 4 hours (~90%)`. Always with the baseline; no naked `~90%`.
-- Foundation: Organizations OUs with Control Tower baselines, SCPs, tag policies, least-privilege account baselines with a security baseline (IMDSv2, EBS encryption, public-access blocks, no default VPC), IAM Identity Center, AWS Backup and SSM Patch Manager in every workload account, all in Terraform Cloud with OIDC, replacing account vending by a legacy pipeline.
-- Networking: two Transit Gateway hubs in separate AWS Regions with Network Firewall inspection and VPN/Direct Connect, plus self-service onboarding (route table within 15 minutes, firewall access by tag in about a minute, no network-team ticket).
-- IPAM: approved after measured sandbox billing; prefix delegation, about 94% lower projected cost.
-- Safety: every change applied in a sandbox mirror first through the same least-privilege role.
-- Speed: a second landing zone foundation in about four weeks, ahead of schedule.
-- AI: `Kiro and Claude Code for requirement analysis, specs and design documentation`.
+- Role: `Lead DevOps Consultant, Enterprise customer`, the DevOps and IaC lead. Never `sole DevOps consultant`.
+- Generic bullets (lead line plus 2 sub-bullets on every variant): `Built a Terraform landing zone: Organizations OUs, Control Tower, SCPs, tag policies, account baselines and least-privilege deploy roles`; `Automated account vending with Terraform Cloud and OIDC federation`; `Automated network onboarding and tag-based firewall access with Transit Gateway`. devops and platform may add `account baselines with IAM Identity Center, AWS Backup and Systems Manager Patch Manager`.
 
-### State Street (Oct 2024 -- Aug 2025)
+### Global financial services customer (Oct 2024 -- Aug 2025)
 
-- Role: `DevOps Consultant`.
-- Scope claim: `Terraform for about 10 AWS services with automated tests, on the regulated landing zone team, part of the path that opened 38+ services to application teams`. Not a `38+ service module library`; that overstated it.
-- Detective: `designed Amazon Detective enablement (delegated admin in the Audit account via an AFT customization, organization-wide auto-enable in Terraform)`.
-- CCMv4.0: `worked on the security solution behind 1,000+ preventative controls aligned with CCMv4.0 (team result)`. Never `Architected 1000+`.
-- Testing: `tftest + PyTest`.
-- Delivery signal: `10/10 CSAT` only. No Pulse ratings: none exist to back them.
+- Role: `DevOps Consultant, Global financial services customer`.
+- Generic bullets (one bullet, two sentences): `Wrote tested Terraform modules (terraform test, PyTest) for a multi-account landing zone. Worked on preventative security controls and EventBridge-based cross-account automation.`
 
-### DTCC (Aug 2025 -- Nov 2025)
+### Financial market infrastructure customer (Aug 2025 -- Nov 2025)
 
-- Role: `DevOps Consultant`.
-- Scope: `Modernized legacy Terraform to cloud-native IaC patterns on high-sensitivity financial workloads`.
-- Amazon Q usage: `Used Amazon Q to accelerate code analysis and migration assessments`. NOT `leveraged` (banned by voice principles).
-- No confirmed metric exists, so since 2026-10-18 the resume line is one rendered line on every variant: `Modernized legacy Terraform to cloud-native IaC with Amazon Q.` (sde: `Refactored`, per INFO.md). Never `S3 native locking`, `policy-as-code checks`, `refactored monoliths into reusable modules`, `standardizing state, provider, and module patterns`, `modular` or `across the estate`: none of them is in the engagement record.
-- IMPORTANT: DTCC MUST appear in every variant that lists RWS + State Street (all 9 do, checked 2026-10-18); dropping it leaves a 6-month gap Aug 2025 to Feb 2026.
+- Role: `DevOps Consultant, Financial market infrastructure customer`.
+- One bullet on every variant: `Modernized legacy Terraform to cloud-native IaC patterns.` (sde: `Refactored`). Nothing else is on record, so add nothing.
+- IMPORTANT: this engagement MUST appear in every variant that lists the other two (all 9 do); dropping it leaves a 6-month gap Aug 2025 to Feb 2026.
 
-### Internal impact (roll into experience or extract to Talks section)
+### Programs and recognition (generic wording only)
 
-- APG pattern `Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub` (2025, co-authored with Abhigyan Dandriyal per INFO.md). **NOT found on the public site on 2026-10-18**: none of the 464 live pattern pages in `docs.aws.amazon.com/prescriptive-guidance/latest/patterns/toc-contents.json` has this title or his name in a byline, and only 5 Amplify patterns exist. Resume wording is `Co-authored an AWS Prescriptive Guidance pattern on secure PR previews and approval-gated releases for Amplify Gen 2`, inside the Experience Internal Impact bullet only. Never `Published APG pattern` until Sagar supplies the public URL; then it can move into Publications.
-- `plus 2 more peer-reviewed in publication pipeline`: dropped 2026-10-18. Not public, and the count disagrees with the portfolio (`3 APG Patterns Peer Reviewed`).
-- No AWS blog post by Sagar exists yet (AWS blog directory search, 2026-10-18). The SageMaker healthcare MLOps blog (INFO.md) is unpublished; add it only once live.
-- MLOps SME Program Graduate (2025).
-- 5x TFC Ambassador: `AI/ML, NGDE (Graduated), CloudOps (AWS DevOps Agent), Agentic AI, Serverless`. Portfolio's `4x` is stale -- fix to 5x. INFO.md line 314 (`4x`) is also stale -- fix to 5x.
-- 2 org-wide tech talks: Terraform testing (2025); GitOps pipeline gating (2026).
-- Associate Speaker Certified (2026).
-- MLOps Pipeline (SME Program, Jun-Aug 2025): SageMaker medical image classification, blue-green endpoints, drift detection.
+The Experience `Internal Impact` bullet (bigtech: the `Talks` and `Programs` lines in `talks.tex`) uses these exact strings. No internal program names, talk titles, event or challenge names, ranks or ticket IDs.
+
+- `AWS Professional Services MLOps SME program graduate` (2025).
+- `AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)`. The community list is not yet confirmed by Sagar; change it here and in every variant in one pass.
+- `Anthropic Claude Ambassador (2026)`.
+- `Internal tech talks on Terraform testing and GitOps`.
+- `Associate Speaker Certification (Renewed 2026)` and `Senior Speaker Certification (2026)`.
+- `Security content review qualification (2026)`.
+- `AWS Jam content tester, DevOps and GenAI (2026)`.
+- `AWS Training and Certification subject matter expert contributor` and `AWS early-career technical program graduate` (2024): INFO.md only for now.
+- MLOps Pipeline (SME program, Jun-Aug 2025): SageMaker medical image classification, blue-green endpoints, drift detection. Published as an aws-samples repo, so it stays.
+- Unpublished or internal-only items stay off every surface until they have a public URL: draft or submitted guidance patterns, unpublished blogs, peer reviews, internal tools and projects, internal awards or rankings, utilization figures. No AWS blog post by Sagar exists yet (AWS blog directory search, 2026-10-18).
 
 ## Published AWS samples (verified 2026-10-18 against each repo's main branch)
 
@@ -201,7 +192,7 @@ General picks (2026-10-19): Ledger Sync, orrery, Claude Cost Optimizer, LeetCode
 
 ## Section-order canon (all 9 variants uniform, homogenized in commit 953843c)
 
-`Summary -> Experience -> Publications & Recognition -> Certifications -> Projects -> Open Source -> Education -> Skills` (reordered 2026-10-18: Publications moved up next to Experience, Education moved below Projects and Open Source). `Publications & Recognition` is `achievements.tex`: the two aws-samples repos plus one LeetCode line (sde adds Kick Start). Bigtech puts `Publications & Talks` (`talks.tex`: the two samples plus internal talks and programs, labelled `AWS internal`) in the slot after Experience via `\variantPublications`, and its `achievements.tex` (`Competitive Programming`) goes last, after Skills, via `\variantExtraSections`. Renamed from `Achievements` on 2026-10-18.
+`Summary -> Experience -> Publications & Recognition -> Certifications -> Projects -> Open Source -> Education -> Skills` (reordered 2026-10-18: Publications moved up next to Experience, Education moved below Projects and Open Source). `Publications & Recognition` is `achievements.tex`: the two aws-samples repos plus one LeetCode line (sde adds Kick Start). Bigtech puts `Publications & Talks` (`talks.tex`: the two samples plus one `Talks` and one `Programs` line in generic wording) in the slot after Experience via `\variantPublications`, and its `achievements.tex` (`Competitive Programming`) goes last, after Skills, via `\variantExtraSections`. Renamed from `Achievements` on 2026-10-18.
 
 ## Banned phrases (voice principles, non-negotiable)
 
