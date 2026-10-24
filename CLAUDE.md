@@ -68,9 +68,10 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 - Local `\input{summary}` etc. (from `body.tex`) resolve to the variant directory's own files because compilation runs from the variant directory
 - All variants share the same section order: Summary -> Experience -> Publications & Recognition (`achievements.tex`) -> Certifications -> Projects -> Open Source -> Education -> Skills. Bigtech puts Publications & Talks (`talks.tex`) in the slot after Experience and its `achievements.tex` (Competitive Programming) last, after Skills.
 - Summary headline: each variant opens with the target job title in bold (general `Cloud & DevOps/MLOps Engineer`, devops `DevOps Engineer`, cloud `Cloud Engineer`, mlops `MLOps Engineer`, aiml `ML Engineer`, platform `Platform Engineer`, sde `Software Engineer (full-stack)`, ai-tools `AI Tools & Developer Productivity Engineer`, bigtech `Software Engineer`). Wherever the resume states his own title (the Experience role line, the summary's `as ...` clause) it is exactly `ProServe (Cloud Consultant) - DevOps/MLOps`.
-- RWS is one result-first lead line plus 2 or 3 short sub-bullets on every variant; DTCC is one line (no confirmed metric exists).
+- The current engagement (`Lead DevOps Consultant, Enterprise customer`) is one generic lead line plus 2 short sub-bullets on every variant; the two earlier engagements are one generic bullet each. Wording lives in `docs/FACTS.md`.
 - Open Source: top 5 merged fixes with a one-line impact each, then one `Also merged` comma line. Never list an open PR.
-- Publications & Recognition: confirmed, publicly checkable items only (the three aws-samples repos, one LeetCode line; bigtech lists two because its page is full). No college contests or hackathons; those live on the portfolio. Add an APG pattern or blog only once it has a public URL.
+- Publications & Recognition: confirmed, publicly checkable items only (the three aws-samples repos, one LeetCode line; bigtech lists two because its page is full). No college contests or hackathons; those live on the portfolio. Add a Prescriptive Guidance pattern or blog only once it has a public URL.
+- Every page carries the footer `Personal projects and opinions are my own and do not represent Amazon or AWS.` (`common/preamble.tex`, fancyhdr in the bottom margin, so it costs no layout space).
 - Must compile from within the variant directory (`cd variants/<slug>`)
 
 ### Other directories
@@ -102,7 +103,8 @@ Each variant has: `resume[-slug].tex` (main), `summary.tex`, `experience.tex`, `
 - **Hyperlinks**: All URLs, certifications, and project links are clickable (blue)
 - **Icons**: FontAwesome (`\faGithub`, `\faGlobe`, `\faLinkedinSquare`, etc.)
 - **Spacing**: Tight spacing optimized for 2-page layout - be careful with additions
-- **Client names**: Name clients directly (RWS, State Street, DTCC) across **all** variants and the cover letters -- these names are already public on the portfolio site and GitHub profile. Anonymize to descriptors (e.g., "US-based Major Financial Services Firm") only when Sagar explicitly asks for an anonymized copy for a specific recruiter.
+- **Customer confidentiality (Amazon/AWS rules)**: never name a customer anywhere (variants, comments, docs, cover letters). Use only `Enterprise customer`, `Global financial services customer` and `Financial market infrastructure customer`. No customer environment, architecture, programme, timeline, process, satisfaction score or customer-specific metric, no statement that customer work used AI tools (Kiro, Claude Code, Amazon Q may stay in skills lists), and no unpublished or internal-only items (draft patterns, internal tools, internal awards or rankings, ticket IDs). Internal programs and talks use the generic strings in `docs/FACTS.md` only.
+- **Location**: `Hyderabad, India` everywhere.
 - **Bullets**: Use `\item[$\diamond$]` for experience items, `\resumeAchievement` for achievements
 - **Hyphens**: Use single `-` in titles, never em dash
 

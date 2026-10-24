@@ -48,19 +48,19 @@ Dear Hiring Manager,
 \noindent
 % PARAGRAPH 1: Why this role + company (2-3 sentences)
 % Hook them with something specific about the company.
-I am writing to express my interest in the \textbf{ROLE\_TITLE} position at \textbf{COMPANY\_NAME}. As a Cloud Consultant at AWS Professional Services with hands-on experience delivering DevOps and MLOps solutions for enterprise clients including State Street, DTCC, and RWS, I am excited about the opportunity to WHAT\_EXCITES\_YOU.
+I am writing to express my interest in the \textbf{ROLE\_TITLE} position at \textbf{COMPANY\_NAME}. As a Cloud Consultant at AWS Professional Services with hands-on experience delivering DevOps and MLOps solutions for financial-services and other enterprise customers, I am excited about the opportunity to WHAT\_EXCITES\_YOU.
 
 \vspace{3mm}
 \noindent
 % PARAGRAPH 2: Your relevant experience (3-4 sentences)
 % Map your experience directly to their job requirements.
-In my current role at AWS, I lead infrastructure engagements for enterprise clients including State Street, DTCC, and RWS. At State Street, I built Terraform with automated tests for about 10 AWS services and worked on the security solution behind 1,000+ preventative controls, and the project closed with a 10/10 customer satisfaction score. At RWS, I lead the Terraform foundation for a data-centre exit and a second landing zone, cutting per-account setup from 3+ days to under 4 hours. This experience has given me deep expertise in RELEVANT\_SKILLS\_FOR\_ROLE.
+In my current role at AWS, I lead DevOps and infrastructure-as-code work for enterprise customers. I build Terraform landing zones (Organizations OUs, SCPs, tag policies, account baselines and least-privilege deploy roles), write tested Terraform modules with terraform test and PyTest, and automate account vending and network onboarding. This experience has given me deep expertise in RELEVANT\_SKILLS\_FOR\_ROLE.
 
 \vspace{3mm}
 \noindent
 % PARAGRAPH 3: Technical depth + differentiator (2-3 sentences)
 % Mention certs, open source, or something that sets you apart.
-I hold 5 AWS certifications, including Solutions Architect, Developer, and ML Engineer at the Associate level. Beyond client work, I have contributed to open-source projects including Apache Airflow, PrefectHQ, and awslabs/mcp, and published an AWS Architecture Prescriptive Guidance pattern. WHY\_YOU\_ARE\_DIFFERENT.
+I hold 5 AWS certifications, including Solutions Architect, Developer, and ML Engineer at the Associate level. Beyond customer work, I have contributed to open-source projects including Apache Airflow, PrefectHQ, and awslabs/mcp, and authored 3 samples published by AWS (aws-samples). WHY\_YOU\_ARE\_DIFFERENT.
 
 \vspace{3mm}
 \noindent

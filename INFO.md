@@ -7,9 +7,9 @@ This file contains all personal, professional, and technical information used ac
 | Field | Value |
 |-------|-------|
 | **Name** | Sagar Gupta |
-| **Title** | ProServe (Cloud Consultant) - DevOps/MLOps (official internal title: Associate Delivery Consultant, ProServe DC) |
+| **Title** | ProServe (Cloud Consultant) - DevOps/MLOps |
 | **Employer** | Amazon Web Services (AWS) - Professional Services |
-| **Location** | Bengaluru, India |
+| **Location** | Hyderabad, India |
 | **Email** | sg85207@gmail.com |
 | **Phone** | +91-8770532413 |
 | **Portfolio** | [sagargupta.online](https://sagargupta.online/portfolio-react/) |
@@ -23,7 +23,7 @@ This file contains all personal, professional, and technical information used ac
 
 ## Bio
 
-Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delivering DevOps engagements for leading financial institutions. Currently leading the Terraform foundation for a data-centre exit and a second landing zone. Built production MLOps pipelines on SageMaker. Published AWS architecture patterns. Open source contributor to Apache Airflow, Terraform Provider AWS, and Feast. 5x AWS certified.
+Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delivering DevOps engagements for financial-services and other enterprise customers. Currently leading Terraform landing zone work. Built production MLOps pipelines on SageMaker. Author of 3 samples published by AWS (aws-samples). Open source contributor to Apache Airflow, Terraform Provider AWS, and Feast. 5x AWS certified.
 
 ## Education
 
@@ -54,36 +54,32 @@ Cloud & DevOps/MLOps Engineer with 2+ years at AWS Professional Services, delive
 
 ### Amazon Web Services (AWS) - Cloud Consultant (Aug 2024 - Present)
 
-Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Bengaluru, India (confirmed 2026-10-14; previously Hyderabad).
+Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Hyderabad, India.
 
-#### Engagement 1: RWS -- UK-based Global Technology Services Firm (Feb 2026 - Present)
+Customer engagements are described generically (Amazon/AWS confidentiality rules): no customer names, environment or architecture details, programmes, timelines, processes, satisfaction scores or customer-specific metrics, and no statement that customer work used AI tools. See docs/FACTS.md.
+
+#### Engagement 1: Enterprise customer (Feb 2026 - Present)
 **Role: Lead DevOps Consultant (DevOps and IaC lead)**
 
-- Building the AWS foundation in Terraform for RWS Group's data-centre exit and a second landing zone: **4,000+ resources across 20+ workspaces**, per-account setup cut from 3+ days to under 4 hours
-- Designing AWS Organizations OU structure, SCPs, tag policies; core networking, security baseline, governance framework
-- Deploying Terraform infrastructure with GitHub Actions CI/CD across multi-account environments; owns full deployment lifecycle. Terraform automation cuts infrastructure setup time by ~90% versus manual configuration
-- Driving architecture decisions and defining migration roadmap
-- Delivering recommendations on cost optimization, HA, and DR
-- Leveraging Kiro for AI-driven requirement analysis, architecture documentation, and implementation specs
+- Built a Terraform landing zone: Organizations OUs, Control Tower, SCPs, tag policies, account baselines and least-privilege deploy roles
+- Automated account vending with Terraform Cloud and OIDC federation
+- Automated network onboarding and tag-based firewall access with Transit Gateway
+- Recommendations on cost optimization, HA, and DR
 
-#### Engagement 2: State Street -- US-based Major Financial Services Firm (Oct 2024 - Aug 2025)
+#### Engagement 2: Global financial services customer (Oct 2024 - Aug 2025)
 **Role: DevOps Consultant**
 
-- Developed Terraform code for ~10 AWS services with comprehensive testing (tftest, PyTest), part of the path that opened 38+ services to application teams
-- Module library adopted across the client's entire cloud platform
-- Worked on the security solution behind 1,000+ preventative controls aligned with CCMv4.0 (team result)
+- Wrote tested Terraform modules (terraform test, PyTest) for a multi-account landing zone
+- Worked on preventative security controls
 - Implemented EventBridge-based cross-account automation patterns
 - Designed self-service capabilities with governance guardrails
-- **10/10 CSAT** at project closure
 
-#### Engagement 3: DTCC -- US-based Leading Financial Services Firm (Aug 2025 - Nov 2025)
+#### Engagement 3: Financial market infrastructure customer (Aug 2025 - Nov 2025)
 **Role: DevOps Consultant**
 
-- Refactored critical Terraform infrastructure, modernizing legacy patterns to cloud-native IaC
-- Leveraged Amazon Q to accelerate code analysis and migration assessments
-- Reduced migration effort across multiple workstreams
+- Refactored legacy Terraform, modernizing it to cloud-native IaC patterns
 
-#### Internal: MLOps Pipeline (SME Program, Jun 2025 - Aug 2025)
+#### Internal: MLOps Pipeline (SME program, Jun 2025 - Aug 2025)
 
 - Architected end-to-end SageMaker MLOps pipeline for medical image classification
 - Blue-green model deployment, auto-scaling endpoints, automated drift detection
@@ -91,20 +87,16 @@ Full-time Cloud Consultant in Professional Services (DevOps/MLOps). Bengaluru, I
 - CloudFront frontend, API Gateway + Lambda inference API
 - Full infrastructure provisioned via Terraform
 
-#### Internal Impact & Recognition
+#### Programs & Recognition (generic wording only)
 
-- Published APG pattern: "Secure PR Previews and Approval-Gated Releases for Amplify Gen 2 with GitHub" (2025, co-authored with Abhigyan Dandriyal)
-- Ongoing: APG Guide "Choosing the Right Service Mesh for Amazon EKS Workloads (Istio / App Mesh / Linkerd)"; blog "Automating Healthcare Image Classification with Amazon SageMaker: End-to-End MLOps Pipeline"
-- MLOps SME Program Graduate (2025)
-- 5x TFC Ambassador: AI/ML, NGDE (Graduated), CloudOps (AWS DevOps Agent), Agentic AI, Serverless
-- Associate Speaker Certified (renewed 2026); hosted DevOps Builder Edition Team Cadence (May 2026)
-- 2 org-wide tech talks:
-  - "Automating Unit Testing for Terraform using Terraform Test and PyTest frameworks" (2025)
-  - "GitOps Configuration Safety with Health Checks and Pipeline Gating" (2026)
-- 2 APG Patterns Peer Reviewed (2025)
-- Other internal: AWS T&C SME Program contributor; Prime Video beta testing; ML Hackathon 2025 (26th/238); GCCI JAM Tester
-- Other internal project (ongoing): Work Task Buddy -- AI orchestration platform unifying business systems via conversational interface, Salesforce integration, strict AI controls
-- ML Hackathon 2025 - 26th/238 teams
+- AWS Professional Services MLOps SME program graduate (2025)
+- AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)
+- Anthropic Claude Ambassador (2026)
+- Associate Speaker Certification (Renewed 2026); Senior Speaker Certification (2026)
+- Internal tech talks on Terraform testing and GitOps
+- AWS Training and Certification subject matter expert contributor
+- Security content review qualification (2026)
+- AWS Jam content tester, DevOps and GenAI (2026)
 
 ### Amazon Web Services (AWS) - Intern (Mar 2024 - Jul 2024)
 
@@ -113,7 +105,7 @@ Associate Professional Services - DevOps. Hyderabad, India.
 - Migrated on-premises application to AWS ECS with blue-green deployment
 - Terraform, CodePipeline, and CodeDeploy for infrastructure and deployment
 - X-Ray and CloudWatch distributed tracing for observability
-- TechU Graduate (2024)
+- AWS early-career technical program graduate (2024)
 
 ### Ikarus-3D - Software Developer Intern (May 2023 - Jul 2023)
 
@@ -263,7 +255,6 @@ StockSage AI (scaffold only, not on the resume), GroundZeroNN (neural network fr
 | Logic Head, INFOTREK '22 (NIT Trichy) | 3rd Place | Jun 2022 |
 | MOTHRA, Version '21 (NIT Trichy) | 3rd Place | Oct 2021 |
 | TriNIT Hackathon (NIT Warangal) | 4th Place | Oct 2023 |
-| ML Hackathon (AWS Internal) | 26th/238 teams | 2025 |
 
 ## Technical Skills
 
@@ -322,9 +313,9 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - 2+ years at AWS Professional Services
 - 5 industry certifications (all AWS; HashiCorp Terraform Associate expired 2026-09-10)
 - 12 AWS knowledge badges
-- 5x TFC Ambassador
-- 2 tech talks delivered
-- 1 APG Pattern published (plus 2 more peer-reviewed in publication pipeline)
+- AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)
+- Internal tech talks on Terraform testing and GitOps
+- 3 samples published by AWS (aws-samples)
 - Open source PRs: 11 merged upstream (axios, Airflow, lucide, Prefect, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins x2, multer, terraform-aws-atlantis), plus 1 co-authored fix (aws-ia/terraform-aws-vpc) -- verified 2026-10-10
 - 40+ projects built
 - 2000+ coding problems solved
