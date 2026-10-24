@@ -47,7 +47,7 @@ Confidentiality (Amazon/AWS rules, 2026-10-24): never name a customer anywhere (
 The Experience `Internal Impact` bullet (bigtech: the `Talks` and `Programs` lines in `talks.tex`) uses these exact strings. No internal program names, talk titles, event or challenge names, ranks or ticket IDs.
 
 - `AWS Professional Services MLOps SME program graduate` (2025).
-- `AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)`. The community list is not yet confirmed by Sagar; change it here and in every variant in one pass.
+- `AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)`. Community list confirmed by Sagar on 2026-10-24.
 - `Anthropic Claude Ambassador (2026)`.
 - `Internal tech talks on Terraform testing and GitOps`.
 - `Associate Speaker Certification (Renewed 2026)` and `Senior Speaker Certification (2026)`.
