@@ -149,14 +149,14 @@ Notable reorderings:
 
 #### DevOps
 - **Summary**: CI/CD pipelines, IaC at scale, automation-first mindset
-- **Experience bullets**: Terraform module library (38+ services), testing (tftest/PyTest), GitHub Actions CI/CD, blue-green ECS deployments, CodePipeline
+- **Experience bullets**: Tested Terraform modules (tftest/PyTest), GitHub Actions CI/CD, blue-green ECS deployments, CodePipeline
 - **Skills top**: Terraform, Docker, GitHub Actions, CI/CD, Blue-Green, Ansible
 - **Projects**: Blue-Green AWS Terraform, DevOps-AWS-FARM
 - **OSS**: terraform-provider-aws, cloudposse/terraform-aws-tfstate-backend, Airflow
 
 #### Cloud
 - **Summary**: AWS architecture, multi-account strategy, enterprise migrations
-- **Experience bullets**: AWS Organizations/SCPs/tag policies, 50+ workload migration, Landing Zone, compliance (CCMv4.0), architecture decisions
+- **Experience bullets**: AWS Organizations/SCPs/tag policies, Landing Zone, preventative security controls, network onboarding
 - **Skills top**: AWS Organizations, SCPs, Landing Zone, CloudFormation, Migration
 - **Projects**: Blue-Green AWS Terraform
 - **OSS**: terraform-provider-aws, terraform-aws-bedrock, terraform-aws-dynamodb-table
@@ -185,14 +185,14 @@ Notable reorderings:
 
 #### Platform
 - **Summary**: Internal developer platforms, self-service tooling, governance at scale
-- **Experience bullets**: Terraform module library adopted across client platform, self-service with governance guardrails, preventative security controls, EventBridge patterns
+- **Experience bullets**: Terraform modules, self-service with governance guardrails, preventative security controls, EventBridge patterns
 - **Skills top**: Terraform modules, IaC testing, EventBridge, Self-Service, Governance
 - **Projects**: Blue-Green AWS Terraform, MCP Toolkit
 - **OSS**: terraform-provider-aws, cloudposse
 
 #### AI Tools
 - **Summary**: AI developer tooling, MCP protocol, agent frameworks, LLM integration
-- **Experience bullets**: Kiro for AI-driven specs, Amazon Q for code analysis, Claude Code workflows
+- **Experience bullets**: AWS samples and internal programs; AI tooling (Claude Code, Kiro, Amazon Q) stays in Skills and personal projects, never tied to customer work
 - **Skills top**: Claude Code, MCP Protocol, Kiro, LLM APIs, RAG Pipelines, Agent Frameworks
 - **Projects**: GitScope, SelfHub, Claude Skills, Claude Cost Optimizer
 - **OSS**: awslabs/mcp, Feast (Claude Code skills)
