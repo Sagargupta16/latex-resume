@@ -9,6 +9,10 @@ All notable changes to this resume are documented here.
 
 Use `[major]` or `[minor]` in commit messages to control version bumps. Default is patch.
 
+## [1.4.1] - 2026-11-17
+
+- fix: intern titles, 13 merged upstream prs and the orrery icon count in every variant (#27)
+
 ## [1.4.0] - 2026-10-24
 
 - fix: make every variant follow amazon confidentiality rules [minor] (#26)
