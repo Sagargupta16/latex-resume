@@ -89,8 +89,10 @@ All three are listed in the `Publications & Recognition` section (bigtech: `Publ
 
 ## Earlier roles
 
-- `Associate Professional Services -- DevOps (Internship)`, AWS, Mar 2024 -- Jul 2024.
-- `Software Developer Associate (Internship)`, Ikarus-3D, May 2023 -- Jul 2023.
+- `Professional Services - Intern`, AWS, Mar 2024 -- Jul 2024.
+- `Software Developer - Intern`, Ikarus-3D, May 2023 -- Jul 2023.
+
+Titles changed 2026-11-17 on Sagar's ask, to match the portfolio's Experience cards (it was `Associate Professional Services -- DevOps (Internship)` and `Software Developer Associate (Internship)`).
 
 ## Education
 
@@ -117,9 +119,9 @@ Also on Credly (not an AWS cert, so the count stays `5x AWS certified`): `Claude
 
 Optional resume additions from learning badges: `Well-Architected Proficient (Jan 2026)`, `AWS AI-DLC Ambassador L100 (Jun 2026)`. Both are current and role-relevant.
 
-## Open source (RECONCILED, verified 2026-10-10)
+## Open source (RECONCILED, verified 2026-10-10, re-checked 2026-11-17)
 
-**Merged (11 PRs, 10 repos):**
+**Merged (13 PRs, 11 repos):**
 1. Apache Airflow #63109 -- 2026-03-23 -- template_fields on SalesforceBulkOperator.
 2. PrefectHQ/prefect #20956 -- 2026-03-04 -- deployment-steps-as-Python doc.
 3. feast-dev/feast #6081 -- 2026-03-16 -- Claude Code agent skills for Feast.
@@ -131,17 +133,19 @@ Optional resume additions from learning badges: `Well-Architected Proficient (Ja
 9. axios/axios #11059 -- 2026-07-13 -- AxiosError message from AggregateError.errors.
 10. expressjs/multer #1426 -- 2026-08-29 -- files skipped by fileFilter no longer consume maxCount.
 11. terraform-aws-modules/terraform-aws-atlantis #446 -- 2026-10-08 -- pass service.security_group_egress_rules through to the ECS service security group.
+12. PrefectHQ/prefect #23557 -- 2026-10-24 -- allow the provisioned ECS execution role to create CloudWatch log groups.
+13. terraform-aws-modules/terraform-aws-s3-bucket #416 -- 2026-11-16 -- avoid null filter attribute lookups on Terraform versions before 1.12.
 
-**Co-authored (not counted in the 11):** aws-ia/terraform-aws-vpc #184 -- root-caused the Cloud WAN attachment-replacement bug; fix co-authored into v4.8.0.
+**Co-authored (not counted in the 13):** aws-ia/terraform-aws-vpc #184 -- root-caused the Cloud WAN attachment-replacement bug; fix co-authored into v4.8.0.
 
 **Open:**
 - hashicorp/terraform-provider-aws #46867 -- IoT CloudWatch metric substitution validation.
 
 **Closed unmerged (do NOT list):** aws-cdk #37601, mcp/python-sdk #2446, chroma #6590, dspy #9405.
 
-Canonical resume claim: `11 upstream PRs merged`, with a list like `axios, Apache Airflow, lucide, Prefect, Feast, awslabs/mcp, multer, and others`. Do not quote an open-PR count. Never `7 upstream PRs` or `6 merged`; both are stale.
+Canonical resume claim: `13 upstream PRs merged` (since 2026-11-17; it was 11 until Prefect #23557 and s3-bucket #416 merged), with a list like `axios, Apache Airflow, lucide, Prefect, Feast, awslabs/mcp, multer, and others`. Do not quote an open-PR count. Never `7 upstream PRs`, `6 merged` or `11 merged`; all are stale.
 
-**Resume section shape (2026-10-18):** header `Open Source Contributions (11 merged upstream)`, then the top 5 behavior fixes with one impact line each, then one `Also merged` line: Prefect, Feast, awslabs/agent-plugins (#132, #212), awslabs/mcp, cloudposse tfstate-backend, and co-author of the aws-ia/terraform-aws-vpc v4.8.0 fix. Top 5 order: axios, Airflow, lucide, multer, atlantis (devops, cloud and platform lead with atlantis; mlops and aiml lead with Airflow). Prefect, Feast, awslabs/mcp and cloudposse are docs or skill-file PRs, so they stay in the comma line. The open terraform-provider-aws #46867 is off every variant.
+**Resume section shape (2026-10-18, count updated 2026-11-17):** header `Open Source Contributions (13 merged upstream)`, then the top 5 behavior fixes with one impact line each, then one `Also merged` line: Prefect (#20956, #23557), Feast, awslabs/agent-plugins (#132, #212), awslabs/mcp, cloudposse tfstate-backend, terraform-aws-modules/s3-bucket (#416), and co-author of the aws-ia/terraform-aws-vpc v4.8.0 fix. Top 5 order: axios, Airflow, lucide, multer, atlantis (devops, cloud and platform lead with atlantis; mlops and aiml lead with Airflow). Prefect, Feast, awslabs/mcp and cloudposse are docs or skill-file PRs, so they stay in the comma line. The open terraform-provider-aws #46867 is off every variant.
 
 - Star counts (live 2026-10-18): axios 109K, Airflow 47K, lucide 25K, Prefect 24K, multer 12K, awslabs/mcp 9.8K, Feast 7.3K (never `9K`), atlantis 557.
 - agent-plugins #132 only moves the defusedxml dependency check after the file-extension check, ending a spurious warning on every Edit/Write. It is **not** a security or XXE fix; never `guard` or `XXE`.
@@ -169,7 +173,7 @@ Ranked by role fit and recency. Each variant may re-rank. All descriptions ~one 
 Since 2026-10-19 every variant leads Projects with Ledger Sync, then orrery (ai-tools: orrery, then Ledger Sync), then the 3 entries that fit the variant best, 5 featured in total.
 
 1. **Ledger Sync** (Jan 2026) -- Self-hosted personal-finance app. React 19, TypeScript, FastAPI, SQLAlchemy 2; SQLite in development, **Neon PostgreSQL 17 in production**; FastAPI on **Vercel** (ASGI), React on GitHub Pages. 26 protected pages (the router also has 3 public routes; not 23); `.xlsx/.xls/.csv` imports with SHA-256 transaction IDs (idempotent re-imports); AI assistant with 15 read-only tool calls (README: `Fifteen read-only, user-scoped financial tools`). `298 test files` across both stacks (107 `test_*.py` + 191 `*.test.ts(x)` on main, `gh api .../git/trees/main?recursive=1`, 2026-10-19). Repo created 2026-01-09; live URL returned 200 on 2026-10-19. Never `CSV/OFX`, `fuzzy-match dedup`, or `SQLite` as the production database. https://sagargupta.online/ledger-sync/
-2. **orrery** (Oct 2026) -- Agent Skill and Claude Code plugin: YAML spec to animated architecture diagrams. Node.js, ELK layout, SVG. `18,209 official icons` (AWS 810, Azure 636, Google Cloud 233, Kubernetes 40, GitHub Octicons 399, IBM Carbon 2,776, plus tech logos, neutral symbols and Phosphor); cloud packs rebuilt from each vendor's own download, pinned by checksum. A validator whose every finding names the fix; a review board of 3 read-only reviewer agents (conventions, flow, legibility); `40 reference diagrams` rendered from specs and checked against the renderer by CI. Runs in Claude Code, Codex, Cursor, Gemini CLI and Kiro (Agent Skills). Latest release v0.7.0 (2026-10-18); repo created 2026-10-11; https://sagargupta.online/orrery/ and the gallery returned 200 on 2026-10-19. https://sagargupta.online/orrery/
+2. **orrery** (Oct 2026) -- Agent Skill and Claude Code plugin: YAML spec to animated architecture diagrams. Node.js, ELK layout, SVG. `18,300 official icons` (orrery README, re-checked 2026-11-17 at v0.12.2: AWS 810, Azure 636, Google Cloud 233, Kubernetes 40, GitHub Octicons 408, IBM Carbon 2,783, plus 5,558 tech logos, 6,305 neutral symbols and Phosphor 1,527; it was 18,209 on 2026-10-18); cloud packs rebuilt from each vendor's own download, pinned by checksum. A validator whose every finding names the fix; a review board of 3 read-only reviewer agents (conventions, flow, legibility); `40 reference diagrams` rendered from specs and checked against the renderer by CI. Runs in Claude Code, Codex, Cursor, Gemini CLI and Kiro (Agent Skills). Latest release v0.7.0 (2026-10-18); repo created 2026-10-11; https://sagargupta.online/orrery/ and the gallery returned 200 on 2026-10-19. https://sagargupta.online/orrery/
 3. **Claude Cost Optimizer** (Mar 2026) -- Claude Code plugin, MCP cost server (`mcp-cost-server`), CLI grader (`claude-rate`) and web calculator. Cache-aware billing corrected a modelled 30-turn Opus 5.5 session from `$3.44 to $0.74` (CHANGELOG); golden-value tests in all three implementations (27 vitest, 13 unittest, 5 node:test). 38 stars, the most of any own repo. **Never `30-60%`**: the README says no typical saving has been published, so the repo quotes none (its GitHub description still says `Save 30-60%` and needs fixing). https://sagargupta.online/claude-cost-optimizer/
 4. **LeetCode Rating Predictor** (Dec 2023) -- Python/TensorFlow/NumPy/FastAPI/React. 15 engineered features. Fixed a participant-count train/serve skew that had tripled backtest error: `MAE 38.76 to 12.46 on 57 contests`. NumPy-only serving, runtime `~1.8 GB to ~65 MB`, pinned by a golden test. Weekly data refresh re-runs the backtest. **Never `MAE ~7.8` or `121K+ records` as the headline**: the README retired the 7.84 figure because it came from a random record split that leaks users. Current numbers if needed: held-out users MAE 14.14; recent-contest backtest MAE 9.11 and 7.58 on two 50-user samples (model 2.4.0). https://leetcode-rating-predictor.onrender.com/
 5. **Blue-Green AWS Terraform** (Jul 2025) -- 15 Terraform modules (plus bootstrap and tests), ECS on an EC2 Auto Scaling Group, NOT Fargate. CodeDeploy `TimeBasedCanary` 30% for 1 minute with rollback on a 5xx spike or unhealthy target; 80% coverage gate in CodeBuild; 8 `.tftest.hcl` files with `tests/mocks/aws.tfmock.hcl`; Checkov and tflint in CI. Never `18 modules` (the GitHub description still says 18).

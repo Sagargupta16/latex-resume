@@ -100,7 +100,7 @@ Customer engagements are described generically (Amazon/AWS confidentiality rules
 
 ### Amazon Web Services (AWS) - Intern (Mar 2024 - Jul 2024)
 
-Associate Professional Services - DevOps. Hyderabad, India.
+Professional Services - Intern. Hyderabad, India.
 
 - Migrated on-premises application to AWS ECS with blue-green deployment
 - Terraform, CodePipeline, and CodeDeploy for infrastructure and deployment
@@ -146,7 +146,7 @@ Non-AWS badge: Claude Partner Badge - Claude Code (Anthropic), issued Sep 2026, 
 
 ## Open Source Contributions
 
-_PR status verified against the GitHub API on 2026-10-10. Only PRs confirmed `merged: true` are listed as merged. Resume claim: `11 upstream PRs merged`, no open-PR count._
+_PR status verified against the GitHub API on 2026-10-10, re-checked 2026-11-17. Only PRs confirmed `merged: true` are listed as merged. Resume claim: `13 upstream PRs merged`, no open-PR count._
 
 ### Merged (verified)
 
@@ -163,8 +163,10 @@ _PR status verified against the GitHub API on 2026-10-10. Only PRs confirmed `me
 | 9 | axios/axios | 109K | [#11059](https://github.com/axios/axios/pull/11059) | 2026-07-13 | Synthesize AxiosError message from AggregateError.errors |
 | 10 | expressjs/multer | -- | [#1426](https://github.com/expressjs/multer/pull/1426) | 2026-08-29 | Do not consume maxCount for files skipped by fileFilter |
 | 11 | terraform-aws-modules/terraform-aws-atlantis | -- | [#446](https://github.com/terraform-aws-modules/terraform-aws-atlantis/pull/446) | 2026-10-08 | Pass service.security_group_egress_rules through to the ECS service security group |
+| 12 | PrefectHQ/prefect | -- | [#23557](https://github.com/PrefectHQ/prefect/pull/23557) | 2026-10-24 | Allow the provisioned ECS execution role to create CloudWatch log groups |
+| 13 | terraform-aws-modules/terraform-aws-s3-bucket | -- | [#416](https://github.com/terraform-aws-modules/terraform-aws-s3-bucket/pull/416) | 2026-11-16 | Avoid null filter attribute lookups on Terraform versions before 1.12 |
 
-### Co-authored (not counted in the 11)
+### Co-authored (not counted in the 13)
 
 - aws-ia/terraform-aws-vpc [#184](https://github.com/aws-ia/terraform-aws-vpc/pull/184) -- root-caused the Cloud WAN attachment-replacement bug; fix co-authored into v4.8.0
 
@@ -316,7 +318,7 @@ Git, VS Code, Jupyter Notebook, Postman, Figma, SonarQube, Linux
 - AWS technical field community ambassador (AI/ML, DevOps, CloudOps, Agentic AI, Serverless)
 - Internal tech talks on Terraform testing and GitOps
 - 3 samples published by AWS (aws-samples)
-- Open source PRs: 11 merged upstream (axios, Airflow, lucide, Prefect, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins x2, multer, terraform-aws-atlantis), plus 1 co-authored fix (aws-ia/terraform-aws-vpc) -- verified 2026-10-10
+- Open source PRs: 13 merged upstream (axios, Airflow, lucide, Prefect x2, Feast, awslabs/mcp, cloudposse, awslabs/agent-plugins x2, multer, terraform-aws-atlantis, terraform-aws-s3-bucket), plus 1 co-authored fix (aws-ia/terraform-aws-vpc) -- verified 2026-11-17
 - 40+ projects built
 - 2000+ coding problems solved
 - LeetCode Guardian (2166 peak rating, top 1.1%)
